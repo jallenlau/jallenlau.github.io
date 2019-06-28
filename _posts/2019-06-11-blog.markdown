@@ -47,6 +47,7 @@ Repository name 填写 `username.github.io`，此处注意 `username` 部分一�
 打开域名供应商网站,将自定 DNS 资源处增加两条记录：
 >- 名称 grus，类型 CNAME，TTL 输入600（10m），IPv4地址填写 `username.github.io`
 >- 名称 www，类型 CNAME，TTL 输入600（10m），IPv4地址填写 `username.github.io`
+
 ### 第三步
 回到 GitHub 所建项目的 Settings，下滑找到 Github Pages，在 Custom domain 内填入购买的域名后点击 Save，下方 enforce https 是否勾选自行选择。
 
