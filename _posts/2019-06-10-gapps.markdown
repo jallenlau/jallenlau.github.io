@@ -6,6 +6,9 @@ tags: microG&GApps
 color: rgb(255,90,90)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/gapps_readme.png?raw=true'
 ---
+
+> pico、nano、micro、mini、full、stock、super 版本差异介绍。
+
 ## pico
 此软件提供最小Gapps安装。在此软件包中，您将找到Google系统基础框架，Google Play商店，Google日历同步，拨号程序框架和以下Play商店应用程序：
 - Google Package Installer（替换stock/AOSP Package Installer）

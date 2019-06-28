@@ -7,22 +7,924 @@ color: rgb(255,90,90)
 cover: '../assets/test.png'
 subtitle: 'Welcome to Jekyll!'
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+> 通过 Android Studio 逐步学习构建 APP。  
+> 持续更新，最后更新时间：2019.6.27。
 
-Jekyll also offers powerful support for code snippets:
+## 简介
+安卓应用是按照 MVC 模式开发的，三个要素分别如下：  
+- M（Model，模型）表示程序中的数组操作模型。  
+- V（View，视图）如 activity_main.xml 布局文件可以看作用户界面，即视图的设计组件。  
+- C（Controler，控制器）用于响应用户操作的部分，如 MainActivity 类，其中包含一个 Button 和一个 TextView，用户通过单击按钮进行操作，并通过文本显示操作结果，这就是控制器的基本功能。  
 
+## 方法
+利用 Android Studio 进行安卓应用的常用组件功能的实现，首先通过新建 New Project，创建新的Demo项目。  
+通过更改：  
+app/manifests/AndroidManifest.xml    
+app/java/com.example.buttondemo/MainActivity.java    
+app/layout/activity_main.xml     
+
+进行基本功能的实现,以下为个人学习范例。
+## Button Demo
+界面线性分布三个按钮，并实现三个按钮分别显示 TextView，长按 Button1 震动反馈并显示 Toast，实现 Button2 识别 Touch 手势并显示 TextView。
+![](https://github.com/jallenlau/picture/blob/master/post-images/1560679993257.png?raw=true)
+### AndroidManifest.xml
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.buttondemo">
+    //Vibrate
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+### MainActivity.java
+{% highlight ruby %}
+package com.example.buttondemo;
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+import android.content.Context;
+import android.os.Vibrator;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,View.OnTouchListener,View.OnLongClickListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //Click
+        ((Button) findViewById(R.id.btn1)).setOnClickListener(this);
+        ((Button) findViewById(R.id.btn2)).setOnClickListener(this);
+        ((Button) findViewById(R.id.btn3)).setOnClickListener(this);
+        //Touch
+        ((Button)findViewById(R.id.btn2)).setOnClickListener(this);
+        ((Button)findViewById(R.id.btn2)).setOnTouchListener(this);
+        //Long Click
+        ((Button) findViewById(R.id.btn1)).setOnLongClickListener(this);
+        ((Button) findViewById(R.id.btn2)).setOnLongClickListener(this);
+        ((Button) findViewById(R.id.btn3)).setOnLongClickListener(this);
+    }
+
+    //Long Click
+    @Override
+    public boolean onLongClick(View v) {
+        if (v.getId() == R.id.btn1) {
+            Toast.makeText(MainActivity.this, "Long Press", Toast.LENGTH_SHORT).show();
+            //Vibrate
+            Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            vib.vibrate(500);
+        }
+        return true;
+    }
+
+    //Click
+    @Override
+    public void onClick(View v) {
+        TextView txt1 = (TextView)findViewById(R.id.txt1);
+        switch (v.getId()) {
+            case R.id.btn1: {
+                txt1.setText("Click Button 1");
+            } break;
+            case R.id.btn2: {
+                txt1.setText("Click Button 2");
+            } break;
+            case R.id.btn3: {
+                txt1.setText("Click Button 3");
+            } break;
+            }
+        }
+
+    //Touch
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+         if (v.getId() == R.id.btn2) {
+             TextView txt = (TextView)findViewById(R.id.txt1);
+             if (event.getAction()==MotionEvent.ACTION_DOWN) {
+                 txt.setText("Finger Down");
+             } else if (event.getAction()==MotionEvent.ACTION_UP) {
+                 txt.setText("Finger Up");
+             } else if (event.getAction()==MotionEvent.ACTION_MOVE) {
+                 txt.setText("Finger Moved");
+             }
+         }
+         return true;
+    }
+}
+{% endhighlight %}
+
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button Demo"/>
+
+    <Button android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button1"
+        android:textAllCaps="false"/>
+
+    <Button android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button2"
+        android:textAllCaps="false"/>
+
+    <Button android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button3"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
+{% endhighlight %}
+
+## Edit Text
+实现单击按钮时，按钮的文本会显示为输入框的内容。  
+![](https://github.com/jallenlau/picture/blob/master/post-images/1560683370656.png?raw=true)
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"/>
+
+    <Button android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Button1"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.edittext;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import  android.widget.EditText;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText edit1 = (EditText)findViewById(R.id.edit1);
+                Button btn = (Button)findViewById(R.id.btn1);
+                btn.setText(edit1.getText());
+            }
+        });
+    }
+}
+{% endhighlight %}
+
+## Alert Dialog
+创建包含两个选择按钮的 Dialog，点击时显示 Toast 且可以拓展操作。
+![](https://github.com/jallenlau/picture/blob/master/post-images/1560685820187.png?raw=true)
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button1"/>
+
+</android.support.constraint.ConstraintLayout>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.alertdialogdemo;
+
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.content.DialogInterface;
+import android.view.View;
+import android.view.Menu;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.btn1) {
+            AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
+            dlg.setTitle("Please confirm your decision.");
+            dlg.setMessage("Really?");
+            dlg.setCancelable(false);
+            //Confirm Buttom
+            dlg.setPositiveButton("Confirm",new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog,int which) {
+                    Toast.makeText(MainActivity.this,"Confirm action",Toast.LENGTH_SHORT).show();
+                }
+            });
+            //Cancel action button
+            dlg.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog,int which) {
+                    Toast.makeText(MainActivity.this,"Cancel action",Toast.LENGTH_SHORT).show();
+                }
+            });
+            dlg.show();
+        }
+    }
+}
+{% endhighlight %}
+
+## Progress Dialog
+点击按钮，显示进程图标，并且设定3秒后自动关闭。  
+![](https://github.com/jallenlau/picture/blob/master/post-images/1560737587963.png?raw=true)
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button1"/>
+
+</android.support.constraint.ConstraintLayout>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.progressdialog;
+
+import java.util.TimerTask;
+import java.util.Timer;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.TimerTask;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProgressDialog dlg = new ProgressDialog(MainActivity.this);
+                dlg.setTitle("Program is on the way.");
+                dlg.setMessage("Wait for a minutes plz...");
+                dlg.setCancelable(false); //Whether dialog be cancelled by other ways or not.
+                //
+                dlg.setOnShowListener(new DialogInterface.OnShowListener() {
+                    @Override
+                    public void onShow(final DialogInterface dialog) {
+                        Timer timer = new Timer();
+                        TimerTask task = new TimerTask() {
+                            @Override
+                            public void run() {
+                                dialog.dismiss();
+                            }
+                        };
+                        timer.schedule(task,3000);
+                    }
+                });
+                dlg.show();
+            }
+        });
+    }
+}
+{% endhighlight %}
+
+## Menu Demo
+在 Activity 中使用菜单，需要完成以下工作：
+1. 使用 xml 文件定义菜单
+2. 在 Activity 中关联菜单
+3. 定义各个菜单选项的响应代码
+
+通过创建 MenuDemo 来实现点击右上角弹出菜单，每点击一个选项会显示相应 Toast。  
+![](https://github.com/jallenlau/picture/blob/master/post-images/1560772245055.png?raw=true)
+### mainmenu.xml
+首先在 res 目录添加 menu 目录，并新建 Menu resources file 添加一个 xml 文件。
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuitem1"
+        android:title="Menu1"/>
+    <item android:id="@+id/menuitem2"
+        android:title="Menu2"/>
+    <item android:id="@+id/menuitem3"
+        android:title="Menu3"/>
+</menu>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.menudemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    //Context menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mi = getMenuInflater();
+        mi.inflate(R.menu.mainmenu,menu);
+        return true;
+    }
+
+    //Response menu item
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.menuitem1:
+            {
+                Toast.makeText(this,"MenuItem 1",Toast.LENGTH_SHORT).show();
+            } break;
+            case R.id.menuitem2:
+            {
+                Toast.makeText(this,"MenuItem 2",Toast.LENGTH_SHORT).show();
+            } break;
+            case R.id.menuitem3:
+            {
+                Toast.makeText(this,"MenuItem 3",Toast.LENGTH_SHORT).show();
+            } break;
+        }
+        return true;
+    }
+}
+{% endhighlight %}
+
+## Radio Button
+实现单选组 RadioGroup，并且显示相应 Toast。  
+![](https://github.com/jallenlau/picture/blob/master/post-images/1560775280319.png?raw=true)
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Sex"/>
+
+    <RadioGroup android:id="@+id/rg_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <RadioButton android:id="@+id/sex_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secret"
+        android:checked="true"/>
+    <RadioButton android:id="@+id/sex_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boy"/>
+    <RadioButton android:id="@+id/sex_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Girl"/>
+    </RadioGroup>
+
+    <Button android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 1"/>
+
+</LinearLayout>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.radiobuttondemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    RadioGroup rgSex;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        rgSex = (RadioGroup)findViewById(R.id.rg_sex);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int rdoId = rgSex.getCheckedRadioButtonId();
+
+//Simplified step
+//通过 RadioGroup 对象的 getCheckedRadioButtonId() 方法获取已选中 RadioButton 对象的 ID。然后，通过ID的比较显示相应的内容。
+  //   RadioButton rdo = (RadioButton)findViewById(rdoId);
+  //   Toast t = Toast.makeText(MainActivity.this, rdo.getText(), Toast.LENGTH_SHORT);
+  //   t.show();
+
+                String msg;
+                switch (rdoId)
+                {
+                    case R.id.sex_1:msg="Boy";break;
+                    case R.id.sex_2:msg="Girl";break;
+                    default:msg="Secret";break;
+                }
+                Toast t = Toast.makeText(MainActivity.this,msg,Toast.LENGTH_SHORT);
+                t.show();
+            }
+        });
+    }
+}
+{% endhighlight %}
+
+### 其他方法
+通过 RadioGroup 的 OnCheckedChangeListener 事件响应选项改变时的操作。  
+activity_main.xml 不变，更改 MainActivity.java。
+
+{% highlight ruby %}
+package com.example.radiobuttondemo;
+
+import android.support.annotation.IdRes;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    RadioGroup rgSex;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        rgSex = (RadioGroup)findViewById(R.id.rg_sex);
+        //
+        rgSex.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group,@IdRes int checkedId) {
+                RadioButton rdo = (RadioButton)findViewById(checkedId);
+                Toast t = Toast.makeText(MainActivity.this,rdo.getText(),Toast.LENGTH_SHORT);
+                t.show();
+            }
+        });
+    }
+}
+{% endhighlight %}
+
+## Check Box Demo
+CheckBox 称为复选框，用于定义“开/关”状态。
+本 Demo 实现复选框，并显示选中内容的 TextView。  
+![](https://github.com/jallenlau/picture/blob/master/post-images/1560848821585.png?raw=true)
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox android:id="@+id/chk1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Economic"/>
+
+    <CheckBox android:id="@+id/chk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car"/>
+
+    <CheckBox android:id="@+id/chk3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"/>
+
+    <Button android:id="@+id/btn1"
+        android:text="Content of interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.checkboxdemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private int[] chkList = {R.id.chk1, R.id.chk2, R.id.chk3};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg = "";
+                for (int chkId : chkList)
+                {
+                    CheckBox chk = (CheckBox)findViewById(chkId);
+                    if (chk.isChecked()) msg = msg+" "+chk.getText();
+                }
+                TextView txt1 = (TextView)findViewById(R.id.txt1);
+                txt1.setText(msg);
+            }
+        });
+    }
+}
+{% endhighlight %}
+
+### 选中状态自动响应
+{% highlight ruby %}
+package com.example.checkboxdemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+
+    private int[] chkList = {R.id.chk1, R.id.chk2, R.id.chk3};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        for (int chkId : chkList) {
+            CheckBox chk = (CheckBox)findViewById(chkId);
+            chk.setOnCheckedChangeListener(this);
+        }
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg = "";
+                for (int chkId : chkList)
+                {
+                    CheckBox chk = (CheckBox)findViewById(chkId);
+                    if (chk.isChecked()) msg = msg + " " + chk.getText();
+                }
+                TextView txt1 = (TextView)findViewById(R.id.txt1);
+                txt1.setText(msg);
+            }
+        });
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView,boolean isChecked)
+    {
+        TextView txt1 = (TextView)findViewById(R.id.txt1);
+        String msg = buttonView.getText().toString();
+        if (isChecked) msg += "Selected";
+        else msg += "unSelected";
+        txt1.setText(msg);
+    }
+}
+{% endhighlight %}
+
+## Spinner Demo
+创建下拉列表，并设置多个选项，当选中某个选项后单击按钮 Button 1 可以显示相应 Toast。
+![](https://github.com/jallenlau/picture/blob/master/post-images/1561423900576.png?raw=true)
+![](https://github.com/jallenlau/picture/blob/master/post-images/1561423909799.png?raw=true)
+首先应该更改 app\res\values\strings.xml 文件，在其中创建下拉列表。
+### strings.xml
+{% highlight ruby %}
+<resources>
+    <string name="app_name">SpinnerDemo</string>
+
+    <string-array name="cities">
+        <item>Bejing</item>
+        <item>Shanghai</item>
+        <item>Tianjin</item>
+        <item>Chongqing</item>
+    </string-array>
+
+</resources>
+{% endhighlight %}
+
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button android:id="@+id/btn1"
+        android:text="Button 1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plz select city"/>
+
+    <Spinner android:id="@+id/city_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries=" @array/cities ">
+    </Spinner>
+
+</LinearLayout>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.spinnerdemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    private String[] cityNames;
+    private Spinner cityList;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //get city names
+        cityNames = getResources().getStringArray(R.array.cities);
+        cityList = (Spinner)findViewById(R.id.city_list);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int index = cityList.getSelectedItemPosition();
+                String name = cityNames[index];
+                //
+                String msg = String.format("%d : %s",index,name);
+                Toast t = Toast.makeText(MainActivity.this,msg,Toast.LENGTH_SHORT);
+                t.show();
+            }
+        });
+    }
+}
+{% endhighlight %}
+
+### OnItemSelected
+选择城市实现自动处理，需要修改如下。
+{% highlight ruby %}
+package com.example.spinnerdemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    private String[] cityNames;
+    private Spinner cityList;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //get city names
+        cityNames = getResources().getStringArray(R.array.cities);
+        cityList = (Spinner)findViewById(R.id.city_list);
+        //
+        cityList.setOnItemSelectedListener(this);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int index = cityList.getSelectedItemPosition();
+                String name = cityNames[index];
+                //
+                String msg = String.format("%d : %s",index,name);
+                Toast t = Toast.makeText(MainActivity.this,msg,Toast.LENGTH_SHORT);
+                t.show();
+            }
+        });
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+    {
+        String msg = String.format("%d : %s",position,cityNames[position]);
+        Toast t = Toast.makeText(MainActivity.this,msg,Toast.LENGTH_SHORT);
+        t.show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        //Nothing to do
+    }
+}
+{% endhighlight %}
+
+### Change Mode
+改变 Mode 属性为弹出对话框。  
+![](https://github.com/jallenlau/picture/blob/master/post-images/1561435944530.png?raw=true)
+仅需在 activity_main.xml 更改下列代码即可：
+{% highlight ruby %}
+<Spinner android:id="@+id/city_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries=" @array/cities "
+        android:spinnerMode="dialog">
+    </Spinner>
+{% endhighlight %}
+
+## Image View Demo
+注册图片的单击事件，根据 counter 字段是否为偶数来判断显示的图片，从而实现两张照片的切换。
+![](https://github.com/jallenlau/picture/blob/master/post-images/1561605200685.png?raw=true)
+![](https://github.com/jallenlau/picture/blob/master/post-images/1561605208626.png?raw=true)
+首先将 round.png 和 robot.png 复制到 app\res\drawable 目录中
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/robot"/> //属性设置为图片文件,使用 @drawable 表示
+
+</LinearLayout>
+{% endhighlight %}
+
+### MainActivity.java
+{% highlight ruby %}
+package com.example.imageviewdemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+    //Counter
+    private int counter = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //
+        ImageView img1 = (ImageView)findViewById(R.id.img1);
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageView img = (ImageView)v;
+                if (counter %2 == 0)
+                    img.setImageResource(R.drawable.round);
+                else
+                    img.setImageResource(R.drawable.robot);
+                counter++;
+            }
+        });
+    }
+}
+{% endhighlight %}

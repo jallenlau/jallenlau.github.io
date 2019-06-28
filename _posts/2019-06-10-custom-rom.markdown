@@ -5,10 +5,8 @@ date:   2019-06-10 22:41:23
 tags: 资源索引
 color: rgb(255,90,90)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/customrom.png?raw=true'
+subtitle: '第三方 Rom & MIUI 官改 官网索引'
 ---
-
-> 第三方 Rom & MIUI 官改 官网索引
-
 ## GSI img
 [GSI镜像汇总](https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list)  
 [Android Q 官方GSI镜像](https://developer.android.com/preview/gsi-release-notes)  
