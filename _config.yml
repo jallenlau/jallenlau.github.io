@@ -20,7 +20,7 @@ webtitle: "Marasati's Blog"
 bio: 'Life is based on algorithms.'
 about: true
 aboutyou: 'your introduction'
-portraits: '/assets/profile.jpeg' # your portraits image file path
+portraits: '/assets/avatar.png' # your portraits image file path
 
 # SNS
 SNS: true
