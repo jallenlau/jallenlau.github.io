@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Magisk介绍安装与模块推荐"
+title:  "Magisk 介绍安装与模块推荐"
 date:   2019-06-10 22:48:32
 tags: 资源索引
 color: rgb(255,90,90)

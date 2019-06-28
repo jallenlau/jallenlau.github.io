@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "安卓手机刷入GSI镜像教程"
+title:  "安卓手机刷入 GSI 镜像教程"
 date:   2019-06-10 22:36:21
 tags: 安卓刷机
 color: rgb(255,90,90)

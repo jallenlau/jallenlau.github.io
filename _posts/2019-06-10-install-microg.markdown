@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "microG安装教程"
-date:   2019-06-10 21:47:55
+title:  "microG 安装教程"
+date:   2019-06-10 22:42:48
 tags: microG&GApps
 color: rgb(255,90,90)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/microg_readme.jpg?raw=true'

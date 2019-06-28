@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ubuntu常见命令"
+title:  "Ubuntu 常见命令"
 date:   2019-06-11 10:55:59
 tags: Linux
 color: rgb(255,90,90)

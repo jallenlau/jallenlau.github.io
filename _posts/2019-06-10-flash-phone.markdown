@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "刷机及Root教程"
+title:  "刷机及 Root 教程"
 date:   2019-06-10 22:21:45
 tags: 安卓刷机
 color: rgb(255,90,90)

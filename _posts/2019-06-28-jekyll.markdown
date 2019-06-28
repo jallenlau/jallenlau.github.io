@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "借助jekyll搭建静态博客"
+title:  "借助 jekyll 搭建静态博客"
 date:   2019-06-28 15:20:21
 tags: 博客搭建
 color: rgb(255,90,90)

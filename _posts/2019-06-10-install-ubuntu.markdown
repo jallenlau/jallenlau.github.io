@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "安装Ubuntu"
+title:  "安装 Ubuntu"
 date:   2019-06-10 22:11:03
 tags: Linux
 color: rgb(255,90,90)
