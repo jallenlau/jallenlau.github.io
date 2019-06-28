@@ -1,0 +1,365 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Algorithms learn blog" />
+<meta name="keywords" content="algorithm , Android" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_manni.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>安卓手机刷入 GSI 镜像教程</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142191569-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142191569-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(255,90,90) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(255,90,90);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Marasati's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">关于我</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>关于我</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">安卓手机刷入 GSI 镜像教程</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(255,90,90);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/2019/06/11/custom-rom.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">刷机包资源索引</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">安卓手机刷入 GSI 镜像教程</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2019/06/11/flash-phone.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">刷机及 Root 教程</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/2019/06/11/custom-rom.html" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>上一篇<br><br>刷机包资源索引</span></a>
+    
+    
+      <a href="/2019/06/11/flash-phone.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>刷机及 Root 教程</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <blockquote>
+  <p>从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。</p>
+</blockquote>
+
+<h1 id="一gsi-镜像包介绍">一、gsi 镜像包介绍</h1>
+<p>GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。 自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新，成为了社区开发的一大福音。从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。</p>
+<h1 id="二gsi-镜像通刷包的特点">二、gsi 镜像通刷包的特点</h1>
+<p>优点是在机器还没有适配第三方 ROM 的时候，可以提前体验到类原生系统，体验原生系统的流畅简洁以及丰富的自定义。但同样存在不小的问题，由于此类镜像包没有针对具体机型进行优化，所以会存在部分问题，例如小米手机的四角弧度过大，gsi 镜像包刷入后状态栏会有不匹配，显示不完全的可能性以及相机无法拍照，即使可以拍照，相片质量也堪忧。</p>
+<h1 id="三gsi镜像包的刷入选择">三、gsi镜像包的刷入选择</h1>
+<p>gsi通刷包有很多种选择，也是由不同的国外大神负责维护，下面贴上几乎所有 gsi 通刷包（包括官方和非官方）的集合链接，请各位自行选择，选择包的种类请见下一章节。</p>
+
+<p><a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">点此跳转GitHub</a></p>
+<h1 id="四gsi镜像包类名的选择两类">四、gsi镜像包类名的选择（两类）</h1>
+<h3 id="出厂安卓版本是80及以下的手机">出厂安卓版本是8.0及以下的手机</h3>
+<h4 id="第一步">第一步</h4>
+<p>需要下载一个软件 Treble Check 检测，附上谷歌商店和酷安链接。</p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.kevintresuelo.treble">Treble Check（点击跳转Google play store）</a></p>
+
+<p><a href="https://www.coolapk.com/apk/com.kevintresuelo.treble">Treble Check（点击跳转酷安应用市场）</a></p>
+<h4 id="第二步">第二步</h4>
+<p>打开软件查看检测结果，只有当 <strong>Project Treble</strong> 通过检测才表明此手机可以刷 gsi 镜像包。接着看第二项 <strong>Seamless System Updates</strong>，如果显示 <strong>A/B</strong> 即表明你应该选择的通刷包后缀名为 <em>A/B</em> 或者 <em>AB</em> 。若检测结果显示 <strong>A only</strong>，即表明你应该选择的通刷包后缀名为 <em>A</em> 或者 <em>A only</em>。</p>
+<h4 id="第三步">第三步</h4>
+<p>上网查找你所使用手机的内核名称，例如小米 9 SE 为 <strong>arm64</strong></p>
+
+<h3 id="出厂版本是安卓90版本的手机第二步关键">出厂版本是安卓9.0版本的手机（第二步关键）</h3>
+<h4 id="第一步-1">第一步</h4>
+<p>同上第一步，需要检测 <strong>Project Treble</strong> 是否支持</p>
+<h4 id="第二步-1">第二步</h4>
+<p>此处注意！凡是出厂版本为 9.0 的手机，无论 <strong>Seamless System Updates</strong> 检测结果如何，通刷包的版本一律选择 <strong>A/B</strong> 或 <strong>AB</strong>。</p>
+<h4 id="第三步-1">第三步</h4>
+<p>同上第三步。</p>
+
+<h1 id="五刷机步骤">五、刷机步骤</h1>
+<h3 id="自行完成">自行完成</h3>
+<p>自行刷入第三方 rec<br />
+自行下载好 gsi 解压后得到 img 镜像包</p>
+
+<h3 id="刷机前注意">刷机前注意</h3>
+<p>使用官方稳定ROM作为底包，不要使用开发版和任何官改版。</p>
+
+<h3 id="开始刷机">开始刷机</h3>
+<h4 id="方法一rec-刷入">方法一：Rec 刷入</h4>
+<h5 id="第一步-2">第一步</h5>
+<p>手机备份好重要资料后，重启至第三方 recovery TWRP, 并在<strong>高级</strong>中选择<strong>取消强制加密</strong>并选中两项后确认。</p>
+<h5 id="第二步-2">第二步</h5>
+<p>主页面选择<strong>清除</strong>，滑动下方滑块进行<strong>双清</strong>即可，不要自作多情，双清足够。</p>
+<h5 id="第三步-2">第三步</h5>
+<p>返回主页面，选择<strong>安装</strong>后，点击右下方<strong>刷入镜像</strong>，找到拷贝到手机里的<strong>img</strong>镜像包，选择后刷入<strong>System镜像</strong>分区内，等待结束后再次<strong>双清</strong>即可使用。</p>
+
+<h4 id="方法二fastboot-刷入">方法二：fastboot 刷入</h4>
+<blockquote>
+  <p><strong>此方法仅对小米手机有效</strong></p>
+  <h5 id="第一步-3">第一步</h5>
+  <ul>
+    <li>网络下载符合所使用机型的 vbmeta.img, 并将其拷贝到 platform-tools 文件夹内</li>
+    <li>下载 <a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">GSI</a> 包  (choose A/B one)</li>
+  </ul>
+</blockquote>
+
+<h5 id="第二步-3">第二步</h5>
+<p>adb依次输入以下命令</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">fastboot</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">verity</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">verification</span> <span class="n">flash</span> <span class="n">vbmeta</span> <span class="n">vbmeta</span><span class="p">.</span><span class="nf">img</span>
+<span class="n">fastboot</span> <span class="n">flash</span> <span class="nb">system</span> <span class="o">&lt;</span><span class="n">gsi</span><span class="o">-</span><span class="n">img</span><span class="o">&gt;</span>
+<span class="n">fastboot</span> <span class="o">-</span><span class="n">w</span>
+<span class="n">fastboot</span> <span class="n">reboot</span></code></pre></figure>
+
+<h1 id="六修复-gsi-可能存在的基础问题">六、修复 GSI 可能存在的基础问题</h1>
+<h3 id="修复自动亮度失效">修复自动亮度失效</h3>
+<ol>
+  <li>下载 <a href="https://drive.google.com/open?id=1DF-v-gwG1rQT-SbAZQYlTwFZFcOPKI9U">framework-res__auto_generated_rro.apk</a></li>
+  <li>用re管理器将其复制到 vendor/overlay 文件夹</li>
+  <li>修改 overlay 文件夹权限为 <code class="highlighter-rouge">rwxr-xr-x</code></li>
+  <li>手机打开 Termux 输入以下命令</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">mount</span> <span class="o">-</span><span class="n">o</span> <span class="n">remount</span> <span class="o">-</span><span class="n">w</span> <span class="sr">/vendor
+chcon u:object_r:vendor_overlay_file:s0 /</span><span class="n">vendor</span><span class="o">/</span><span class="n">overlay</span><span class="p">;</span><span class="n">chcon</span> <span class="n">u</span><span class="ss">:object_r:vendor_overlay_file:s0</span> <span class="o">/</span><span class="n">vendor</span><span class="o">/</span><span class="n">overlay</span><span class="o">/</span><span class="n">framework</span><span class="o">-</span><span class="n">res__auto_generated_rro</span><span class="p">.</span><span class="nf">apk</span></code></pre></figure>
+
+<h3 id="修复扬声器失真">修复扬声器失真</h3>
+<ol>
+  <li>手机下载 Root Explorer</li>
+  <li>删除两个文件夹
+    <blockquote>
+      <p>/system/vendor/lib/soundfx<br />
+/system/vendor/lib64/soundfx</p>
+    </blockquote>
+  </li>
+  <li>改变 vendor 文件夹的权限为  <code class="highlighter-rouge">rw-r--r--</code></li>
+  <li>重启手机</li>
+</ol>
+
+<h3 id="修复屏幕状态栏圆角">修复屏幕状态栏圆角</h3>
+<p>adb 输入以下命令(最后的数字根据自己喜好任意修改):</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">adb</span> <span class="n">shell</span> <span class="n">settings</span> <span class="n">put</span> <span class="n">secure</span> <span class="n">sysui_rounded_content_padding</span> <span class="mi">20</span></code></pre></figure>
+
+<h1 id="七系统的使用">七、系统的使用</h1>
+<p>完成以上步骤即可完成刷机工作，如过程中遇到问题，可以去负责维护相关镜像系统的GitHub反馈Issue。</p>
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDk1NS8yMTQ3NQ=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>Marasati ©
+  
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

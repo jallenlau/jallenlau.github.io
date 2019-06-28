@@ -1,0 +1,456 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Algorithms learn blog" />
+<meta name="keywords" content="algorithm , Android" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_manni.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>The Open GApps 各版本详细介绍</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142191569-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142191569-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(255,90,90) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(255,90,90);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Marasati's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">关于我</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>关于我</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">The Open GApps 各版本详细介绍</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(255,90,90);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/2019/06/11/twrp.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">TWRP 下载</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">The Open GApps 各版本详细介绍</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2019/06/11/mipay.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">提取小米钱包教程</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/2019/06/11/twrp.html" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>上一篇<br><br>TWRP 下载</span></a>
+    
+    
+      <a href="/2019/06/11/mipay.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>提取小米钱包教程</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <blockquote>
+  <p>pico、nano、micro、mini、full、stock、super 版本差异介绍。</p>
+</blockquote>
+
+<h2 id="pico">pico</h2>
+<p>此软件提供最小Gapps安装。在此软件包中，您将找到Google系统基础框架，Google Play商店，Google日历同步，拨号程序框架和以下Play商店应用程序：</p>
+<ul>
+  <li>Google Package Installer（替换stock/AOSP Package Installer）</li>
+  <li>Google Play Services</li>
+  <li>Google Text-to-Speech（谷歌文字转语音）</li>
+</ul>
+
+<h2 id="nano">nano</h2>
+<p>此套餐具有最小的Google足迹但仍享有“Okay Google”和Google搜索。 在此软件包中，您将找到核心Google系统库，Google Android共享服务，<strong>离线语音文件</strong>，Google Play商店，Google日历同步，<strong>媒体人脸检测</strong>，<strong>面部解锁</strong>，拨号程序框架和以下Play商店应用程序：</p>
+<ul>
+  <li><strong>Device Health Services（设备健康服务）</strong></li>
+  <li><strong>Google App（搜索）</strong></li>
+  <li>Google Package Installer（替换stock/AOSP Package Installer）</li>
+  <li>Google Play Services</li>
+  <li>Google Text-to-Speech（谷歌文字转语音）</li>
+</ul>
+
+<h2 id="micro">micro</h2>
+<p>此软件包专为系统分区较小的旧设备用户或喜欢简约的用户而设计。在此软件包中，您将找到核心Google系统包，Google Android共享服务，离线语音文件，Google Play商店，<strong>Google Exchange服务（替换stock/AOSP Exchange Services）</strong>，媒体人脸检测，面部解锁，拨号程序框架和以下Play商店应用程序：</p>
+<ul>
+  <li>Device Health Services（设备健康服务）</li>
+  <li><strong>Gmail</strong></li>
+  <li>Google App（搜索）</li>
+  <li><strong>Google Calendar（替换stock/AOSP自带日历）</strong></li>
+  <li><strong>Google Pixel Launcher</strong></li>
+  <li>Google Package Installer（替换stock/AOSP Package Installer）</li>
+  <li>Google Play Services</li>
+  <li>Google Text-to-Speech（谷歌文字转语音）</li>
+  <li>Pixel Wallpapers（谷歌壁纸）</li>
+  <li>Pixel Icons（谷歌图标）</li>
+  <li>Pixel Launcher（启动器）</li>
+</ul>
+
+<h2 id="mini">mini</h2>
+<p>此套餐拥有部分常用Google应用且可以自行安装余下应用。在此软件包中，您将找到核心Google系统包，Google Android共享服务，离线语音文件，Google Play商店，Google Exchange服务（替换stock/AOSP Exchange Services），媒体人脸检测，面部解锁，拨号程序框架和以下Play商店应用程序：</p>
+<ul>
+  <li>Device Health Services（设备健康服务）</li>
+  <li>Gmail</li>
+  <li>Google App（搜索）</li>
+  <li><strong>Google Calculator（谷歌计算器取代stock/AOSP自带计算器）</strong></li>
+  <li>Google Calendar（替换stock/AOSP自带日历）</li>
+  <li><strong>Google Clock（谷歌时钟替换stock/AOSP自带时钟）</strong></li>
+  <li><strong>Google Maps（谷歌地图）</strong></li>
+  <li><strong>Google Messages（平板电脑设备不安装）（替换库存/AOSP短信应用）</strong></li>
+  <li>Google Pixel Launcher</li>
+  <li>Google Package Installer（替换stock /AOSP Package Installer）</li>
+  <li><strong>Google Photos（相册替换stock/AOSP图库）</strong></li>
+  <li>Google Play Services</li>
+  <li><strong>Google Tags（谷歌标签（取代stock/AOSP NFC Tags）</strong></li>
+  <li>Google Text-to-Speech（谷歌文字转语音）</li>
+  <li>YouTube</li>
+</ul>
+
+<h2 id="full">full</h2>
+<p>此套餐与Stock套餐类似，不同之处在于它不包含Google相机和Google键盘，也不会删替换stock AOSP自带浏览器，相机，电子邮件，图库，启动器，键盘，短信应用，Pico TTS或WebView。
+如果您更喜欢使用stock/AOSP应用程序，则此套餐专为您而设计。在此软件包中，您将找到核心Google系统库，Google Android共享服务，离线语音文件，媒体人脸检测，面部解锁，Google Play商店，Google Exchange服务（替换stock/ AOSP Exchange Services），拨号程序框架和以下Play商店应用程序：</p>
+<ul>
+  <li><strong>Cloud Print（云打印）</strong></li>
+  <li>Device Health Services（设备健康服务）</li>
+  <li>Gmail（替换stock/AOSP电子邮件）</li>
+  <li>Google Accessibility Suite（TalkBack）</li>
+  <li>Google App（搜索）</li>
+  <li>Google Calendar（谷歌计算器取代stock/AOSP计算器）</li>
+  <li>Google Calendar（日历替换stock/AOSP日历）</li>
+  <li><strong>Google Chrome（谷歌浏览器替换stock/AOSP浏览器）</strong></li>
+  <li>Google Clock（谷歌时钟替换stock/AOSP时钟）</li>
+  <li><strong>Google Drive（云端硬盘）</strong></li>
+  <li><strong>Google Keep Notes</strong></li>
+  <li>Google Maps（谷歌地图）</li>
+  <li>Google Messages（在平板电脑设备上不安装）（替换stock/AOSP短信应用）</li>
+  <li><strong>Google News（谷歌新闻）</strong></li>
+  <li>Google Pixel Launcher</li>
+  <li>Google Package Installer（替换stock/AOSP Package Installer）</li>
+  <li>Google Photos（替换库存/ AOSP图库）</li>
+  <li><strong>Google Play Books（图书）</strong></li>
+  <li><strong>Google Play Games（游戏）</strong></li>
+  <li><strong>Google Play Movies&amp;TV（影视）</strong></li>
+  <li><strong>Google Play Music（音乐）</strong></li>
+  <li>Google Play Services</li>
+  <li>Google Tags（谷歌标签取代stock/AOSP NFC Tags）</li>
+  <li>Google Text-to-Speech（谷歌文字转语音）</li>
+  <li>YouTube</li>
+</ul>
+
+<h2 id="stock">stock</h2>
+<p>此套餐包括最新谷歌手机标配的所有Google应用。
+在此软件包中，您将找到核心Google系统库，Google Android共享服务，离线语音文件，媒体人脸检测，面部解锁，Google Play商店，Google Exchange Services（替换stock/AOSP Exchange Services），拨号程序框架和以下Play商店应用程序：</p>
+<ul>
+  <li><strong>Android Auto</strong></li>
+  <li><strong>Android System WebView（替换stock/AOSP WebView）</strong></li>
+  <li>Cloud Print（云打印）</li>
+  <li>Device Health Services（设备健康服务）</li>
+  <li>Gmail（替换stock/AOSP电子邮件）</li>
+  <li>Google Accessibility Suite（TalkBack）</li>
+  <li>Google App（搜索）</li>
+  <li>Google Calculator（计算器取代stock/AOSP计算器）</li>
+  <li>Google Calendar（日历替换stock/AOSP日历）</li>
+  <li><strong>Google Camera（相机替换stock/AOSP相机）</strong></li>
+  <li>Google Chrome（浏览器替换stock/AOSP浏览器）</li>
+  <li>Google Clock（时钟替换stock/AOSP时钟）</li>
+  <li><strong>Google Contacts（通讯录替换stock/AOSP通讯录）</strong></li>
+  <li>Google Drive（云端硬盘）</li>
+  <li><strong>Google Duo</strong></li>
+  <li>Google Keep Notes</li>
+  <li><strong>Google Keyboard（谷歌键盘替换stock/AOSP键盘）</strong></li>
+  <li>Google Maps（谷歌地图）</li>
+  <li>Google Messages（在平板电脑设备上不安装）（替换stock/AOSP短信应用）</li>
+  <li>Google News（谷歌新闻）</li>
+  <li>Google Pixel Launcher（替换stock/AOSP启动器）</li>
+  <li>Google Package Installer（替换stock/AOSP Package Installer）</li>
+  <li><strong>Google Pay</strong></li>
+  <li>Google Phone</li>
+  <li>Google Photos（相册替换stock/AOSP图库）</li>
+  <li>Google Play Books（图书）</li>
+  <li>Google Play Games（游戏）</li>
+  <li>Google Play Movies&amp;TV（影视）</li>
+  <li>Google Play Music（音乐）</li>
+  <li>Google Play Services</li>
+  <li><strong>Google Print Service Recommendation Service（打印推荐服务替换stock/AOSP）</strong></li>
+  <li><strong>Google Storage Manager（替换stock/AOSP存储管理器）</strong></li>
+  <li>Google Tags（谷歌标签取代stock/AOSP NFC Tags）</li>
+  <li>Google Text-to-Speech（文字转语音替换stock/AOSP文字转语音）</li>
+  <li><strong>Google VR</strong></li>
+  <li>Google Wallpapers（谷歌壁纸）</li>
+  <li>Pixel Icons（像素图标）</li>
+  <li>Pixel Launcher（替换stock/AOSP启动器）</li>
+  <li>YouTube</li>
+</ul>
+
+<h2 id="super">super</h2>
+<p>此套餐包括Google设备上提供的所有Google应用。
+在此软件包中，您将找到核心Google系统库，Google Android共享服务，离线语音文件，媒体人脸检测，面部解锁，Google Play商店，Google Exchange服务（替换stock/AOSP Exchange服务），拨号程序框架和以下Play商店应用程序：</p>
+<ul>
+  <li>Android Auto</li>
+  <li>Android System WebView（替换stock/AOSP WebView）</li>
+  <li>Cloud Print（云打印）</li>
+  <li>Device Health Services（设备健康服务）</li>
+  <li>Gmail（替换stock/AOSP电子邮件）</li>
+  <li>Google Accessibility Suite（TalkBack）</li>
+  <li>Google App（搜索）</li>
+  <li><strong>Google Apps Device Policy</strong></li>
+  <li>Google Calculator（计算器取代stock/AOSP计算器）</li>
+  <li>Google Calendar（日历替换stock/AOSP日历）</li>
+  <li>Google Camera（相机替换stock/AOSP相机）</li>
+  <li>Google Chrome（浏览器替换stock/AOSP浏览器）</li>
+  <li>Google Clock（时钟替换stock/AOSP时钟）</li>
+  <li>Google Contacts（通讯录替换stock/AOSP通讯录）</li>
+  <li>Google Drive（云端硬盘）</li>
+  <li>Google Duo</li>
+  <li><strong>Google Earth（谷歌地球）</strong></li>
+  <li><strong>Google Fit</strong></li>
+  <li><strong>Google Hangouts（环聊）</strong></li>
+  <li><strong>Google Indic Keyboard（谷歌印度键盘）</strong></li>
+  <li><strong>Google Japanese Input（谷歌日语输入）</strong></li>
+  <li>Google Keep Notes</li>
+  <li>Google Keyboard（谷歌键盘替换stock/AOSP键盘）</li>
+  <li><strong>Google Korean Input（谷歌韩语输入）</strong></li>
+  <li>Google Maps（谷歌地图）</li>
+  <li>Google Messages（在平板电脑设备上不安装）（替换stock/AOSP短信应用）</li>
+  <li>Google News（谷歌新闻）</li>
+  <li>Google Pixel Launcher（替换stock/AOSP启动器）</li>
+  <li>Google Package Installer（替换stock/AOSP Package Installer）</li>
+  <li>Google Pay</li>
+  <li>Google Phone</li>
+  <li>Google Photos（相册替换stock/AOSP图库）</li>
+  <li><strong>Google Pinyin Input（谷歌拼音输入法）</strong></li>
+  <li>Google Play Books（图书）</li>
+  <li>Google Play Games（游戏）</li>
+  <li>Google Play Movies&amp;TV（影视）</li>
+  <li>Google Play Music（音乐）</li>
+  <li>Google Play Services</li>
+  <li><strong>Google Plus</strong></li>
+  <li>Google Print Service Recommendation Service（打印推荐服务替换stock/AOSP）</li>
+  <li>Google Storage Manager（替换stock/AOSP存储管理器）</li>
+  <li><strong>Google Street View（谷歌街景）</strong></li>
+  <li>Google Tags（谷歌标签取代stock/AOSP NFC Tags）</li>
+  <li>Google Text-to-Speech（文字转语音替换stock/AOSP文字转语音）</li>
+  <li><strong>Google Translate（谷歌翻译）</strong></li>
+  <li>Google VR</li>
+  <li>Google Wallpapers（谷歌壁纸）</li>
+  <li><strong>Google Zhuyin Input（谷歌注音输入法）</strong></li>
+  <li>Pixel Icons（像素图标）</li>
+  <li>Pixel Launcher（替换stock/AOSP启动器）</li>
+  <li><strong>Project Fi</strong></li>
+  <li>YouTube</li>
+</ul>
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDk1NS8yMTQ3NQ=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>Marasati ©
+  
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

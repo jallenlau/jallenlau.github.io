@@ -1,0 +1,361 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Algorithms learn blog" />
+<meta name="keywords" content="algorithm , Android" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_manni.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Ubuntu 常见命令</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142191569-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142191569-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(255,90,90) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(255,90,90);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Marasati's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">关于我</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>关于我</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Ubuntu 常见命令</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(255,90,90);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/2019/06/12/blog.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">创建 GitHub Pages & 自定域名教程</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Ubuntu 常见命令</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2019/06/11/magisk.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">Magisk 介绍安装与模块推荐</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/2019/06/12/blog.html" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>上一篇<br><br>创建 GitHub Pages & 自定域名教程</span></a>
+    
+    
+      <a href="/2019/06/11/magisk.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>Magisk 介绍安装与模块推荐</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <blockquote>
+  <p>持续更新本人 Linux 学习过程中所需常见命令。</p>
+</blockquote>
+
+<h2 id="基础指令">基础指令</h2>
+<ol>
+  <li>列出文件夹名称。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#ls //列出当前路径下的全部文件夹名称</span>
+<span class="c1">#ls &lt;path&gt; //列出指定路径下的全部文件(夹)名称</span>
+<span class="c1">#ls root //列出相对路径root下的全部文件夹</span>
+<span class="c1">#ls /root //列出绝对路径root下的全部文件夹</span>
+<span class="c1">#ls -l &lt;path&gt; //以详细列表的形式列出路径下的所有文件夹</span>
+<span class="c1">#ls -a &lt;path&gt; //显示隐藏文件(夹)</span>
+<span class="c1">#ls -lh</span></code></pre></figure>
+
+<h2 id="替换源">替换源</h2>
+<ol>
+  <li>输入指令。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">cp</span> <span class="sr">/etc/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="nf">list</span> <span class="sr">/etc/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="nf">list</span><span class="p">.</span><span class="nf">bak</span> <span class="sr">//</span><span class="err">备份</span>
+<span class="n">sudo</span> <span class="n">vim</span>  <span class="sr">/etc/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="nf">list</span> <span class="sr">//</span><span class="err">打开</span><span class="n">list</span><span class="err">列表</span></code></pre></figure>
+
+<ol>
+  <li>替换阿里源。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">proposed</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">proposed</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span></code></pre></figure>
+
+<ol>
+  <li>按 ESC 退出，并输入<code class="highlighter-rouge">:wq</code>保存。</li>
+  <li>输入指令更新源。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span></code></pre></figure>
+
+<h2 id="安装">安装</h2>
+<ol>
+  <li>更新软件库</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span></code></pre></figure>
+
+<ol>
+  <li>安装软件</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
+
+<ol>
+  <li>通过关键词搜索软件库</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">search</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span></code></pre></figure>
+
+<h2 id="卸载">卸载</h2>
+<ol>
+  <li>删除软件及其配置文件。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="o">/</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">--</span><span class="n">purge</span> <span class="n">remove</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
+
+<ol>
+  <li>删除依赖包,保留配置文件。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">autoremove</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
+
+<ol>
+  <li>删除软件，不删除依赖包，保留配置文件。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">remove</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
+
+<ol>
+  <li>apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">autoclean</span></code></pre></figure>
+
+<h2 id="以最高权限开启文件管理">以最高权限开启文件管理</h2>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">nautilus</span></code></pre></figure>
+
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDk1NS8yMTQ3NQ=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>Marasati ©
+  
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

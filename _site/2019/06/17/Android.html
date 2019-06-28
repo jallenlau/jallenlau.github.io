@@ -1,0 +1,1167 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Algorithms learn blog" />
+<meta name="keywords" content="algorithm , Android" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_manni.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>安卓应用构建</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142191569-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142191569-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(255,90,90) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(255,90,90);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Marasati's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">关于我</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>关于我</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">安卓应用构建</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(255,90,90);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">安卓应用构建</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2019/06/12/blog.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">创建 GitHub Pages & 自定域名教程</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2019/06/12/blog.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>创建 GitHub Pages & 自定域名教程</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <blockquote>
+  <p>通过 Android Studio 逐步学习构建 APP。<br />
+持续更新，最后更新时间：2019.6.27。</p>
+</blockquote>
+
+<h2 id="简介">简介</h2>
+<p>安卓应用是按照 MVC 模式开发的，三个要素分别如下：</p>
+<ul>
+  <li>M（Model，模型）表示程序中的数组操作模型。</li>
+  <li>V（View，视图）如 activity_main.xml 布局文件可以看作用户界面，即视图的设计组件。</li>
+  <li>C（Controler，控制器）用于响应用户操作的部分，如 MainActivity 类，其中包含一个 Button 和一个 TextView，用户通过单击按钮进行操作，并通过文本显示操作结果，这就是控制器的基本功能。</li>
+</ul>
+
+<h2 id="方法">方法</h2>
+<p>利用 Android Studio 进行安卓应用的常用组件功能的实现，首先通过新建 New Project，创建新的Demo项目。<br />
+通过更改：<br />
+app/manifests/AndroidManifest.xml  <br />
+app/java/com.example.buttondemo/MainActivity.java  <br />
+app/layout/activity_main.xml</p>
+
+<p>进行基本功能的实现,以下为个人学习范例。</p>
+<h2 id="button-demo">Button Demo</h2>
+<p>界面线性分布三个按钮，并实现三个按钮分别显示 TextView，长按 Button1 震动反馈并显示 Toast，实现 Button2 识别 Touch 手势并显示 TextView。
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1560679993257.png?raw=true" alt="" /></p>
+<h3 id="androidmanifestxml">AndroidManifest.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">manifest</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">package</span><span class="o">=</span><span class="s2">"com.example.buttondemo"</span><span class="o">&gt;</span>
+    <span class="sr">//</span><span class="no">Vibrate</span>
+    <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="n">android</span><span class="p">:</span><span class="nb">name</span><span class="o">=</span><span class="s2">"android.permission.VIBRATE"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">application</span>
+        <span class="n">android</span><span class="ss">:allowBackup</span><span class="o">=</span><span class="s2">"true"</span>
+        <span class="n">android</span><span class="ss">:icon</span><span class="o">=</span><span class="s2">"@mipmap/ic_launcher"</span>
+        <span class="n">android</span><span class="ss">:label</span><span class="o">=</span><span class="s2">"@string/app_name"</span>
+        <span class="n">android</span><span class="ss">:roundIcon</span><span class="o">=</span><span class="s2">"@mipmap/ic_launcher_round"</span>
+        <span class="n">android</span><span class="ss">:supportsRtl</span><span class="o">=</span><span class="s2">"true"</span>
+        <span class="n">android</span><span class="ss">:theme</span><span class="o">=</span><span class="s2">"@style/AppTheme"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">activity</span> <span class="n">android</span><span class="ss">:name</span><span class="o">=</span><span class="s2">".MainActivity"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">intent</span><span class="o">-</span><span class="n">filter</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">action</span> <span class="n">android</span><span class="ss">:name</span><span class="o">=</span><span class="s2">"android.intent.action.MAIN"</span> <span class="o">/&gt;</span>
+                <span class="o">&lt;</span><span class="n">category</span> <span class="n">android</span><span class="ss">:name</span><span class="o">=</span><span class="s2">"android.intent.category.LAUNCHER"</span> <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="sr">/intent-filter&gt;
+        &lt;/</span><span class="n">activity</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/application&gt;
+
+&lt;/m</span><span class="n">anifest</span><span class="o">&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">buttondemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">content</span><span class="o">.</span><span class="no">Context</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Vibrator</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">MotionEvent</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">TextView</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="n">implements</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">,</span><span class="no">View</span><span class="o">.</span><span class="no">OnTouchListener</span><span class="p">,</span><span class="no">View</span><span class="o">.</span><span class="no">OnLongClickListener</span> <span class="p">{</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span><span class="no">Click</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span> <span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">)).</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span> <span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn2</span><span class="p">)).</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span> <span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn3</span><span class="p">)).</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="sr">//</span><span class="no">Touch</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn2</span><span class="p">)).</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn2</span><span class="p">)).</span><span class="nf">setOnTouchListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="sr">//</span><span class="no">Long</span> <span class="no">Click</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span> <span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">)).</span><span class="nf">setOnLongClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span> <span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn2</span><span class="p">)).</span><span class="nf">setOnLongClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="p">((</span><span class="no">Button</span><span class="p">)</span> <span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn3</span><span class="p">)).</span><span class="nf">setOnLongClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="sr">//</span><span class="no">Long</span> <span class="no">Click</span>
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">boolean</span> <span class="n">onLongClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="nf">getId</span><span class="p">()</span> <span class="o">==</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span> <span class="s2">"Long Press"</span><span class="p">,</span> <span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">();</span>
+            <span class="sr">//</span><span class="no">Vibrate</span>
+            <span class="no">Vibrator</span> <span class="n">vib</span> <span class="o">=</span> <span class="p">(</span><span class="no">Vibrator</span><span class="p">)</span> <span class="n">getSystemService</span><span class="p">(</span><span class="no">Context</span><span class="o">.</span><span class="no">VIBRATOR_SERVICE</span><span class="p">);</span>
+            <span class="n">vib</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kp">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sr">//</span><span class="no">Click</span>
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+        <span class="no">TextView</span> <span class="n">txt1</span> <span class="o">=</span> <span class="p">(</span><span class="no">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">txt1</span><span class="p">);</span>
+        <span class="n">switch</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="nf">getId</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">:</span> <span class="p">{</span>
+                <span class="n">txt1</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="s2">"Click Button 1"</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn2</span><span class="p">:</span> <span class="p">{</span>
+                <span class="n">txt1</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="s2">"Click Button 2"</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn3</span><span class="p">:</span> <span class="p">{</span>
+                <span class="n">txt1</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="s2">"Click Button 3"</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+    <span class="sr">//</span><span class="no">Touch</span>
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">boolean</span> <span class="n">onTouch</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">,</span> <span class="no">MotionEvent</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="nf">getId</span><span class="p">()</span> <span class="o">==</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn2</span><span class="p">)</span> <span class="p">{</span>
+             <span class="no">TextView</span> <span class="n">txt</span> <span class="o">=</span> <span class="p">(</span><span class="no">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">txt1</span><span class="p">);</span>
+             <span class="k">if</span> <span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="nf">getAction</span><span class="p">()</span><span class="o">==</span><span class="no">MotionEvent</span><span class="o">.</span><span class="no">ACTION_DOWN</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">txt</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="s2">"Finger Down"</span><span class="p">);</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="nf">getAction</span><span class="p">()</span><span class="o">==</span><span class="no">MotionEvent</span><span class="o">.</span><span class="no">ACTION_UP</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">txt</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="s2">"Finger Up"</span><span class="p">);</span>
+             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="nf">getAction</span><span class="p">()</span><span class="o">==</span><span class="no">MotionEvent</span><span class="o">.</span><span class="no">ACTION_MOVE</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="n">txt</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="s2">"Finger Moved"</span><span class="p">);</span>
+             <span class="p">}</span>
+         <span class="p">}</span>
+         <span class="k">return</span> <span class="kp">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="activity_mainxml">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">TextView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/txt1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button Demo"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button1"</span>
+        <span class="n">android</span><span class="ss">:textAllCaps</span><span class="o">=</span><span class="s2">"false"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn2"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button2"</span>
+        <span class="n">android</span><span class="ss">:textAllCaps</span><span class="o">=</span><span class="s2">"false"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn3"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button3"</span>
+        <span class="n">android</span><span class="ss">:textAllCaps</span><span class="o">=</span><span class="s2">"false"</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/LinearLayout&gt;</span></code></pre></figure>
+
+<h2 id="edit-text">Edit Text</h2>
+<p>实现单击按钮时，按钮的文本会显示为输入框的内容。<br />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1560683370656.png?raw=true" alt="" /></p>
+<h3 id="activity_mainxml-1">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">EditText</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/edit1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:textSize</span><span class="o">=</span><span class="s2">"25sp"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:textSize</span><span class="o">=</span><span class="s2">"25sp"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button1"</span>
+        <span class="n">android</span><span class="ss">:textAllCaps</span><span class="o">=</span><span class="s2">"false"</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/LinearLayout&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-1">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">edittext</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span>  <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">EditText</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="no">EditText</span> <span class="n">edit1</span> <span class="o">=</span> <span class="p">(</span><span class="no">EditText</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">edit1</span><span class="p">);</span>
+                <span class="no">Button</span> <span class="n">btn</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+                <span class="n">btn</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="n">edit1</span><span class="p">.</span><span class="nf">getText</span><span class="p">());</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="alert-dialog">Alert Dialog</h2>
+<p>创建包含两个选择按钮的 Dialog，点击时显示 Toast 且可以拓展操作。
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1560685820187.png?raw=true" alt="" /></p>
+<h3 id="activity_mainxml-2">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">constraint</span><span class="o">.</span><span class="no">ConstraintLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">xmlns</span><span class="p">:</span><span class="n">app</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res-auto"</span>
+    <span class="n">xmlns</span><span class="ss">:tools</span><span class="o">=</span><span class="s2">"http://schemas.android.com/tools"</span>
+    <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">tools</span><span class="ss">:context</span><span class="o">=</span><span class="s2">".MainActivity"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">TextView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/txt1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Hello World!"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintBottom_toBottomOf</span><span class="o">=</span><span class="s2">"parent"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintLeft_toLeftOf</span><span class="o">=</span><span class="s2">"parent"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintRight_toRightOf</span><span class="o">=</span><span class="s2">"parent"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintTop_toTopOf</span><span class="o">=</span><span class="s2">"parent"</span> <span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button1"</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/android.support.constraint.ConstraintLayout&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-2">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">alertdialogdemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AlertDialog</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">content</span><span class="o">.</span><span class="no">DialogInterface</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">Menu</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="n">implements</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span> <span class="p">{</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="nf">getId</span><span class="p">()</span> <span class="o">==</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="no">AlertDialog</span><span class="o">.</span><span class="no">Builder</span> <span class="n">dlg</span> <span class="o">=</span> <span class="n">new</span> <span class="no">AlertDialog</span><span class="o">.</span><span class="no">Builder</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">);</span>
+            <span class="n">dlg</span><span class="p">.</span><span class="nf">setTitle</span><span class="p">(</span><span class="s2">"Please confirm your decision."</span><span class="p">);</span>
+            <span class="n">dlg</span><span class="p">.</span><span class="nf">setMessage</span><span class="p">(</span><span class="s2">"Really?"</span><span class="p">);</span>
+            <span class="n">dlg</span><span class="p">.</span><span class="nf">setCancelable</span><span class="p">(</span><span class="kp">false</span><span class="p">);</span>
+            <span class="sr">//</span><span class="no">Confirm</span> <span class="no">Buttom</span>
+            <span class="n">dlg</span><span class="p">.</span><span class="nf">setPositiveButton</span><span class="p">(</span><span class="s2">"Confirm"</span><span class="p">,</span><span class="n">new</span> <span class="no">DialogInterface</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+                <span class="vi">@Override</span>
+                <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">DialogInterface</span> <span class="n">dialog</span><span class="p">,</span><span class="n">int</span> <span class="n">which</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="s2">"Confirm action"</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+            <span class="sr">//</span><span class="no">Cancel</span> <span class="n">action</span> <span class="n">button</span>
+            <span class="n">dlg</span><span class="p">.</span><span class="nf">setNegativeButton</span><span class="p">(</span><span class="s2">"Cancel"</span><span class="p">,</span><span class="n">new</span> <span class="no">DialogInterface</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+                <span class="vi">@Override</span>
+                <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">DialogInterface</span> <span class="n">dialog</span><span class="p">,</span><span class="n">int</span> <span class="n">which</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="s2">"Cancel action"</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+            <span class="n">dlg</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="progress-dialog">Progress Dialog</h2>
+<p>点击按钮，显示进程图标，并且设定3秒后自动关闭。<br />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1560737587963.png?raw=true" alt="" /></p>
+<h3 id="activity_mainxml-3">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">constraint</span><span class="o">.</span><span class="no">ConstraintLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">xmlns</span><span class="p">:</span><span class="n">app</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res-auto"</span>
+    <span class="n">xmlns</span><span class="ss">:tools</span><span class="o">=</span><span class="s2">"http://schemas.android.com/tools"</span>
+    <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">tools</span><span class="ss">:context</span><span class="o">=</span><span class="s2">".MainActivity"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">TextView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/txt1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Hello World!"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintBottom_toBottomOf</span><span class="o">=</span><span class="s2">"parent"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintLeft_toLeftOf</span><span class="o">=</span><span class="s2">"parent"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintRight_toRightOf</span><span class="o">=</span><span class="s2">"parent"</span>
+        <span class="n">app</span><span class="ss">:layout_constraintTop_toTopOf</span><span class="o">=</span><span class="s2">"parent"</span> <span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button1"</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/android.support.constraint.ConstraintLayout&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-3">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">progressdialog</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="nf">util</span><span class="o">.</span><span class="no">TimerTask</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="nf">util</span><span class="o">.</span><span class="no">Timer</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">ProgressDialog</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">content</span><span class="o">.</span><span class="no">DialogInterface</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="nf">util</span><span class="o">.</span><span class="no">TimerTask</span><span class="p">;</span>
+
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="no">ProgressDialog</span> <span class="n">dlg</span> <span class="o">=</span> <span class="n">new</span> <span class="no">ProgressDialog</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">);</span>
+                <span class="n">dlg</span><span class="p">.</span><span class="nf">setTitle</span><span class="p">(</span><span class="s2">"Program is on the way."</span><span class="p">);</span>
+                <span class="n">dlg</span><span class="p">.</span><span class="nf">setMessage</span><span class="p">(</span><span class="s2">"Wait for a minutes plz..."</span><span class="p">);</span>
+                <span class="n">dlg</span><span class="p">.</span><span class="nf">setCancelable</span><span class="p">(</span><span class="kp">false</span><span class="p">);</span> <span class="sr">//</span><span class="no">Whether</span> <span class="n">dialog</span> <span class="n">be</span> <span class="n">cancelled</span> <span class="n">by</span> <span class="n">other</span> <span class="n">ways</span> <span class="n">or</span> <span class="n">not</span><span class="p">.</span>
+                <span class="nf">/</span><span class="o">/</span>
+                <span class="n">dlg</span><span class="p">.</span><span class="nf">setOnShowListener</span><span class="p">(</span><span class="n">new</span> <span class="no">DialogInterface</span><span class="o">.</span><span class="no">OnShowListener</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="vi">@Override</span>
+                    <span class="kp">public</span> <span class="n">void</span> <span class="n">onShow</span><span class="p">(</span><span class="n">final</span> <span class="no">DialogInterface</span> <span class="n">dialog</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="no">Timer</span> <span class="n">timer</span> <span class="o">=</span> <span class="n">new</span> <span class="no">Timer</span><span class="p">();</span>
+                        <span class="no">TimerTask</span> <span class="n">task</span> <span class="o">=</span> <span class="n">new</span> <span class="no">TimerTask</span><span class="p">()</span> <span class="p">{</span>
+                            <span class="vi">@Override</span>
+                            <span class="kp">public</span> <span class="n">void</span> <span class="n">run</span><span class="p">()</span> <span class="p">{</span>
+                                <span class="n">dialog</span><span class="p">.</span><span class="nf">dismiss</span><span class="p">();</span>
+                            <span class="p">}</span>
+                        <span class="p">};</span>
+                        <span class="n">timer</span><span class="p">.</span><span class="nf">schedule</span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="mi">3000</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">});</span>
+                <span class="n">dlg</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="menu-demo">Menu Demo</h2>
+<p>在 Activity 中使用菜单，需要完成以下工作：</p>
+<ol>
+  <li>使用 xml 文件定义菜单</li>
+  <li>在 Activity 中关联菜单</li>
+  <li>定义各个菜单选项的响应代码</li>
+</ol>
+
+<p>通过创建 MenuDemo 来实现点击右上角弹出菜单，每点击一个选项会显示相应 Toast。<br />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1560772245055.png?raw=true" alt="" /></p>
+<h3 id="mainmenuxml">mainmenu.xml</h3>
+<p>首先在 res 目录添加 menu 目录，并新建 Menu resources file 添加一个 xml 文件。</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">menu</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">item</span> <span class="n">android</span><span class="p">:</span><span class="nb">id</span><span class="o">=</span><span class="s2">"@+id/menuitem1"</span>
+        <span class="n">android</span><span class="ss">:title</span><span class="o">=</span><span class="s2">"Menu1"</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">item</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/menuitem2"</span>
+        <span class="n">android</span><span class="ss">:title</span><span class="o">=</span><span class="s2">"Menu2"</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">item</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/menuitem3"</span>
+        <span class="n">android</span><span class="ss">:title</span><span class="o">=</span><span class="s2">"Menu3"</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="sr">/menu&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-4">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">menudemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">Menu</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">MenuInflater</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">MenuItem</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="sr">//</span><span class="no">Context</span> <span class="n">menu</span>
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">boolean</span> <span class="n">onCreateOptionsMenu</span><span class="p">(</span><span class="no">Menu</span> <span class="n">menu</span><span class="p">)</span> <span class="p">{</span>
+        <span class="no">MenuInflater</span> <span class="n">mi</span> <span class="o">=</span> <span class="n">getMenuInflater</span><span class="p">();</span>
+        <span class="n">mi</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">menu</span><span class="p">.</span><span class="nf">mainmenu</span><span class="p">,</span><span class="n">menu</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kp">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sr">//</span><span class="no">Response</span> <span class="n">menu</span> <span class="n">item</span>
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">boolean</span> <span class="n">onOptionsItemSelected</span><span class="p">(</span><span class="no">MenuItem</span> <span class="n">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">switch</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">getItemId</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">menuitem1</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="n">this</span><span class="p">,</span><span class="s2">"MenuItem 1"</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span> <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">menuitem2</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="n">this</span><span class="p">,</span><span class="s2">"MenuItem 2"</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span> <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">menuitem3</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="n">this</span><span class="p">,</span><span class="s2">"MenuItem 3"</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span> <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kp">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="radio-button">Radio Button</h2>
+<p>实现单选组 RadioGroup，并且显示相应 Toast。<br />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1560775280319.png?raw=true" alt="" /></p>
+<h3 id="activity_mainxml-4">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">TextView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/txt1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Select Sex"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">RadioGroup</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/rg_sex"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:orientation</span><span class="o">=</span><span class="s2">"horizontal"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="no">RadioButton</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/sex_0"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Secret"</span>
+        <span class="n">android</span><span class="ss">:checked</span><span class="o">=</span><span class="s2">"true"</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="no">RadioButton</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/sex_1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Boy"</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="no">RadioButton</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/sex_2"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Girl"</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/RadioGroup&gt;
+
+    &lt;Button android:id="@+id/</span><span class="n">btn1</span><span class="s2">"
+        android:layout_width="</span><span class="n">match_parent</span><span class="s2">"
+        android:layout_height="</span><span class="n">wrap_content</span><span class="s2">"
+        android:text="</span><span class="no">Button</span> <span class="mi">1</span><span class="s2">"/&gt;
+
+&lt;/LinearLayout&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-5">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">radiobuttondemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">RadioGroup</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="no">RadioGroup</span> <span class="n">rgSex</span><span class="p">;</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="n">rgSex</span> <span class="o">=</span> <span class="p">(</span><span class="no">RadioGroup</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">rg_sex</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">int</span> <span class="n">rdoId</span> <span class="o">=</span> <span class="n">rgSex</span><span class="p">.</span><span class="nf">getCheckedRadioButtonId</span><span class="p">();</span>
+
+<span class="sr">//</span><span class="no">Simplified</span> <span class="n">step</span>
+<span class="sr">//</span><span class="err">通过</span> <span class="no">RadioGroup</span> <span class="err">对象的</span> <span class="n">getCheckedRadioButtonId</span><span class="p">()</span> <span class="err">方法获取已选中</span> <span class="no">RadioButton</span> <span class="err">对象的</span> <span class="no">ID</span><span class="err">。然后，通过</span><span class="no">ID</span><span class="err">的比较显示相应的内容。</span>
+  <span class="sr">//</span>   <span class="no">RadioButton</span> <span class="n">rdo</span> <span class="o">=</span> <span class="p">(</span><span class="no">RadioButton</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">rdoId</span><span class="p">);</span>
+  <span class="sr">//</span>   <span class="no">Toast</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span> <span class="n">rdo</span><span class="p">.</span><span class="nf">getText</span><span class="p">(),</span> <span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">);</span>
+  <span class="sr">//</span>   <span class="n">t</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+
+                <span class="no">String</span> <span class="n">msg</span><span class="p">;</span>
+                <span class="n">switch</span> <span class="p">(</span><span class="n">rdoId</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">sex_1</span><span class="ss">:msg</span><span class="o">=</span><span class="s2">"Boy"</span><span class="p">;</span><span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">sex_2</span><span class="ss">:msg</span><span class="o">=</span><span class="s2">"Girl"</span><span class="p">;</span><span class="k">break</span><span class="p">;</span>
+                    <span class="n">default</span><span class="ss">:msg</span><span class="o">=</span><span class="s2">"Secret"</span><span class="p">;</span><span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="no">Toast</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="n">msg</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">);</span>
+                <span class="n">t</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="其他方法">其他方法</h3>
+<p>通过 RadioGroup 的 OnCheckedChangeListener 事件响应选项改变时的操作。<br />
+activity_main.xml 不变，更改 MainActivity.java。</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">radiobuttondemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">annotation</span><span class="o">.</span><span class="no">IdRes</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">RadioButton</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">RadioGroup</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="no">RadioGroup</span> <span class="n">rgSex</span><span class="p">;</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="n">rgSex</span> <span class="o">=</span> <span class="p">(</span><span class="no">RadioGroup</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">rg_sex</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="n">rgSex</span><span class="p">.</span><span class="nf">setOnCheckedChangeListener</span><span class="p">(</span><span class="n">new</span> <span class="no">RadioGroup</span><span class="o">.</span><span class="no">OnCheckedChangeListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onCheckedChanged</span><span class="p">(</span><span class="no">RadioGroup</span> <span class="n">group</span><span class="p">,</span><span class="vi">@IdRes</span> <span class="n">int</span> <span class="n">checkedId</span><span class="p">)</span> <span class="p">{</span>
+                <span class="no">RadioButton</span> <span class="n">rdo</span> <span class="o">=</span> <span class="p">(</span><span class="no">RadioButton</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">checkedId</span><span class="p">);</span>
+                <span class="no">Toast</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="n">rdo</span><span class="p">.</span><span class="nf">getText</span><span class="p">(),</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">);</span>
+                <span class="n">t</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="check-box-demo">Check Box Demo</h2>
+<p>CheckBox 称为复选框，用于定义“开/关”状态。
+本 Demo 实现复选框，并显示选中内容的 TextView。<br />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1560848821585.png?raw=true" alt="" /></p>
+<h3 id="activity_mainxml-5">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">CheckBox</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/chk1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Economic"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">CheckBox</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/chk2"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Car"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">CheckBox</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/chk3"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Music"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn1"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Content of interest"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span> <span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">TextView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/txt1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span> <span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/LinearLayout&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-6">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">checkboxdemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">CheckBox</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">TextView</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="kp">private</span> <span class="n">int</span><span class="p">[]</span> <span class="n">chkList</span> <span class="o">=</span> <span class="p">{</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">chk1</span><span class="p">,</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">chk2</span><span class="p">,</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">chk3</span><span class="p">};</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="no">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">int</span> <span class="n">chkId</span> <span class="p">:</span> <span class="n">chkList</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="no">CheckBox</span> <span class="n">chk</span> <span class="o">=</span> <span class="p">(</span><span class="no">CheckBox</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">chkId</span><span class="p">);</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">chk</span><span class="p">.</span><span class="nf">isChecked</span><span class="p">())</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">+</span><span class="s2">" "</span><span class="o">+</span><span class="n">chk</span><span class="p">.</span><span class="nf">getText</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="no">TextView</span> <span class="n">txt1</span> <span class="o">=</span> <span class="p">(</span><span class="no">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">txt1</span><span class="p">);</span>
+                <span class="n">txt1</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="选中状态自动响应">选中状态自动响应</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">checkboxdemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">CheckBox</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">CompoundButton</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">TextView</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="n">implements</span> <span class="no">CompoundButton</span><span class="o">.</span><span class="no">OnCheckedChangeListener</span> <span class="p">{</span>
+
+    <span class="kp">private</span> <span class="n">int</span><span class="p">[]</span> <span class="n">chkList</span> <span class="o">=</span> <span class="p">{</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">chk1</span><span class="p">,</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">chk2</span><span class="p">,</span> <span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">chk3</span><span class="p">};</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">int</span> <span class="n">chkId</span> <span class="p">:</span> <span class="n">chkList</span><span class="p">)</span> <span class="p">{</span>
+            <span class="no">CheckBox</span> <span class="n">chk</span> <span class="o">=</span> <span class="p">(</span><span class="no">CheckBox</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">chkId</span><span class="p">);</span>
+            <span class="n">chk</span><span class="p">.</span><span class="nf">setOnCheckedChangeListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="no">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">int</span> <span class="n">chkId</span> <span class="p">:</span> <span class="n">chkList</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="no">CheckBox</span> <span class="n">chk</span> <span class="o">=</span> <span class="p">(</span><span class="no">CheckBox</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="n">chkId</span><span class="p">);</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">chk</span><span class="p">.</span><span class="nf">isChecked</span><span class="p">())</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="n">chk</span><span class="p">.</span><span class="nf">getText</span><span class="p">();</span>
+                <span class="p">}</span>
+                <span class="no">TextView</span> <span class="n">txt1</span> <span class="o">=</span> <span class="p">(</span><span class="no">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">txt1</span><span class="p">);</span>
+                <span class="n">txt1</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">void</span> <span class="n">onCheckedChanged</span><span class="p">(</span><span class="no">CompoundButton</span> <span class="n">buttonView</span><span class="p">,</span><span class="n">boolean</span> <span class="n">isChecked</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="no">TextView</span> <span class="n">txt1</span> <span class="o">=</span> <span class="p">(</span><span class="no">TextView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">txt1</span><span class="p">);</span>
+        <span class="no">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">buttonView</span><span class="p">.</span><span class="nf">getText</span><span class="p">().</span><span class="nf">toString</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">isChecked</span><span class="p">)</span> <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"Selected"</span><span class="p">;</span>
+        <span class="k">else</span> <span class="n">msg</span> <span class="o">+=</span> <span class="s2">"unSelected"</span><span class="p">;</span>
+        <span class="n">txt1</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="spinner-demo">Spinner Demo</h2>
+<p>创建下拉列表，并设置多个选项，当选中某个选项后单击按钮 Button 1 可以显示相应 Toast。
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1561423900576.png?raw=true" alt="" />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1561423909799.png?raw=true" alt="" />
+首先应该更改 app\res\values\strings.xml 文件，在其中创建下拉列表。</p>
+<h3 id="stringsxml">strings.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">resources</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">string</span> <span class="nb">name</span><span class="o">=</span><span class="s2">"app_name"</span><span class="o">&gt;</span><span class="no">SpinnerDemo</span><span class="o">&lt;</span><span class="sr">/string&gt;
+
+    &lt;string-array name="cities"&gt;
+        &lt;item&gt;Bejing&lt;/i</span><span class="n">tem</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span><span class="no">Shanghai</span><span class="o">&lt;</span><span class="sr">/item&gt;
+        &lt;item&gt;Tianjin&lt;/i</span><span class="n">tem</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;</span><span class="no">Chongqing</span><span class="o">&lt;</span><span class="sr">/item&gt;
+    &lt;/s</span><span class="n">tring</span><span class="o">-</span><span class="n">array</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/resources&gt;</span></code></pre></figure>
+
+<h3 id="activity_mainxml-6">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn1"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button 1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span> <span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">TextView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/txt1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Plz select city"</span><span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Spinner</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/city_list"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:entries</span><span class="o">=</span><span class="s2">" @array/cities "</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/Spinner&gt;
+
+&lt;/</span><span class="no">LinearLayout</span><span class="o">&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-7">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">spinnerdemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Spinner</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="kp">private</span> <span class="no">String</span><span class="p">[]</span> <span class="n">cityNames</span><span class="p">;</span>
+    <span class="kp">private</span> <span class="no">Spinner</span> <span class="n">cityList</span><span class="p">;</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span><span class="n">get</span> <span class="n">city</span> <span class="n">names</span>
+        <span class="n">cityNames</span> <span class="o">=</span> <span class="n">getResources</span><span class="p">().</span><span class="nf">getStringArray</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">array</span><span class="p">.</span><span class="nf">cities</span><span class="p">);</span>
+        <span class="n">cityList</span> <span class="o">=</span> <span class="p">(</span><span class="no">Spinner</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">city_list</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">cityList</span><span class="p">.</span><span class="nf">getSelectedItemPosition</span><span class="p">();</span>
+                <span class="no">String</span> <span class="nb">name</span> <span class="o">=</span> <span class="n">cityNames</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+                <span class="sr">//</span>
+                <span class="no">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="no">String</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="s2">"%d : %s"</span><span class="p">,</span><span class="n">index</span><span class="p">,</span><span class="nb">name</span><span class="p">);</span>
+                <span class="no">Toast</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="n">msg</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">);</span>
+                <span class="n">t</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="onitemselected">OnItemSelected</h3>
+<p>选择城市实现自动处理，需要修改如下。</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">spinnerdemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">AdapterView</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Spinner</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="n">implements</span> <span class="no">AdapterView</span><span class="o">.</span><span class="no">OnItemSelectedListener</span> <span class="p">{</span>
+
+    <span class="kp">private</span> <span class="no">String</span><span class="p">[]</span> <span class="n">cityNames</span><span class="p">;</span>
+    <span class="kp">private</span> <span class="no">Spinner</span> <span class="n">cityList</span><span class="p">;</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span><span class="n">get</span> <span class="n">city</span> <span class="n">names</span>
+        <span class="n">cityNames</span> <span class="o">=</span> <span class="n">getResources</span><span class="p">().</span><span class="nf">getStringArray</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">array</span><span class="p">.</span><span class="nf">cities</span><span class="p">);</span>
+        <span class="n">cityList</span> <span class="o">=</span> <span class="p">(</span><span class="no">Spinner</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">city_list</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="n">cityList</span><span class="p">.</span><span class="nf">setOnItemSelectedListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">cityList</span><span class="p">.</span><span class="nf">getSelectedItemPosition</span><span class="p">();</span>
+                <span class="no">String</span> <span class="nb">name</span> <span class="o">=</span> <span class="n">cityNames</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+                <span class="sr">//</span>
+                <span class="no">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="no">String</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="s2">"%d : %s"</span><span class="p">,</span><span class="n">index</span><span class="p">,</span><span class="nb">name</span><span class="p">);</span>
+                <span class="no">Toast</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="n">msg</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">);</span>
+                <span class="n">t</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">void</span> <span class="n">onItemSelected</span><span class="p">(</span><span class="no">AdapterView</span><span class="o">&lt;</span><span class="sc">?&gt;</span> <span class="n">parent</span><span class="p">,</span> <span class="no">View</span> <span class="n">view</span><span class="p">,</span> <span class="n">int</span> <span class="n">position</span><span class="p">,</span> <span class="n">long</span> <span class="nb">id</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="no">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="no">String</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="s2">"%d : %s"</span><span class="p">,</span><span class="n">position</span><span class="p">,</span><span class="n">cityNames</span><span class="p">[</span><span class="n">position</span><span class="p">]);</span>
+        <span class="no">Toast</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="n">msg</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">);</span>
+        <span class="n">t</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">public</span> <span class="n">void</span> <span class="n">onNothingSelected</span><span class="p">(</span><span class="no">AdapterView</span><span class="o">&lt;</span><span class="sc">?&gt;</span> <span class="n">parent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="sr">//</span><span class="no">Nothing</span> <span class="n">to</span> <span class="k">do</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="change-mode">Change Mode</h3>
+<p>改变 Mode 属性为弹出对话框。<br />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1561435944530.png?raw=true" alt="" />
+仅需在 activity_main.xml 更改下列代码即可：</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="no">Spinner</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/city_list"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:entries</span><span class="o">=</span><span class="s2">" @array/cities "</span>
+        <span class="n">android</span><span class="ss">:spinnerMode</span><span class="o">=</span><span class="s2">"dialog"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/Spinner&gt;</span></code></pre></figure>
+
+<h2 id="image-view-demo">Image View Demo</h2>
+<p>注册图片的单击事件，根据 counter 字段是否为偶数来判断显示的图片，从而实现两张照片的切换。
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1561605200685.png?raw=true" alt="" />
+<img src="https://github.com/jallenlau/picture/blob/master/post-images/1561605208626.png?raw=true" alt="" />
+首先将 round.png 和 robot.png 复制到 app\res\drawable 目录中</p>
+<h3 id="activity_mainxml-7">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">ImageView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/img1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:src</span><span class="o">=</span><span class="s2">"@drawable/robot"</span><span class="o">/&gt;</span> <span class="sr">//</span><span class="err">属性设置为图片文件</span><span class="p">,</span><span class="err">使用</span> <span class="vi">@drawable</span> <span class="err">表示</span>
+
+<span class="o">&lt;</span><span class="sr">/LinearLayout&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-8">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">imageviewdemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">ImageView</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+    <span class="sr">//</span><span class="no">Counter</span>
+    <span class="kp">private</span> <span class="n">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">ImageView</span> <span class="n">img1</span> <span class="o">=</span> <span class="p">(</span><span class="no">ImageView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">img1</span><span class="p">);</span>
+        <span class="n">img1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="no">ImageView</span> <span class="n">img</span> <span class="o">=</span> <span class="p">(</span><span class="no">ImageView</span><span class="p">)</span><span class="n">v</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">counter</span> <span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">img</span><span class="p">.</span><span class="nf">setImageResource</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">drawable</span><span class="p">.</span><span class="nf">round</span><span class="p">);</span>
+                <span class="k">else</span>
+                    <span class="n">img</span><span class="p">.</span><span class="nf">setImageResource</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">drawable</span><span class="p">.</span><span class="nf">robot</span><span class="p">);</span>
+                <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDk1NS8yMTQ3NQ=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>Marasati ©
+  
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
