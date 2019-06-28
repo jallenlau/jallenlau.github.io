@@ -14,10 +14,10 @@ nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
 
 # 博主
 author: true
-name: 'your awesome name'
-NickName: 'your awesome nickname'
-webtitle: 'your awesome webtitle'
-bio: 'your awesome bio'
+name: 'Marasati'
+NickName: 'Jallen Lau'
+webtitle: 'Marasati的学习旅途'
+bio: 'Life is based on algorithms.'
 about: true
 aboutyou: 'your introduction'
 portraits: '/assets/profile.jpeg' # your portraits image file path
@@ -25,10 +25,10 @@ portraits: '/assets/profile.jpeg' # your portraits image file path
 # SNS
 SNS: true
 SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  mail: 'mailto:abc@gmail.com'
+  mail: 'jallenlau@outlook.com'
   weixin: '' # 你的微信二维码存放的地址
-  qq: '' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
-  github: ''
+  qq: 'http://wpa.qq.com/msgrd?v=3&uin=1050313195&site=qq&menu=yes' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
+  github: 'jallenlau'
   Codepen: ''
   weibo: ''
   instagram: ''
