@@ -25,8 +25,7 @@ portraits: '/assets/profile.jpeg' # your portraits image file path
 # SNS
 SNS: true
 SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  mail: 'jallenlau@outlook.com'
-  weixin: 'D:\jallenlau-master\jallenlau-master\assets\wechat.jpg' # 你的微信二维码存放的地址
+  weixin: 'https://github.com/jallenlau/jallenlau.github.io/blob/master/assets/wechat.jpg?raw=true' # 你的微信二维码存放的地址
   qq: 'http://wpa.qq.com/msgrd?v=3&uin=1050313195&site=qq&menu=yes' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
   github: 'https://github.com/jallenlau'
   # Codepen: ''
@@ -35,6 +34,7 @@ SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagr
   Twitter: 'https://twitter.com/JallenLau1997'
   # Dribbble: ''
   Facebook: 'https://www.facebook.com/jallenlau'
+  mail: 'jallenlau@outlook.com'
   # Google: ''
   # zhihu: ''
   # juejin: ''
