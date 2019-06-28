@@ -61,8 +61,8 @@ U盘插入电脑，开机选取U盘作为第一启动。
 ## 开机可能遇到的问题
 ### 画面自动旋转
 开机后快捷键 **Ctrl+alt+T**，打开 Terminal 终端，输入：
-```linux
+{% highlight ruby %}
 xrandr -o normal
-```
+{% endhighlight %}
 
 然后点击屏幕右上角快捷设置，锁定屏幕。

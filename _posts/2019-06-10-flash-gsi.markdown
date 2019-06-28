@@ -76,10 +76,10 @@ fastboot reboot
 2.  用re管理器将其复制到 vendor/overlay 文件夹
 3. 修改 overlay 文件夹权限为 `rwxr-xr-x`
 3. 手机打开 Termux 输入以下命令
-```linux
+{% highlight ruby %}
 mount -o remount -w /vendor
 chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay;chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay/framework-res__auto_generated_rro.apk
-```
+{% endhighlight %}
 
 ### 修复扬声器失真
 1. 手机下载 Root Explorer
@@ -91,9 +91,9 @@ chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay;chcon u:object_r:vendor_
 
 ### 修复屏幕状态栏圆角
 adb 输入以下命令(最后的数字根据自己喜好任意修改):  
-```linux
+{% highlight ruby %}
 adb shell settings put secure sysui_rounded_content_padding 20
-```
+{% endhighlight %}
 
 # 七、系统的使用
 完成以上步骤即可完成刷机工作，如过程中遇到问题，可以去负责维护相关镜像系统的GitHub反馈Issue。
