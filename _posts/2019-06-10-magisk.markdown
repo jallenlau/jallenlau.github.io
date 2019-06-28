@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Magisk介绍安装与模块推荐"
+date:   2019-06-10 22:48:32
+tags: 资源索引
+color: rgb(255,90,90)
+cover: 'https://github.com/jallenlau/picture/blob/master/post-images/magisk.png?raw=true'
+---
+# [Magisk官方GitHub](https://github.com/topjohnwu/Magisk)
+
+
+[每个 Android 玩家都不可错过的神器（一）：Magisk 初识与安装 ](http://sspai.com/post/53043)
+
+[每个 Android 玩家都不可错过的神器（二）：保留 Magisk 进行「无痛 OTA」](http://sspai.com/post/53075)
+
+[每个Android 玩家都不可错过的神器（三）：用好 Magisk Manager，骗过特定应用的 root 检测 ](https://sspai.com/post/53809)
+
+[每个 Android 玩家都不可错过的神器（四）：不刷机轻松换上好字体](https://sspai.com/post/53808)
+
+[开通 VoLTE 后发现 Pixel 手机不支持？装上这个 Magisk 模块就好了 ](https://sspai.com/post/53949)
+
+[装完 Magisk 不知道用什么？这些模块让你的手机好用又有个性](https://sspai.com/post/53999)
+
+[微信、支付宝指纹支付的 Magisk 模块已经出现，它们究竟适不适合你？](https://sspai.com/post/54139)
+
+#### 原文引自:少数派  

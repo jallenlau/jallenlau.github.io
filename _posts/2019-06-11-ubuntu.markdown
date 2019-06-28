@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "Ubuntu常见命令"
+date:   2019-06-11 10:55:59
+tags: Linux
+color: rgb(255,90,90)
+cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubuntu.png?raw=true'
+---
+
+> 持续更新本人 Linux 学习过程中所需常见命令。
+
+## 基础指令
+1.  列出文件夹名称。
+{% highlight ruby %}
+#ls //列出当前路径下的全部文件夹名称
+#ls <path> //列出指定路径下的全部文件(夹)名称
+#ls root //列出相对路径root下的全部文件夹
+#ls /root //列出绝对路径root下的全部文件夹
+#ls -l <path> //以详细列表的形式列出路径下的所有文件夹
+#ls -a <path> //显示隐藏文件(夹)
+#ls -lh
+{% endhighlight %}
+
+## 替换源
+1. 输入指令。
+{% highlight ruby %}
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
+sudo vim  /etc/apt/sources.list //打开list列表
+{% endhighlight %}
+2. 替换阿里源。
+{% highlight ruby %}
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+{% endhighlight %}
+3. 按 ESC 退出，并输入`:wq`保存。
+4. 输入指令更新源。
+{% highlight ruby %}
+sudo apt update
+sudo apt upgrade
+{% endhighlight %}
+
+## 安装
+1. 更新软件库  
+{% highlight ruby %}
+sudo apt-get update
+{% endhighlight %}
+2. 安装软件
+{% highlight ruby %}
+sudo apt-get install <package>
+{% endhighlight %}
+3. 通过关键词搜索软件库
+{% highlight ruby %}
+sudo apt search <key>
+{% endhighlight %}
+
+## 卸载
+1. 删除软件及其配置文件。
+{% highlight ruby %}
+apt-get purge / apt-get --purge remove <package>
+{% endhighlight %}
+2. 删除依赖包,保留配置文件。
+{% highlight ruby %}
+apt-get autoremove <package>
+{% endhighlight %}
+3. 删除软件，不删除依赖包，保留配置文件。
+{% highlight ruby %}
+apt-get remove <package>
+{% endhighlight %}
+4. apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
+{% highlight ruby %}
+apt-get autoclean
+{% endhighlight %}
+
+## 以最高权限开启文件管理
+{% highlight ruby %}
+sudo nautilus
+{% endhighlight %}

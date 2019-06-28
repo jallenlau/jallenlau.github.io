@@ -2,9 +2,9 @@
 layout: post
 title:  "microG安装教程"
 date:   2019-06-10 21:47:55
-tags: microG & GApps
+tags: microG&GApps
 color: rgb(255,90,90)
-cover: 'https://microg.org/img/microg_full_colored.svg'
+cover: 'https://github.com/jallenlau/picture/blob/master/post-images/microg_readme.jpg?raw=true'
 ---
 ## 下载卡刷包
 [点此下载](https://androidfilehost.com/?w=files&flid=198483) **NanoDroid-patcher** 和 **NanoDroid-microG** 两个卡刷包。
