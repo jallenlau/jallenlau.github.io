@@ -63,12 +63,12 @@ gsi通刷包有很多种选择，也是由不同的国外大神负责维护，�
 
 ##### 第二步  
 adb依次输入以下命令
-```linux
+{% highlight ruby %}
 fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
 fastboot flash system <gsi-img>
 fastboot -w
 fastboot reboot
-```
+{% endhighlight %}
 
 # 六、修复 GSI 可能存在的基础问题
 ### 修复自动亮度失效
