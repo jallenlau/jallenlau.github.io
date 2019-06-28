@@ -3,7 +3,7 @@ layout: post
 title:  "创建 GitHub Pages & 自定域名教程"
 date:   2019-06-11 21:17:42
 tags: 博客搭建
-color: rgb(255,90,90)
+color: rgb(000,142,116)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/githubpages.gif?raw=true'
 ---
 

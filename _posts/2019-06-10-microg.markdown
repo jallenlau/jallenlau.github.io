@@ -3,7 +3,7 @@ layout: post
 title:  "microG 介绍"
 date:   2019-06-10 22:42:47
 tags: microG&GApps
-color: rgb(255,90,90)
+color: rgb(000,142,116)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/microg_readme.jpg?raw=true'
 subtitle: 'microG 官网说明翻译'
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "microG 安装教程"
 date:   2019-06-10 22:42:48
 tags: microG&GApps
-color: rgb(255,90,90)
+color: rgb(000,142,116)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/microg_readme.jpg?raw=true'
 subtitle: 'microG 卡刷教程'
 ---

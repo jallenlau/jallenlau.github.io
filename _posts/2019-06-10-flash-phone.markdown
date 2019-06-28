@@ -3,7 +3,7 @@ layout: post
 title:  "刷机及 Root 教程"
 date:   2019-06-10 22:21:45
 tags: 安卓刷机
-color: rgb(255,90,90)
+color: rgb(236,224,052)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/flash_gsi.gif?raw=true'
 subtitle: '小米手机刷机及Root专用教程'
 ---

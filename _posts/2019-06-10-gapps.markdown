@@ -3,7 +3,7 @@ layout: post
 title:  "The Open GApps 各版本详细介绍"
 date:   2019-06-10 22:46:18
 tags: microG&GApps
-color: rgb(255,90,90)
+color: rgb(232,107,121)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/gapps_readme.png?raw=true'
 ---
 

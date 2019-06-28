@@ -3,7 +3,7 @@ layout: post
 title:  "刷机包资源索引"
 date:   2019-06-10 22:41:23
 tags: 资源索引
-color: rgb(255,90,90)
+color: rgb(233,084,107)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/customrom.png?raw=true'
 subtitle: '第三方 Rom & MIUI 官改 官网索引'
 ---
