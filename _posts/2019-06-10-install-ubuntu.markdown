@@ -4,7 +4,7 @@ title:  "安装Ubuntu"
 date:   2019-06-10 22:11:03
 tags: Linux
 color: rgb(255,90,90)
-cover: '../assets/test.png'
+cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubuntu.png?raw=true'
 subtitle: 'UEFI启动模式安装Ubuntu双系统'
 ---
 ## 准备
