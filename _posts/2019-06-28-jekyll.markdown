@@ -46,7 +46,9 @@ bundle exec jekyll serve
 
 ## 建立静态博客
 1. 登陆 [Jekyllthemes](http://jekyllthemes.org/) 下载主题模板。
+
 2. 修改 _config.yml 文件中的 URL 为自己的仓库。
+
 3. 解压缩到本地，在当前目录打开 Git Bash 同步到仓库
 ```
 bundle install
@@ -58,4 +60,5 @@ git commit -m "init"
 git remote add origin git@github.com:'你的用户名'.git
 git push -u origin master
 ```
+
 4 .建立完成!
