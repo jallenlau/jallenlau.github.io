@@ -43,7 +43,7 @@
 
 
 <!-- Android Lolipop Theme Color -->
-<meta name="theme-color" content=" rgb(255,90,90) ">
+<meta name="theme-color" content=" rgb(108,187,090) ">
 </head>
 <body>
 
@@ -51,7 +51,7 @@
 <a id="htmlup" name="htmlup"></a>
 <!-- 引入博文顶部选项 -->
 
-<header id="post-header" style="background-color:rgb(255,90,90);">
+<header id="post-header" style="background-color:rgb(108,187,090);">
   <div class="top-center">
       <div class="logo">
           <a href="/" title="my awesome webtitle" style="color: white;">Marasati's Blog</a>
@@ -108,12 +108,12 @@
 
 <!-- 版本二 可切换页面 -->
 
-<div class="post-top" style="background-color:rgb(255,90,90);">
+<div class="post-top" style="background-color:rgb(108,187,090);">
   <!-- 页面宽度大于800px -->
   <div class="left-area">
     
-      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
-      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">没有上一页咯</sapn></span></div>
+      <a href="/2019/06/28/jekyll.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(108,187,090)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(108,187,090);"><sapn class="main">借助 jekyll 搭建静态博客</sapn></span></div>
     
   </div>
   <div class="post-titlearea">
@@ -124,18 +124,18 @@
   </div>
   <div class="right-area">
     
-      <a href="/2019/06/12/blog.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
-      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">创建 GitHub Pages & 自定域名教程</sapn></span></div>
+      <a href="/2019/06/12/blog.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(108,187,090)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(108,187,090);"><sapn class="main">创建 GitHub Pages & 自定域名教程</sapn></span></div>
     
   </div>
 
   <!-- 页面宽度小于800px -->
   <div class="post-changearea">
     
-      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span><br>没有上一篇咯</span></a>
+      <a href="/2019/06/28/jekyll.html" class="leftchange" style="border-right: 1px solid rgb(108,187,090);border-bottom: 2px solid rgb(108,187,090);"><span>上一篇<br><br>借助 jekyll 搭建静态博客</span></a>
     
     
-      <a href="/2019/06/12/blog.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>创建 GitHub Pages & 自定域名教程</span></a>
+      <a href="/2019/06/12/blog.html" class="rightchange" style="border-left: 1px solid rgb(108,187,090);border-bottom: 2px solid rgb(108,187,090);"><span>下一篇<br><br>创建 GitHub Pages & 自定域名教程</span></a>
     
   </div>
 </div>
@@ -1047,6 +1047,63 @@ activity_main.xml 不变，更改 MainActivity.java。</p>
         <span class="p">});</span>
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
+
+<h2 id="list-view-demo">List View Demo</h2>
+<p>实现列表显示，点击显示响应 Toast。
+<img src="/assets/blog/1.png" alt="" /></p>
+<h3 id="activity_mainxml-8">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">ListView</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/lst1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;&lt;</span><span class="sr">/ListView&gt;
+
+&lt;/</span><span class="no">LinearLayout</span><span class="o">&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-9">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">listviewdemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">AdapterView</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">ArrayAdapter</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">ListView</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Toast</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="n">implements</span> <span class="no">AdapterView</span><span class="o">.</span><span class="no">OnItemClickListener</span> <span class="p">{</span>
+
+    <span class="sr">//</span><span class="no">List</span> <span class="n">data</span>
+    <span class="kp">private</span> <span class="no">String</span><span class="p">[]</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"aaa"</span><span class="p">,</span><span class="s2">"bbb"</span><span class="p">,</span><span class="s2">"ccc"</span><span class="p">,</span><span class="s2">"ddd"</span><span class="p">,</span><span class="s2">"eee"</span><span class="p">,</span><span class="s2">"fff"</span><span class="p">,</span><span class="s2">"ggg"</span><span class="p">,</span><span class="s2">"hhh"</span><span class="p">};</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//ini</span><span class="n">tialize</span> <span class="n">list</span>
+        <span class="no">ArrayAdapter</span><span class="o">&lt;</span><span class="no">String</span><span class="o">&gt;</span> <span class="n">ada</span> <span class="o">=</span> <span class="n">new</span> <span class="no">ArrayAdapter</span><span class="o">&lt;</span><span class="no">String</span><span class="o">&gt;</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span> <span class="n">android</span><span class="o">.</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">simple_list_item_1</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">ListView</span> <span class="n">lst1</span> <span class="o">=</span> <span class="p">(</span><span class="no">ListView</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">lst1</span><span class="p">);</span>
+        <span class="n">lst1</span><span class="p">.</span><span class="nf">setAdapter</span><span class="p">(</span><span class="n">ada</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="n">lst1</span><span class="p">.</span><span class="nf">setOnItemClickListener</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+    <span class="p">}</span>
+        <span class="sr">//</span><span class="no">Click</span>
+        <span class="vi">@Override</span>
+                <span class="kp">public</span> <span class="n">void</span> <span class="n">onItemClick</span><span class="p">(</span><span class="no">AdapterView</span><span class="o">&lt;</span><span class="sc">?&gt;</span> <span class="n">parent</span><span class="p">,</span> <span class="no">View</span> <span class="n">view</span><span class="p">,</span> <span class="n">int</span> <span class="n">position</span><span class="p">,</span> <span class="n">long</span> <span class="nb">id</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">id</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="no">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">int</span><span class="p">)</span> <span class="nb">id</span><span class="p">];</span>
+                <span class="no">Toast</span> <span class="n">t</span> <span class="o">=</span> <span class="no">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="no">MainActivity</span><span class="p">.</span><span class="nf">this</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="no">Toast</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">);</span>
+                <span class="n">t</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></figure>
 
 
   <!-- 引入share模块 -->

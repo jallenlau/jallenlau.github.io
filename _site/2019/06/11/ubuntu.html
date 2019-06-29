@@ -152,96 +152,87 @@
 
 <h2 id="基础指令">基础指令</h2>
 <ol>
-  <li>列出文件夹名称。</li>
+  <li>列出文件夹名称。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#ls //列出当前路径下的全部文件夹名称
+#ls &lt;path&gt; //列出指定路径下的全部文件(夹)名称
+#ls root //列出相对路径root下的全部文件夹
+#ls /root //列出绝对路径root下的全部文件夹
+#ls -l &lt;path&gt; //以详细列表的形式列出路径下的所有文件夹
+#ls -a &lt;path&gt; //显示隐藏文件(夹)
+#ls -lh
+</code></pre></div>    </div>
+  </li>
 </ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#ls //列出当前路径下的全部文件夹名称</span>
-<span class="c1">#ls &lt;path&gt; //列出指定路径下的全部文件(夹)名称</span>
-<span class="c1">#ls root //列出相对路径root下的全部文件夹</span>
-<span class="c1">#ls /root //列出绝对路径root下的全部文件夹</span>
-<span class="c1">#ls -l &lt;path&gt; //以详细列表的形式列出路径下的所有文件夹</span>
-<span class="c1">#ls -a &lt;path&gt; //显示隐藏文件(夹)</span>
-<span class="c1">#ls -lh</span></code></pre></figure>
 
 <h2 id="替换源">替换源</h2>
 <ol>
-  <li>输入指令。</li>
+  <li>输入指令。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
+sudo vim  /etc/apt/sources.list //打开list列表
+</code></pre></div>    </div>
+  </li>
+  <li>替换阿里源。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>按 ESC 退出，并输入<code class="highlighter-rouge">:wq</code>保存。</p>
+  </li>
+  <li>输入指令更新源。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+sudo apt upgrade
+</code></pre></div>    </div>
+  </li>
 </ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">cp</span> <span class="sr">/etc/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="nf">list</span> <span class="sr">/etc/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="nf">list</span><span class="p">.</span><span class="nf">bak</span> <span class="sr">//</span><span class="err">备份</span>
-<span class="n">sudo</span> <span class="n">vim</span>  <span class="sr">/etc/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="p">.</span><span class="nf">list</span> <span class="sr">//</span><span class="err">打开</span><span class="n">list</span><span class="err">列表</span></code></pre></figure>
-
-<ol>
-  <li>替换阿里源。</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">proposed</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">proposed</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
-<span class="n">deb</span><span class="o">-</span><span class="n">src</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">mirrors</span><span class="p">.</span><span class="nf">aliyun</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">trusty</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span></code></pre></figure>
-
-<ol>
-  <li>按 ESC 退出，并输入<code class="highlighter-rouge">:wq</code>保存。</li>
-  <li>输入指令更新源。</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span></code></pre></figure>
 
 <h2 id="安装">安装</h2>
 <ol>
-  <li>更新软件库</li>
+  <li>更新软件库
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+</code></pre></div>    </div>
+  </li>
+  <li>安装软件
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>通过关键词搜索软件库
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt search &lt;key&gt;
+</code></pre></div>    </div>
+  </li>
 </ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span></code></pre></figure>
-
-<ol>
-  <li>安装软件</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
-
-<ol>
-  <li>通过关键词搜索软件库</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">search</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span></code></pre></figure>
 
 <h2 id="卸载">卸载</h2>
 <ol>
-  <li>删除软件及其配置文件。</li>
+  <li>删除软件及其配置文件。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get purge / apt-get --purge remove &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>删除依赖包,保留配置文件。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get autoremove &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>删除软件，不删除依赖包，保留配置文件。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get remove &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get autoclean
+</code></pre></div>    </div>
+  </li>
 </ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="o">/</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">--</span><span class="n">purge</span> <span class="n">remove</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
-
-<ol>
-  <li>删除依赖包,保留配置文件。</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">autoremove</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
-
-<ol>
-  <li>删除软件，不删除依赖包，保留配置文件。</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">remove</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span></code></pre></figure>
-
-<ol>
-  <li>apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">autoclean</span></code></pre></figure>
 
 <h2 id="以最高权限开启文件管理">以最高权限开启文件管理</h2>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">nautilus</span></code></pre></figure>
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nautilus
+</code></pre></div></div>
 
   <!-- 引入share模块 -->
   

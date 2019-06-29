@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-28T17:46:35+08:00</updated><id>http://localhost:4000/</id><title type="html">Marasati</title><subtitle>Algorithms learn blog</subtitle><author><name>true</name></author><entry><title type="html">安卓应用构建</title><link href="http://localhost:4000/2019/06/17/Android.html" rel="alternate" type="text/html" title="安卓应用构建" /><published>2019-06-17T02:11:57+08:00</published><updated>2019-06-17T02:11:57+08:00</updated><id>http://localhost:4000/2019/06/17/Android</id><content type="html" xml:base="http://localhost:4000/2019/06/17/Android.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-29T16:45:32+08:00</updated><id>http://localhost:4000/</id><title type="html">Marasati</title><subtitle>Algorithms learn blog</subtitle><author><name>true</name></author><entry><title type="html">借助 jekyll 搭建静态博客</title><link href="http://localhost:4000/2019/06/28/jekyll.html" rel="alternate" type="text/html" title="借助 jekyll 搭建静态博客" /><published>2019-06-28T23:20:21+08:00</published><updated>2019-06-28T23:20:21+08:00</updated><id>http://localhost:4000/2019/06/28/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/06/28/jekyll.html">&lt;blockquote&gt;
+  &lt;p&gt;jekyll 工具搭建自定义静态博客经验教程，本人 Win10 专业版。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;安装及初始化&quot;&gt;安装及初始化&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装&lt;br /&gt;
+&lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;点此跳转&lt;/a&gt;按照官网安装指引完成必要组件的安装。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;换源&lt;br /&gt;
+打开 cmd 终端
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//RubyGems
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/  
+gem sources -l
+//确保只有 gems.ruby-china.com
+//NPM
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;校验安装&lt;br /&gt;
+打开 cmd 终端
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby -v
+npm -v
+bundle -v
+gem -v
+jekyll -v
+//以上显示出相应版本号及代表安装成功
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;新建初始模板
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new &amp;lt;Example&amp;gt;
+cd PATH:&amp;lt;Example&amp;gt;
+bundle install
+bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;复制终端网址即可临时预览博客效果。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;建立静态博客&quot;&gt;建立静态博客&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;登陆 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyllthemes&lt;/a&gt; 下载主题模板。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;修改 _config.yml 文件中的 URL 为自己的仓库。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;解压缩到本地，在当前目录打开 Git Bash 同步到仓库&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+bundle exec jekyll serve
+//如果成功运行即可进行下一步，如缺少必要组件应按照提示修正错误。
+git init
+git add -A .
+git commit -m &quot;init&quot;
+git remote add origin git@github.com:'你的用户名'.git
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;4 .建立完成!&lt;/p&gt;</content><author><name>true</name></author><category term="博客搭建" /><summary type="html">jekyll 工具搭建自定义静态博客经验教程，本人 Win10 专业版。</summary></entry><entry><title type="html">安卓应用构建</title><link href="http://localhost:4000/2019/06/17/Android.html" rel="alternate" type="text/html" title="安卓应用构建" /><published>2019-06-17T02:11:57+08:00</published><updated>2019-06-17T02:11:57+08:00</updated><id>http://localhost:4000/2019/06/17/Android</id><content type="html" xml:base="http://localhost:4000/2019/06/17/Android.html">&lt;blockquote&gt;
   &lt;p&gt;通过 Android Studio 逐步学习构建 APP。&lt;br /&gt;
 持续更新，最后更新时间：2019.6.27。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -898,7 +960,64 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
             &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>true</name></author><category term="Android架构学习" /><summary type="html">通过 Android Studio 逐步学习构建 APP。 持续更新，最后更新时间：2019.6.27。</summary></entry><entry><title type="html">创建 GitHub Pages &amp;amp; 自定域名教程</title><link href="http://localhost:4000/2019/06/12/blog.html" rel="alternate" type="text/html" title="创建 GitHub Pages &amp; 自定域名教程" /><published>2019-06-12T05:17:42+08:00</published><updated>2019-06-12T05:17:42+08:00</updated><id>http://localhost:4000/2019/06/12/blog</id><content type="html" xml:base="http://localhost:4000/2019/06/12/blog.html">&lt;blockquote&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;list-view-demo&quot;&gt;List View Demo&lt;/h2&gt;
+&lt;p&gt;实现列表显示，点击显示响应 Toast。
+&lt;img src=&quot;/assets/blog/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;activity_mainxml-8&quot;&gt;activity_main.xml&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1.0&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;LinearLayout&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xmlns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orientation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;vertical&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:layout_width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:layout_height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ListView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;@+id/lst1&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:layout_width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:layout_height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/ListView&amp;gt;
+
+&amp;lt;/&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;LinearLayout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;mainactivityjava-9&quot;&gt;MainActivity.java&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;listviewdemo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;support&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;v7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;AppCompatActivity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Bundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;AdapterView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ArrayAdapter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ListView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kp&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AdapterView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;OnItemClickListener&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;List&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;aaa&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bbb&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ccc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ddd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eee&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fff&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ggg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hhh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;vi&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;sr&quot;&gt;//ini&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tialize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;
+        &lt;span class=&quot;no&quot;&gt;ArrayAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ada&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ArrayAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MainActivity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;simple_list_item_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;
+        &lt;span class=&quot;no&quot;&gt;ListView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lst1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ListView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;lst1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lst1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setAdapter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ada&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lst1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setOnItemClickListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Click&lt;/span&gt;
+        &lt;span class=&quot;vi&quot;&gt;@Override&lt;/span&gt;
+                &lt;span class=&quot;kp&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onItemClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;AdapterView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;?&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;no&quot;&gt;Toast&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MainActivity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>true</name></author><category term="Android架构学习" /><summary type="html">通过 Android Studio 逐步学习构建 APP。 持续更新，最后更新时间：2019.6.27。</summary></entry><entry><title type="html">创建 GitHub Pages &amp;amp; 自定域名教程</title><link href="http://localhost:4000/2019/06/12/blog.html" rel="alternate" type="text/html" title="创建 GitHub Pages &amp; 自定域名教程" /><published>2019-06-12T05:17:42+08:00</published><updated>2019-06-12T05:17:42+08:00</updated><id>http://localhost:4000/2019/06/12/blog</id><content type="html" xml:base="http://localhost:4000/2019/06/12/blog.html">&lt;blockquote&gt;
   &lt;p&gt;本文详细介绍利用 Github Pages 搭建个人博客，以及自定义域名步骤。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -945,12 +1064,12 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;ul&gt;
     &lt;li&gt;名称 grus，类型 CNAME，TTL 输入600（10m），IPv4地址填写 &lt;code class=&quot;highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;名称 www，类型 CNAME，TTL 输入600（10m），IPv4地址填写 &lt;code class=&quot;highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt;
-      &lt;h3 id=&quot;第三步-1&quot;&gt;第三步&lt;/h3&gt;
-      &lt;p&gt;回到 GitHub 所建项目的 Settings，下滑找到 Github Pages，在 Custom domain 内填入购买的域名后点击 Save，下方 enforce https 是否勾选自行选择。&lt;/p&gt;
-    &lt;/li&gt;
+    &lt;li&gt;名称 www，类型 CNAME，TTL 输入600（10m），IPv4地址填写 &lt;code class=&quot;highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
+
+&lt;h3 id=&quot;第三步-1&quot;&gt;第三步&lt;/h3&gt;
+&lt;p&gt;回到 GitHub 所建项目的 Settings，下滑找到 Github Pages，在 Custom domain 内填入购买的域名后点击 Save，下方 enforce https 是否勾选自行选择。&lt;/p&gt;
 
 &lt;h3 id=&quot;建立完成&quot;&gt;建立完成&lt;/h3&gt;</content><author><name>true</name></author><category term="博客搭建" /><summary type="html">本文详细介绍利用 Github Pages 搭建个人博客，以及自定义域名步骤。</summary></entry><entry><title type="html">Ubuntu 常见命令</title><link href="http://localhost:4000/2019/06/11/ubuntu.html" rel="alternate" type="text/html" title="Ubuntu 常见命令" /><published>2019-06-11T18:55:59+08:00</published><updated>2019-06-11T18:55:59+08:00</updated><id>http://localhost:4000/2019/06/11/ubuntu</id><content type="html" xml:base="http://localhost:4000/2019/06/11/ubuntu.html">&lt;blockquote&gt;
   &lt;p&gt;持续更新本人 Linux 学习过程中所需常见命令。&lt;/p&gt;
@@ -958,95 +1077,87 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
 
 &lt;h2 id=&quot;基础指令&quot;&gt;基础指令&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;列出文件夹名称。&lt;/li&gt;
+  &lt;li&gt;列出文件夹名称。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#ls //列出当前路径下的全部文件夹名称
+#ls &amp;lt;path&amp;gt; //列出指定路径下的全部文件(夹)名称
+#ls root //列出相对路径root下的全部文件夹
+#ls /root //列出绝对路径root下的全部文件夹
+#ls -l &amp;lt;path&amp;gt; //以详细列表的形式列出路径下的所有文件夹
+#ls -a &amp;lt;path&amp;gt; //显示隐藏文件(夹)
+#ls -lh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#ls //列出当前路径下的全部文件夹名称&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#ls &amp;lt;path&amp;gt; //列出指定路径下的全部文件(夹)名称&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#ls root //列出相对路径root下的全部文件夹&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#ls /root //列出绝对路径root下的全部文件夹&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#ls -l &amp;lt;path&amp;gt; //以详细列表的形式列出路径下的所有文件夹&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#ls -a &amp;lt;path&amp;gt; //显示隐藏文件(夹)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#ls -lh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;替换源&quot;&gt;替换源&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;输入指令。&lt;/li&gt;
+  &lt;li&gt;输入指令。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
+sudo vim  /etc/apt/sources.list //打开list列表
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;替换阿里源。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;按 ESC 退出，并输入&lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;保存。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;输入指令更新源。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update
+sudo apt upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/etc/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/etc/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bak&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;备份&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vim&lt;/span&gt;  &lt;span class=&quot;sr&quot;&gt;/etc/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;打开&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;列表&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;替换阿里源。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;updates&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;proposed&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backports&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;security&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;updates&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;proposed&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;deb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;aliyun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ubuntu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backports&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restricted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;universe&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiverse&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;按 ESC 退出，并输入&lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;保存。&lt;/li&gt;
-  &lt;li&gt;输入指令更新源。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upgrade&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;更新软件库&lt;/li&gt;
+  &lt;li&gt;更新软件库
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;安装软件
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;通过关键词搜索软件库
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt search &amp;lt;key&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;安装软件&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;通过关键词搜索软件库&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;卸载&quot;&gt;卸载&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;删除软件及其配置文件。&lt;/li&gt;
+  &lt;li&gt;删除软件及其配置文件。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get purge / apt-get --purge remove &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;删除依赖包,保留配置文件。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get autoremove &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;删除软件，不删除依赖包，保留配置文件。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get remove &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get autoclean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;purge&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;purge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;删除依赖包,保留配置文件。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autoremove&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;删除软件，不删除依赖包，保留配置文件。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autoclean&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;以最高权限开启文件管理&quot;&gt;以最高权限开启文件管理&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nautilus&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>true</name></author><category term="Linux" /><summary type="html">持续更新本人 Linux 学习过程中所需常见命令。</summary></entry><entry><title type="html">Magisk 介绍安装与模块推荐</title><link href="http://localhost:4000/2019/06/11/magisk.html" rel="alternate" type="text/html" title="Magisk 介绍安装与模块推荐" /><published>2019-06-11T06:48:32+08:00</published><updated>2019-06-11T06:48:32+08:00</updated><id>http://localhost:4000/2019/06/11/magisk</id><content type="html" xml:base="http://localhost:4000/2019/06/11/magisk.html">&lt;blockquote&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nautilus
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="Linux" /><summary type="html">持续更新本人 Linux 学习过程中所需常见命令。</summary></entry><entry><title type="html">Magisk 介绍安装与模块推荐</title><link href="http://localhost:4000/2019/06/11/magisk.html" rel="alternate" type="text/html" title="Magisk 介绍安装与模块推荐" /><published>2019-06-11T06:48:32+08:00</published><updated>2019-06-11T06:48:32+08:00</updated><id>http://localhost:4000/2019/06/11/magisk</id><content type="html" xml:base="http://localhost:4000/2019/06/11/magisk.html">&lt;blockquote&gt;
   &lt;p&gt;Magisk~~~&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1359,88 +1470,4 @@ microg其他软件默认开启&lt;/li&gt;
 启用 Google Cloud Messaging&lt;br /&gt;
 启用 Google SafetyNet&lt;br /&gt;
 在 UnifiedNlp Settings 内全部勾选&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>true</name></author><category term="microG&amp;GApps" /><summary type="html">下载卡刷包 点此下载 NanoDroid-patcher 和 NanoDroid-microG 两个卡刷包。 第一步 刷入目标第三方 ROM（必须刷入不包含谷歌框架的系统包）。 第二步（推荐但不是必要的） 刷入Magisk。 如果安装了 Magisk，NanoDroid 将会被作为模块刷入，否则将会直接安装到/system 分区。</summary></entry><entry><title type="html">microG 介绍</title><link href="http://localhost:4000/2019/06/11/microg.html" rel="alternate" type="text/html" title="microG 介绍" /><published>2019-06-11T06:42:47+08:00</published><updated>2019-06-11T06:42:47+08:00</updated><id>http://localhost:4000/2019/06/11/microg</id><content type="html" xml:base="http://localhost:4000/2019/06/11/microg.html">&lt;h1 id=&quot;microg-介绍&quot;&gt;microG 介绍&lt;/h1&gt;
-&lt;p&gt;越来越多的 Library 和 API 仅适用于预先安装了各种 Google 应用的手机，从而有效地将第三方应用锁定到 Google 生态系统。出于这些原因，Android 被描述为“可远观而不可亵玩”的开放式。&lt;/p&gt;
-
-&lt;p&gt;此时microG项目诞生了——谷歌专有核心库和应用程序的免费软件克隆。
-用户获得了扩展的应用程序支持，可以减少或监控发送给 Google 的数据，旧款手机可以提高电池寿命。microG 不仅用于真实设备，还取代了测试模拟器中的 Google 工具，甚至用于虚拟移动基础设施。&lt;/p&gt;
-&lt;h1 id=&quot;组件&quot;&gt;组件&lt;/h1&gt;
-&lt;h2 id=&quot;service-core-gmscore&quot;&gt;Service Core (GmsCore)&lt;/h2&gt;
-&lt;p&gt;是一个库应用程序，给需通过谷歌服务或 Google Maps Android API（v2）才可运行的应用程序所需的功能特性。&lt;/p&gt;
-&lt;h3 id=&quot;概览&quot;&gt;概览&lt;/h3&gt;
-&lt;p&gt;microG GmsCore 是 Google Play 服务框架的免费开源实现方式。它允许调用专有 Google API 的应用程序在基于 AOSP 的 Rom（如 Replicant 和 LineageOS）上运行。作为闭源 Google Apps（GAPPS）的替代品，它是在享受 Android 核心功能的同时保护隐私的强大工具。&lt;/p&gt;
-&lt;h3 id=&quot;特征&quot;&gt;特征&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;选择加入 Google 服务并扩展应用程序支持&lt;br /&gt;
-(Opt-in to Google Services and extend application support)&lt;/li&gt;
-    &lt;li&gt;在线/离线定位服务&lt;br /&gt;
-(On-/Offline location service)&lt;/li&gt;
-    &lt;li&gt;易于使用电池，内存和CPU&lt;br /&gt;
-(Easy on battery, memory and CPU)&lt;/li&gt;
-    &lt;li&gt;没有多余软件&lt;br /&gt;
-(No bloatware)&lt;/li&gt;
-    &lt;li&gt;适用于真实设备，测试模拟器和虚拟移动基础设施&lt;br /&gt;
-(Works on real devices, test emulators and virtual mobile infrastructure)&lt;/li&gt;
-    &lt;li&gt;免费且开源（Apache 2.0许可）&lt;br /&gt;
-(Free and open source (Apache 2.0 licensed))
-      &lt;h3 id=&quot;系统要求&quot;&gt;系统要求&lt;/h3&gt;
-      &lt;p&gt;需要伪装签名，使 GmsCore 可以假装官方 Play 服务使其存在于需要调用 Google API 的应用程序。&lt;/p&gt;
-      &lt;h4 id=&quot;签名伪装&quot;&gt;签名伪装&lt;/h4&gt;
-      &lt;p&gt;您需要一个支持签名伪装的 Rom。一些自定义 Rom 需要安装补丁并且在手机内完成部分操作设置以支持。&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;CarbonROM&lt;br /&gt;
-MicroG will ask for Signature Spoofing authorization&lt;/li&gt;
-    &lt;li&gt;OmniROM 5&lt;br /&gt;
-Must be enabled at the bottom of the developer settings first.&lt;/li&gt;
-    &lt;li&gt;OmniROM 6/7&lt;br /&gt;
-Must be enabled in Settings&amp;gt;Apps&amp;gt;Advanced(gear icon)&amp;gt;Additional permissions&amp;gt;Spoof signature.&lt;/li&gt;
-    &lt;li&gt;MarshRom&lt;br /&gt;
-Must be enabled in Settings&amp;gt;Apps&amp;gt;Advanced(gear icon)&amp;gt;Additional permissions&amp;gt;Spoof signature.&lt;/li&gt;
-    &lt;li&gt;AospExtended&lt;br /&gt;
-Must be enabled in Settings&amp;gt;Apps&amp;gt;Advanced(gear icon)&amp;gt;App Permissions&amp;gt;Spoof package signature.&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://lineage.microg.org/&quot;&gt;LineageOS bundled with microG&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://forum.xda-developers.com/showpost.php?p=71042083&quot;&gt;其他自定义Rom的支持列表&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;p&gt;如果安装了Xposed Framework，以下模块可以开启签名伪装：&lt;a href=&quot;https://repo.xposed.info/module/com.thermatk.android.xf.fakegapps&quot;&gt;FakeGApps&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;还可以通过 &lt;a href=&quot;https://github.com/Nanolx/NanoDroid&quot;&gt;NanoDroid-patcher&lt;/a&gt; 修补自定义 Rom，无需任何计算机操作,它将自动修补每次更新的 Rom。&lt;/p&gt;
-
-  &lt;p&gt;如果你已Root，但没有使用Xposed，你可以尝试使用 &lt;a href=&quot;https://github.com/moosd/Needle&quot;&gt;Needle by moosd&lt;/a&gt;（或 &lt;a href=&quot;https://github.com/ale5000-git/tingle&quot;&gt;fork Tingle by ale5000&lt;/a&gt;）或 &lt;a href=&quot;https://github.com/Lanchon/haystack&quot;&gt;Haystack by Lanchon&lt;/a&gt; 修补你已经安装的 Rom。Haystack可以选择添加一个简单的UI来控制伪装，它类似于 OmniROM 5 的伪装方式。请注意，所有3个修补程序都要求修补的是 Rom 不是 odexed。&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;注意：microG GmsCore无法安装在拥有Google服务的设备上。&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing&quot;&gt;原文详情&lt;/a&gt;&lt;/p&gt;
-  &lt;h3 id=&quot;模块&quot;&gt;模块&lt;/h3&gt;
-  &lt;p&gt;GmsCore 包括统一网络位置提供程序模块（UnifiedNlp），用于处理对 Google 网络位置提供程序的应用程序调用。它依赖于必须单独安装的位置和地址查找后端。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/README.md&quot;&gt;参阅&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;对于完整的 microG 设置，可以安装PlayStore替换应用程序以及服务框架代理（GsfProxy）模块，以提供Google的推送消息服务。另请参见&lt;a href=&quot;https://github.com/microg/android_packages_apps_GmsCore/wiki/Installation&quot;&gt;安装&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;services-framework-proxy-gsfproxy&quot;&gt;Services Framework Proxy (GsfProxy)&lt;/h2&gt;
-&lt;p&gt;是一个辅助实用程序，允许为 Google Cloud to Device Messaging（C2DM）开发的应用程序使用 Gms Core 内附带的 Google Cloud Messaging Service。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;同上GmsCore&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;unified-network-location-provider-unifiednlp&quot;&gt;Unified Network Location Provider (UnifiedNlp)&lt;/h2&gt;
-&lt;p&gt;是一个库，可为使用 Google 网络位置的应用提供基于 Wi-Fi 和移动数据的地理定位。它包含在 GmsCore 中，但也可以在大多数 Android 系统上独立运行。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/README.md&quot;&gt;详情&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;maps-api-mapsv1&quot;&gt;Maps API (mapsv1)&lt;/h2&gt;
-&lt;p&gt;是一个系统库，提供与现已弃用的 Google Maps API（v1）相同的功能。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/microg/android_frameworks_mapsv1&quot;&gt;详情&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;下载&quot;&gt;下载&lt;/h1&gt;
-&lt;p&gt;提供了从 microG 项目下载 APK 文件索引。对于非APK组件，请参阅相应的文档。&lt;/p&gt;
-
-&lt;h4 id=&quot;f-droid存储库&quot;&gt;F-Droid存储库&lt;/h4&gt;
-&lt;p&gt;下载和更新 microG 项目组件的最佳方法是使用 F-Droid 存储库。它目前为 GmsCore 提供稳定的夜间更新以及 GsfProxy 和 FakeStore 发布。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://microg.org/download.html&quot;&gt;点此跳转下载界面&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;原文链接&quot;&gt;原文链接&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://microg.org/&quot;&gt;点此跳转&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="microG&amp;GApps" /><summary type="html">microG 介绍 越来越多的 Library 和 API 仅适用于预先安装了各种 Google 应用的手机，从而有效地将第三方应用锁定到 Google 生态系统。出于这些原因，Android 被描述为“可远观而不可亵玩”的开放式。</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name>true</name></author><category term="microG&amp;GApps" /><summary type="html">下载卡刷包 点此下载 NanoDroid-patcher 和 NanoDroid-microG 两个卡刷包。 第一步 刷入目标第三方 ROM（必须刷入不包含谷歌框架的系统包）。 第二步（推荐但不是必要的） 刷入Magisk。 如果安装了 Magisk，NanoDroid 将会被作为模块刷入，否则将会直接安装到/system 分区。</summary></entry></feed>
