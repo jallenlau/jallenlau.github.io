@@ -985,3 +985,78 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 {% endhighlight %}
+
+## Progress Bar Demo
+实现点击按钮显示条形进度条，并10秒后结束。
+![](/assets/blog/2.png)
+### activity_main.xml
+{% highlight ruby %}
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar android:id="@+id/pd1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 1"/>
+
+</LinearLayout>
+{% endhighlight %}
+### MainActivity.java
+{% highlight ruby %}
+package com.example.progressbardemo;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import static android.R.style.Widget;
+
+public class MainActivity extends AppCompatActivity {
+
+    ProgressBar pd1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //Progress Bar
+        pd1 = (ProgressBar)findViewById(R.id.pd1);
+        pd1.setProgress(0);
+        //
+        Button btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pd1.setProgress(0);
+                Timer timer = new Timer();
+                TimerTask task = new TimerTask() {
+                    @Override
+                    public void run() {
+                        int cur = pd1.getProgress();
+                        cur += 10;
+                        if (cur <= 100) {
+                            pd1.setProgress(cur);
+                        } else {
+                            this.cancel();
+                        }
+                    }
+                };
+                timer.scheduleAtFixedRate(task,0,1000);
+            }
+        });
+
+    }
+}
+{% endhighlight %}
