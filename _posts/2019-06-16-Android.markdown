@@ -8,7 +8,7 @@ cover: 'https://github.com/jallenlau/picture/blob/master/post-images/app_learn.g
 ---
 
 > 通过 Android Studio 逐步学习构建 APP。  
-> 持续更新，最后更新时间：2019.6.27。
+> 持续更新，最后更新时间：2019.6.29。
 
 ## 简介
 安卓应用是按照 MVC 模式开发的，三个要素分别如下：  
