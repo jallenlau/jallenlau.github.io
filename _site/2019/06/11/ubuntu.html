@@ -152,7 +152,7 @@
 
 <h2 id="基础指令">基础指令</h2>
 <ol>
-  <li>列出文件夹名称。
+  <li>ls 列出文件夹名称。
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#ls //列出当前路径下的全部文件夹名称
 #ls &lt;path&gt; //列出指定路径下的全部文件(夹)名称
 #ls root //列出相对路径root下的全部文件夹
@@ -162,6 +162,55 @@
 #ls -lh
 </code></pre></div>    </div>
   </li>
+  <li>cd &amp; pwd
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#pwd // Print Working Directory 打印当前工作路径
+#cd &lt;parh&gt; // Change Directory 切换当前工作目录
+#cd ~ //切换到当前用户的家目录
+ //#cd ~/apple
+</code></pre></div>    </div>
+  </li>
+  <li>mkdir 创建目录 Make Directory
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#mkdir &lt;path&gt;
+ //#mkdir newfolder
+ //#mkdir /root/newfolder
+#mkdir -p &lt;path&gt; //创建多层不存在目录
+ //#mkdir -p /root/newfolder/a/b/c/d
+#mkdir path1 path2 path3... //创建多个目录
+</code></pre></div>    </div>
+  </li>
+  <li>touch 创建文件
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#touch &lt;path&gt;
+ //#touch fold1.txt fold2.txt...
+</code></pre></div>    </div>
+  </li>
+  <li>cp 复制 Copy
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#cp &lt;copy path&gt; &lt;paste path&gt; //可以对新文件重命名
+#cp -r &lt;copy folder&gt; &lt;paste folder&gt; //复制文件夹，"- r" 表示递归复制
+</code></pre></div>    </div>
+  </li>
+  <li>mv 移动，重命名 move
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#mv &lt;move path&gt; &lt;paste path&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>rm 删除 remove
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#rm -f &lt;path&gt; //force remove
+#rm -r &lt;path&gt; //删除文件夹
+ //rm -rf &lt;path&gt;
+#rm -f linux* //删除具有公共特性的文件，*为通配符
+</code></pre></div>    </div>
+  </li>
+  <li>vim 文本编辑器
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#vim &lt;fold&gt; //文件存在与否均可
+         //Shift+: 按下 q 后回车即可退出
+</code></pre></div>    </div>
+  </li>
+  <li>储存重定向
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#正常执行的指令 &gt;/&gt;&gt; 文件的路径 //文件不存在则自动创建
+ //#ls -la &gt; ls.txt 覆盖
+ //#ls -la &gt;&gt; ls.txt 追加
+</code></pre></div>    </div>
+  </li>
+  <li>cat 直接打开文件</li>
 </ol>
 
 <h2 id="替换源">替换源</h2>

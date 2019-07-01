@@ -7,10 +7,10 @@ color: rgb(255,90,90)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubuntu.png?raw=true'
 ---
 
-> 持续更新本人 Linux 学习过程中所需常见命令。
+> 持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.1。
 
 ## 基础指令
-1.  列出文件夹名称。
+1. ls 列出文件夹名称。
 ```
 #ls //列出当前路径下的全部文件夹名称
 #ls <path> //列出指定路径下的全部文件(夹)名称
@@ -20,6 +20,65 @@ cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubu
 #ls -a <path> //显示隐藏文件(夹)
 #ls -lh
 ```
+
+2. cd & pwd
+```
+#pwd // Print Working Directory 打印当前工作路径
+#cd <parh> // Change Directory 切换当前工作目录
+#cd ~ //切换到当前用户的家目录
+    //#cd ~/apple
+```
+
+3. mkdir 创建目录 Make Directory
+```
+#mkdir <path>
+    //#mkdir newfolder
+    //#mkdir /root/newfolder
+#mkdir -p <path> //创建多层不存在目录
+    //#mkdir -p /root/newfolder/a/b/c/d
+#mkdir path1 path2 path3... //创建多个目录
+```
+
+4. touch 创建文件
+```
+#touch <path>
+    //#touch fold1.txt fold2.txt...
+```
+
+5. cp 复制 Copy
+```
+#cp <copy path> <paste path> //可以对新文件重命名
+#cp -r <copy folder> <paste folder> //复制文件夹，"- r" 表示递归复制
+```
+
+6. mv 移动，重命名 move
+```
+#mv <move path> <paste path>
+```
+
+7. rm 删除 remove
+```
+#rm -f <path> //force remove
+#rm -r <path> //删除文件夹
+    //rm -rf <path>
+#rm -f linux* //删除具有公共特性的文件，*为通配符
+```
+
+8. vim 文本编辑器
+```
+#vim <fold> //文件存在与否均可
+            //Shift+: 按下 q 后回车即可退出
+```
+
+9. 储存重定向
+```
+#正常执行的指令 >/>> 文件的路径 //文件不存在则自动创建
+    //#ls -la > ls.txt 覆盖
+    //#ls -la >> ls.txt 追加
+```
+
+10. cat 直接打开文件
+
 
 ## 替换源
 1. 输入指令。

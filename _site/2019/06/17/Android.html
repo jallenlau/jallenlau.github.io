@@ -148,7 +148,7 @@
   <!-- 文章内容 -->
   <blockquote>
   <p>通过 Android Studio 逐步学习构建 APP。<br />
-持续更新，最后更新时间：2019.6.27。</p>
+持续更新，最后更新时间：2019.6.29。</p>
 </blockquote>
 
 <h2 id="简介">简介</h2>
@@ -1104,6 +1104,80 @@ activity_main.xml 不变，更改 MainActivity.java。</p>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span></code></pre></figure>
+
+<h2 id="progress-bar-demo">Progress Bar Demo</h2>
+<p>实现点击按钮显示条形进度条，并10秒后结束。
+<img src="/assets/blog/2.png" alt="" /></p>
+<h3 id="activity_mainxml-9">activity_main.xml</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">?</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="no">LinearLayout</span> <span class="n">xmlns</span><span class="p">:</span><span class="n">android</span><span class="o">=</span><span class="s2">"http://schemas.android.com/apk/res/android"</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span> <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+    <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"match_parent"</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">ProgressBar</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/pd1"</span>
+        <span class="n">style</span><span class="o">=</span><span class="s2">"@style/Widget.AppCompat.ProgressBar.Horizontal"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span> <span class="o">/&gt;</span>
+
+    <span class="o">&lt;</span><span class="no">Button</span> <span class="n">android</span><span class="ss">:id</span><span class="o">=</span><span class="s2">"@+id/btn1"</span>
+        <span class="n">android</span><span class="ss">:layout_width</span><span class="o">=</span><span class="s2">"match_parent"</span>
+        <span class="n">android</span><span class="ss">:layout_height</span><span class="o">=</span><span class="s2">"wrap_content"</span>
+        <span class="n">android</span><span class="ss">:text</span><span class="o">=</span><span class="s2">"Button 1"</span><span class="o">/&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/LinearLayout&gt;</span></code></pre></figure>
+
+<h3 id="mainactivityjava-10">MainActivity.java</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">package</span> <span class="n">com</span><span class="p">.</span><span class="nf">example</span><span class="p">.</span><span class="nf">progressbardemo</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">support</span><span class="p">.</span><span class="nf">v7</span><span class="p">.</span><span class="nf">app</span><span class="o">.</span><span class="no">AppCompatActivity</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">os</span><span class="o">.</span><span class="no">Bundle</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">view</span><span class="o">.</span><span class="no">View</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">Button</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">android</span><span class="p">.</span><span class="nf">widget</span><span class="o">.</span><span class="no">ProgressBar</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="nf">util</span><span class="o">.</span><span class="no">Timer</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="nf">util</span><span class="o">.</span><span class="no">TimerTask</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">static</span> <span class="n">android</span><span class="o">.</span><span class="no">R</span><span class="p">.</span><span class="nf">style</span><span class="o">.</span><span class="no">Widget</span><span class="p">;</span>
+
+<span class="kp">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="no">AppCompatActivity</span> <span class="p">{</span>
+
+    <span class="no">ProgressBar</span> <span class="n">pd1</span><span class="p">;</span>
+
+    <span class="vi">@Override</span>
+    <span class="kp">protected</span> <span class="n">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="no">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">layout</span><span class="p">.</span><span class="nf">activity_main</span><span class="p">);</span>
+        <span class="sr">//</span><span class="no">Progress</span> <span class="no">Bar</span>
+        <span class="n">pd1</span> <span class="o">=</span> <span class="p">(</span><span class="no">ProgressBar</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">pd1</span><span class="p">);</span>
+        <span class="n">pd1</span><span class="p">.</span><span class="nf">setProgress</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="sr">//</span>
+        <span class="no">Button</span> <span class="n">btn1</span> <span class="o">=</span> <span class="p">(</span><span class="no">Button</span><span class="p">)</span><span class="n">findViewById</span><span class="p">(</span><span class="no">R</span><span class="p">.</span><span class="nf">id</span><span class="p">.</span><span class="nf">btn1</span><span class="p">);</span>
+        <span class="n">btn1</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">pd1</span><span class="p">.</span><span class="nf">setProgress</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                <span class="no">Timer</span> <span class="n">timer</span> <span class="o">=</span> <span class="n">new</span> <span class="no">Timer</span><span class="p">();</span>
+                <span class="no">TimerTask</span> <span class="n">task</span> <span class="o">=</span> <span class="n">new</span> <span class="no">TimerTask</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="vi">@Override</span>
+                    <span class="kp">public</span> <span class="n">void</span> <span class="n">run</span><span class="p">()</span> <span class="p">{</span>
+                        <span class="n">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">pd1</span><span class="p">.</span><span class="nf">getProgress</span><span class="p">();</span>
+                        <span class="n">cur</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="n">pd1</span><span class="p">.</span><span class="nf">setProgress</span><span class="p">(</span><span class="n">cur</span><span class="p">);</span>
+                        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                            <span class="n">this</span><span class="p">.</span><span class="nf">cancel</span><span class="p">();</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">};</span>
+                <span class="n">timer</span><span class="p">.</span><span class="nf">scheduleAtFixedRate</span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
 
   <!-- 引入share模块 -->
