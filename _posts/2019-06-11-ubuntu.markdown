@@ -10,7 +10,7 @@ cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubu
 > 持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.1。
 
 ## 基础指令
-1. ls 列出文件夹名称。
+1. ls
 ```
 #ls //列出当前路径下的全部文件夹名称
 #ls <path> //列出指定路径下的全部文件(夹)名称
@@ -29,9 +29,9 @@ cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubu
     //#cd ~/apple
 ```
 
-3. mkdir 创建目录 Make Directory
+3. mkdir (Make Directory)
 ```
-#mkdir <path>
+#mkdir <path> //创建目录
     //#mkdir newfolder
     //#mkdir /root/newfolder
 #mkdir -p <path> //创建多层不存在目录
@@ -39,24 +39,24 @@ cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubu
 #mkdir path1 path2 path3... //创建多个目录
 ```
 
-4. touch 创建文件
+4. touch
 ```
-#touch <path>
+#touch <path> //创建文件
     //#touch fold1.txt fold2.txt...
 ```
 
-5. cp 复制 Copy
+5. cp (Copy)
 ```
 #cp <copy path> <paste path> //可以对新文件重命名
 #cp -r <copy folder> <paste folder> //复制文件夹，"- r" 表示递归复制
 ```
 
-6. mv 移动，重命名 move
+6. mv (Move)
 ```
 #mv <move path> <paste path>
 ```
 
-7. rm 删除 remove
+7. rm (Remove)
 ```
 #rm -f <path> //force remove
 #rm -r <path> //删除文件夹
@@ -64,7 +64,7 @@ cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubu
 #rm -f linux* //删除具有公共特性的文件，*为通配符
 ```
 
-8. vim 文本编辑器
+8. vim
 ```
 #vim <fold> //文件存在与否均可
             //Shift+: 按下 q 后回车即可退出
@@ -77,8 +77,48 @@ cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubu
     //#ls -la >> ls.txt 追加
 ```
 
-、
+10. cat
+```
+#cat <path> //直接打开文件
+#cat <path1> <path2> ... <pathN> > <path> //合并文件
+```
 
+## 进阶指令
+1. df
+```
+#df -h //查看磁盘空间
+```
+
+2. free
+```
+#free -m/h //查看内存使用情况，-m 表示以 MB 为单位查看
+```
+swap 用于临时内存
+shared 用于共享内存
+
+3. head
+```
+#head -n abc.log //查看文件前 n 行，如果不指定，默认为10行
+```
+
+4. tail
+```
+#tail -n abc.log //查看文件末 n 行，如果不指定，默认为10行
+#tail -f <path> //查看文件动态变化
+```
+
+5. less
+```
+#less <path> //查看文件，以较少的内容进行输出，按下辅助功能键（数字+回车、空格+上下方向键）查看更多
+```
+
+6. wc
+```
+#wc -lwc //统计文件内容信息（包含行数、单词数、字节数）
+    //-l 行数
+    //-w 单词数
+    //-c 字节数
+```
 
 ## 替换源
 1. 输入指令。
