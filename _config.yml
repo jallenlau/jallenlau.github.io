@@ -25,7 +25,7 @@ portraits: '/assets/avatar.png' # your portraits image file path
 # SNS
 SNS: true
 SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  telegram: 'https://t.me/MARASATI'
+  mail: 'https://t.me/MARASATI'
   # weixin: 'https://github.com/jallenlau/jallenlau.github.io/blob/master/assets/wechat.jpg?raw=true' # 你的微信二维码存放的地址
   qq: 'http://wpa.qq.com/msgrd?v=3&uin=1050313195&site=qq&menu=yes' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
   github: 'https://github.com/jallenlau'
