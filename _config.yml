@@ -8,7 +8,7 @@ url: 'https://jallenlau.github.io' # your host
 nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
   首页: '/'
   标签: '/tags.html'
-  时间线: '/timeline.html'
+  时光机: '/timeline.html'
   关于我: '/about.html'
   友情链接: '/friendLink.html'
 
@@ -25,7 +25,7 @@ portraits: '/assets/avatar.png' # your portraits image file path
 # SNS
 SNS: true
 SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  mail: 'https://t.me/MARASATI'
+  telegram: 'https://t.me/MARASATI'
   # weixin: 'https://github.com/jallenlau/jallenlau.github.io/blob/master/assets/wechat.jpg?raw=true' # 你的微信二维码存放的地址
   qq: 'http://wpa.qq.com/msgrd?v=3&uin=1050313195&site=qq&menu=yes' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
   github: 'https://github.com/jallenlau'

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-01T11:16:03+08:00</updated><id>http://localhost:4000/</id><title type="html">Marasati</title><subtitle>Algorithms learn blog</subtitle><author><name>true</name></author><entry><title type="html">借助 jekyll 搭建静态博客</title><link href="http://localhost:4000/2019/06/28/jekyll.html" rel="alternate" type="text/html" title="借助 jekyll 搭建静态博客" /><published>2019-06-28T23:20:21+08:00</published><updated>2019-06-28T23:20:21+08:00</updated><id>http://localhost:4000/2019/06/28/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/06/28/jekyll.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-02T10:30:52+08:00</updated><id>http://localhost:4000/</id><title type="html">Marasati</title><subtitle>Algorithms learn blog</subtitle><author><name>true</name></author><entry><title type="html">借助 jekyll 搭建静态博客</title><link href="http://localhost:4000/2019/06/28/jekyll.html" rel="alternate" type="text/html" title="借助 jekyll 搭建静态博客" /><published>2019-06-28T23:20:21+08:00</published><updated>2019-06-28T23:20:21+08:00</updated><id>http://localhost:4000/2019/06/28/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/06/28/jekyll.html">&lt;blockquote&gt;
   &lt;p&gt;jekyll 工具搭建自定义静态博客经验教程，本人 Win10 专业版。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1146,12 +1146,12 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
 &lt;p&gt;回到 GitHub 所建项目的 Settings，下滑找到 Github Pages，在 Custom domain 内填入购买的域名后点击 Save，下方 enforce https 是否勾选自行选择。&lt;/p&gt;
 
 &lt;h3 id=&quot;建立完成&quot;&gt;建立完成&lt;/h3&gt;</content><author><name>true</name></author><category term="博客搭建" /><summary type="html">本文详细介绍利用 Github Pages 搭建个人博客，以及自定义域名步骤。</summary></entry><entry><title type="html">Ubuntu 常见命令</title><link href="http://localhost:4000/2019/06/11/ubuntu.html" rel="alternate" type="text/html" title="Ubuntu 常见命令" /><published>2019-06-11T18:55:59+08:00</published><updated>2019-06-11T18:55:59+08:00</updated><id>http://localhost:4000/2019/06/11/ubuntu</id><content type="html" xml:base="http://localhost:4000/2019/06/11/ubuntu.html">&lt;blockquote&gt;
-  &lt;p&gt;持续更新本人 Linux 学习过程中所需常见命令。&lt;/p&gt;
+  &lt;p&gt;持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.2。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;基础指令&quot;&gt;基础指令&lt;/h2&gt;
 &lt;ol&gt;
-  &lt;li&gt;ls 列出文件夹名称。
+  &lt;li&gt;ls
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#ls //列出当前路径下的全部文件夹名称
 #ls &amp;lt;path&amp;gt; //列出指定路径下的全部文件(夹)名称
 #ls root //列出相对路径root下的全部文件夹
@@ -1168,8 +1168,8 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
  //#cd ~/apple
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;mkdir 创建目录 Make Directory
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#mkdir &amp;lt;path&amp;gt;
+  &lt;li&gt;mkdir (Make Directory)
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#mkdir &amp;lt;path&amp;gt; //创建目录
  //#mkdir newfolder
  //#mkdir /root/newfolder
 #mkdir -p &amp;lt;path&amp;gt; //创建多层不存在目录
@@ -1177,28 +1177,28 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
 #mkdir path1 path2 path3... //创建多个目录
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;touch 创建文件
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#touch &amp;lt;path&amp;gt;
+  &lt;li&gt;touch
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#touch &amp;lt;path&amp;gt; //创建文件
  //#touch fold1.txt fold2.txt...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;cp 复制 Copy
+  &lt;li&gt;cp (Copy)
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#cp &amp;lt;copy path&amp;gt; &amp;lt;paste path&amp;gt; //可以对新文件重命名
 #cp -r &amp;lt;copy folder&amp;gt; &amp;lt;paste folder&amp;gt; //复制文件夹，&quot;- r&quot; 表示递归复制
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;mv 移动，重命名 move
+  &lt;li&gt;mv (Move)
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#mv &amp;lt;move path&amp;gt; &amp;lt;paste path&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;rm 删除 remove
+  &lt;li&gt;rm (Remove)
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#rm -f &amp;lt;path&amp;gt; //force remove
 #rm -r &amp;lt;path&amp;gt; //删除文件夹
  //rm -rf &amp;lt;path&amp;gt;
 #rm -f linux* //删除具有公共特性的文件，*为通配符
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;vim 文本编辑器
+  &lt;li&gt;vim
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#vim &amp;lt;fold&amp;gt; //文件存在与否均可
          //Shift+: 按下 q 后回车即可退出
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
@@ -1209,7 +1209,81 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
  //#ls -la &amp;gt;&amp;gt; ls.txt 追加
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;cat 直接打开文件&lt;/li&gt;
+  &lt;li&gt;cat
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#cat &amp;lt;path&amp;gt; //直接打开文件
+#cat &amp;lt;path1&amp;gt; &amp;lt;path2&amp;gt; ... &amp;lt;pathN&amp;gt; &amp;gt; &amp;lt;path&amp;gt; //合并文件
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;进阶指令&quot;&gt;进阶指令&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;df
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#df -h //查看磁盘空间
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;free
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#free -m/h //查看内存使用情况，-m 表示以 MB 为单位查看
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;swap 用于临时内存
+shared 用于共享内存&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;head
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#head -n abc.log //查看文件前 n 行，如果不指定，默认为10行
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;tail
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#tail -n abc.log //查看文件末 n 行，如果不指定，默认为10行
+#tail -f &amp;lt;path&amp;gt; //查看文件动态变化
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;一般用于查看系统日志&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;less
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#less &amp;lt;path&amp;gt; //查看文件，以较少的内容进行输出，按下辅助功能键（数字+回车、空格+上下方向键）查看更多
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;wc
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#wc -lwc //统计文件内容信息（包含行数、单词数、字节数）
+ //-l 行数
+ //-w 单词数
+ //-c 字节数
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;date
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#date //表示操作时间日期（读取、设置）
+#date +%F
+#date &quot;+%Y-%m-%d&quot; //输出形式：2019-07-02
+#date &quot;+%F %T&quot;
+#date &quot;+%Y-%m-%d %H:%M:%S&quot; //输出形式：2019-07-02 08:41:20
+#date -d &quot;-1 day&quot; &quot;+%Y-%m-%d %H:%M:%S&quot;
+#date -d &quot;-1 year&quot; &quot;+%Y-%m-%d %H:%M:%S&quot; //获取之前的时间
+#date -d &quot;+1 day&quot; &quot;+%Y-%m-%d %H:%M:%S&quot; //获取之后的时间
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;%F 表示完整的年月日&lt;br /&gt;
+%T 表示完整的时分秒&lt;br /&gt;
+%Y 表示四位年份&lt;br /&gt;
+%m 表示两位月份（带前导0）&lt;br /&gt;
+%d 表示日期（带前导0）&lt;br /&gt;
+%H 表示小时（带前导0）&lt;br /&gt;
+%M 表示分钟（带前导0）&lt;br /&gt;
+%S 表示秒数（带前导0）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cal
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#cal
+#cal -1 //直接输出当前月份日历
+#cal -3 //输出上月+本月+下月日历
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;clear/ctrl+L
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#clear/ctrl+L //清除(隐藏)终端中已经存在的信息
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;管道&lt;br /&gt;
+一般用于“过滤”、“特殊”、“拓展处理”。&lt;br /&gt;
+不能单独使用，主要是辅助作用。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#//
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;替换源&quot;&gt;替换源&lt;/h2&gt;
@@ -1280,7 +1354,7 @@ sudo apt upgrade
 
 &lt;h2 id=&quot;以最高权限开启文件管理&quot;&gt;以最高权限开启文件管理&lt;/h2&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nautilus
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="Linux" /><summary type="html">持续更新本人 Linux 学习过程中所需常见命令。</summary></entry><entry><title type="html">Magisk 介绍安装与模块推荐</title><link href="http://localhost:4000/2019/06/11/magisk.html" rel="alternate" type="text/html" title="Magisk 介绍安装与模块推荐" /><published>2019-06-11T06:48:32+08:00</published><updated>2019-06-11T06:48:32+08:00</updated><id>http://localhost:4000/2019/06/11/magisk</id><content type="html" xml:base="http://localhost:4000/2019/06/11/magisk.html">&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="Linux" /><summary type="html">持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.2。</summary></entry><entry><title type="html">Magisk 介绍安装与模块推荐</title><link href="http://localhost:4000/2019/06/11/magisk.html" rel="alternate" type="text/html" title="Magisk 介绍安装与模块推荐" /><published>2019-06-11T06:48:32+08:00</published><updated>2019-06-11T06:48:32+08:00</updated><id>http://localhost:4000/2019/06/11/magisk</id><content type="html" xml:base="http://localhost:4000/2019/06/11/magisk.html">&lt;blockquote&gt;
   &lt;p&gt;Magisk~~~&lt;/p&gt;
 &lt;/blockquote&gt;
 
