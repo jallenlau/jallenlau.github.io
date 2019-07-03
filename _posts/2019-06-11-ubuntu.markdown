@@ -192,8 +192,7 @@ shared 用于共享内存
 查看服务器进程信息  
 > 选项含义：  
 > -e 等价于 “-A” ，表示列出全部的进程。  
-> -f 显示全部列
->
+> -f 显示全部列  
 ```
 jallen@JALLENLAU:~$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
@@ -217,6 +216,37 @@ CMD：该进程的名称或者对应的路径
 
 5. top
 查看服务器进程占用资源
+```
+jallen@JALLENLAU:~$ top
+top - 10:35:23 up  2:51,  0 users,  load average: 0.52, 0.58, 0.59
+Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5.1 us,  3.7 sy,  0.0 ni, 90.9 id,  0.0 wa,  0.3 hi,  0.0 si,
+KiB Mem :  8273208 total,  3175048 free,  4868808 used,   229352 buff/cac
+KiB Swap: 15497464 total, 14828848 free,   668616 used.  3270668 avail Me
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+
+    1 root      20   0    8892      0      0 S   0.0  0.0   0:00.10
+    6 root      20   0    8904      0      0 S   0.0  0.0   0:00.01
+    7 jallen    20   0   16928   1216   1128 S   0.0  0.0   0:00.26
+  484 jallen    20   0   17644   1948   1436 R   0.0  0.0   0:00.03
+```
+- 表头含义：  
+PID：进程id  
+USER：该进程对应的用户id  
+PR：优先级  
+VIRT：虚拟内存  
+RES：常驻内存  
+SHR：共享内存  
+> 计算一个进程实际使用的内存 = 常驻内存 - 共享内存  
+S：运行的状态（S代表睡眠，R代表运行）  
+%CPU：表示 CPU 占用百分比  
+%MEM：表示内存占用百分比  
+TIME+：执行的时间  
+COMMAND：进程的名称和路径  
+- 在运行 top 的时候,可以按下方便快捷键:  
+M:表示将结果按内存从高到低进行排序  
+P:表示将结果按照 CPU 使用率从高到低进行降序排序
+
 
 
 ## 替换源

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-03T09:20:58+08:00</updated><id>http://localhost:4000/</id><title type="html">Marasati</title><subtitle>Algorithms learn blog</subtitle><author><name>true</name></author><entry><title type="html">借助 jekyll 搭建静态博客</title><link href="http://localhost:4000/2019/06/28/jekyll.html" rel="alternate" type="text/html" title="借助 jekyll 搭建静态博客" /><published>2019-06-28T23:20:21+08:00</published><updated>2019-06-28T23:20:21+08:00</updated><id>http://localhost:4000/2019/06/28/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/06/28/jekyll.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-03T11:08:53+08:00</updated><id>http://localhost:4000/</id><title type="html">Marasati</title><subtitle>Algorithms learn blog</subtitle><author><name>true</name></author><entry><title type="html">借助 jekyll 搭建静态博客</title><link href="http://localhost:4000/2019/06/28/jekyll.html" rel="alternate" type="text/html" title="借助 jekyll 搭建静态博客" /><published>2019-06-28T23:20:21+08:00</published><updated>2019-06-28T23:20:21+08:00</updated><id>http://localhost:4000/2019/06/28/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/06/28/jekyll.html">&lt;blockquote&gt;
   &lt;p&gt;jekyll 工具搭建自定义静态博客经验教程，本人 Win10 专业版。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1146,7 +1146,7 @@ activity_main.xml 不变，更改 MainActivity.java。&lt;/p&gt;
 &lt;p&gt;回到 GitHub 所建项目的 Settings，下滑找到 Github Pages，在 Custom domain 内填入购买的域名后点击 Save，下方 enforce https 是否勾选自行选择。&lt;/p&gt;
 
 &lt;h3 id=&quot;建立完成&quot;&gt;建立完成&lt;/h3&gt;</content><author><name>true</name></author><category term="博客搭建" /><summary type="html">本文详细介绍利用 Github Pages 搭建个人博客，以及自定义域名步骤。</summary></entry><entry><title type="html">Ubuntu 常见命令</title><link href="http://localhost:4000/2019/06/11/ubuntu.html" rel="alternate" type="text/html" title="Ubuntu 常见命令" /><published>2019-06-11T18:55:59+08:00</published><updated>2019-06-11T18:55:59+08:00</updated><id>http://localhost:4000/2019/06/11/ubuntu</id><content type="html" xml:base="http://localhost:4000/2019/06/11/ubuntu.html">&lt;blockquote&gt;
-  &lt;p&gt;持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.2。&lt;/p&gt;
+  &lt;p&gt;持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.3。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;基础指令&quot;&gt;基础指令&lt;/h2&gt;
@@ -1282,9 +1282,9 @@ shared 用于共享内存&lt;/p&gt;
 一般用于“过滤”、“特殊”、“拓展处理”。&lt;br /&gt;
 不能单独使用，主要是辅助作用。
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#ls /|grep y //过滤（查询出根目录下包含 “y” 的文档名称）
-针对以上命令说明：  
-① 以管道作为分界线，前面的命令有个输出，后面需要先输入，再过滤最后输出。  
-② grep 指令主要用于过滤。  
+ 针对以上命令说明：  
+ ① 以管道作为分界线，前面的命令有个输出，后面需要先输入，再过滤最后输出。  
+ ② grep 指令主要用于过滤。  
 #ls /|wc -l //统计根目录文档总个数
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
@@ -1318,7 +1318,8 @@ shared 用于共享内存&lt;/p&gt;
       &lt;p&gt;选项含义：&lt;br /&gt;
 -e 等价于 “-A” ，表示列出全部的进程。&lt;br /&gt;
 -f 显示全部列&lt;/p&gt;
-      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;UID        PID  PPID  C STIME TTY          TIME CMD
+      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jallen@JALLENLAU:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
 root         1     0  0 07:44 ?        00:00:00 /init ro
 root         6     1  0 07:44 tty1     00:00:00 /init ro
 jallen       7     6  0 07:44 tty1     00:00:00 -bash
@@ -1330,20 +1331,57 @@ PID：进程id&lt;br /&gt;
 PPID：该进程的父级进程id，如果一个程序的父级进程找不到，改进程称之为僵尸进程&lt;br /&gt;
 C：CPU的占用率&lt;br /&gt;
 STIME：进行的启动时间&lt;br /&gt;
-TTY：终端设备，发起该进程的设备识别符号&lt;/p&gt;
+TTY：终端设备，发起该进程的设备识别符号
+TIME：进程的执行时间
+CMD：该进程的名称或者对应的路径&lt;/p&gt;
+      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#ps -ef|grep name //在 ps 结果中搜索
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
+  &lt;li&gt;top
+查看服务器进程占用资源
+```
+jallen@JALLENLAU:~$ top
+top - 10:35:23 up  2:51,  0 users,  load average: 0.52, 0.58, 0.59
+Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5.1 us,  3.7 sy,  0.0 ni, 90.9 id,  0.0 wa,  0.3 hi,  0.0 si,
+KiB Mem :  8273208 total,  3175048 free,  4868808 used,   229352 buff/cac
+KiB Swap: 15497464 total, 14828848 free,   668616 used.  3270668 avail Me&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;替换源&quot;&gt;替换源&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;输入指令。
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
-sudo vim  /etc/apt/sources.list //打开list列表
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;替换阿里源。
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+&lt;p&gt;PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+
+    1 root      20   0    8892      0      0 S   0.0  0.0   0:00.10
+    6 root      20   0    8904      0      0 S   0.0  0.0   0:00.01
+    7 jallen    20   0   16928   1216   1128 S   0.0  0.0   0:00.26
+  484 jallen    20   0   17644   1948   1436 R   0.0  0.0   0:00.03&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- 表头含义：  
+PID：进程id  
+USER：该进程对应的用户id  
+PR：优先级  
+VIRT：虚拟内存  
+RES：常驻内存  
+SHR：共享内存  
+&amp;gt; 计算一个进程实际使用的内存 = 常驻内存 - 共享内存  
+S：运行的状态（S代表睡眠，R代表运行）  
+%CPU：表示 CPU 占用百分比  
+%MEM：表示内存占用百分比  
+TIME+：执行的时间  
+COMMAND：进程的名称和路径  
+- 在运行 top 的时候,可以按下方便快捷键:  
+M:表示将结果按内存从高到低进行排序  
+P:表示将结果按照 CPU 使用率从高到低进行降序排序
+
+
+
+## 替换源
+1. 输入指令。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
+sudo vim  /etc/apt/sources.list //打开list列表&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+2. 替换阿里源。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
@@ -1352,58 +1390,49 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiv
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;按 ESC 退出，并输入&lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;保存。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;输入指令更新源。
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update
-sudo apt upgrade
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+3. 按 ESC 退出，并输入`:wq`保存。
 
-&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;更新软件库
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;安装软件
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install &amp;lt;package&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;通过关键词搜索软件库
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt search &amp;lt;key&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;卸载&quot;&gt;卸载&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;删除软件及其配置文件。
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get purge / apt-get --purge remove &amp;lt;package&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;删除依赖包,保留配置文件。
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get autoremove &amp;lt;package&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;删除软件，不删除依赖包，保留配置文件。
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get remove &amp;lt;package&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get autoclean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;以最高权限开启文件管理&quot;&gt;以最高权限开启文件管理&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nautilus
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="Linux" /><summary type="html">持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.2。</summary></entry><entry><title type="html">Magisk 介绍安装与模块推荐</title><link href="http://localhost:4000/2019/06/11/magisk.html" rel="alternate" type="text/html" title="Magisk 介绍安装与模块推荐" /><published>2019-06-11T06:48:32+08:00</published><updated>2019-06-11T06:48:32+08:00</updated><id>http://localhost:4000/2019/06/11/magisk</id><content type="html" xml:base="http://localhost:4000/2019/06/11/magisk.html">&lt;blockquote&gt;
+4. 输入指令更新源。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sudo apt update
+sudo apt upgrade&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## 安装
+1. 更新软件库  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sudo apt-get update&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+2. 安装软件
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sudo apt-get install &lt;package&gt;&lt;/package&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+3. 通过关键词搜索软件库
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sudo apt search &lt;key&gt;&lt;/key&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## 卸载
+1. 删除软件及其配置文件。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;apt-get purge / apt-get –purge remove &lt;package&gt;&lt;/package&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+2. 删除依赖包,保留配置文件。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;apt-get autoremove &lt;package&gt;&lt;/package&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+3. 删除软件，不删除依赖包，保留配置文件。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;apt-get remove &lt;package&gt;&lt;/package&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+4. apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;apt-get autoclean&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## 以最高权限开启文件管理
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;sudo nautilus
+```&lt;/p&gt;</content><author><name>true</name></author><category term="Linux" /><summary type="html">持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.3。</summary></entry><entry><title type="html">Magisk 介绍安装与模块推荐</title><link href="http://localhost:4000/2019/06/11/magisk.html" rel="alternate" type="text/html" title="Magisk 介绍安装与模块推荐" /><published>2019-06-11T06:48:32+08:00</published><updated>2019-06-11T06:48:32+08:00</updated><id>http://localhost:4000/2019/06/11/magisk</id><content type="html" xml:base="http://localhost:4000/2019/06/11/magisk.html">&lt;blockquote&gt;
   &lt;p&gt;Magisk~~~&lt;/p&gt;
 &lt;/blockquote&gt;
 
