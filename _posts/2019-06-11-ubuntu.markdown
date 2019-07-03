@@ -274,10 +274,46 @@ option:
 #killall 进程名称
 ```
 
-10 ifconfig
+10. ifconfig
 ```
 #ifconfig //获取网卡信息
 ```
+
+11. reboot  
+重启计算机
+```
+#reboot
+#reboot -w //模拟重启（只写开机与关机的日志信息）
+```
+
+12. shutdown  
+关机
+```
+#shutdown
+#shutdown -h now/15:25
+```
+
+13. uptime  
+输出计算机的持续在线时间
+```
+#uptime
+```
+
+14. uname  
+获取计算机操作系统相关信息
+```
+#uname //获取操作系统的类型
+#uname -a //获取全部的系统信息（类型、全部主机名、内核版本、发布时间、开源计划）
+```
+
+15. netstat-tnlp  
+查看网络连接状态
+```
+#netstat-tnlp
+```
+选项说明：  
+    -t：表示只列出 tcp 协议的链接
+    -n：表示列出
 
 
 ## 替换源
