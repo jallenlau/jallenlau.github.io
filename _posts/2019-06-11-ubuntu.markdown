@@ -213,7 +213,7 @@ CMD：该进程的名称或者对应的路径
 #ps -ef|grep name //在 ps 结果中搜索
 ```
 
-5. top
+5. top  
 查看服务器进程占用资源
 ```
 jallen@JALLENLAU:~$ top
@@ -245,6 +245,39 @@ COMMAND：进程的名称和路径
 M:表示将结果按内存从高到低进行排序  
 P:表示将结果按照 CPU 使用率从高到低进行降序排序
 
+6. du -sh   
+查看目录真实大小  
+“ -s ”只显示汇总的大小  
+“ -h ”表示以较高可读性进行显示  
+```
+#du -sh <path>
+```
+
+7. find  
+用于查找
+```
+#find <path> option name
+```    
+option:  
+    -name //按照文档名称搜索（支持模糊搜索）  
+    -type //按照文档类型搜索（“-”表示文件，在用find时用f替换），“d”表示文件夹
+
+8. service  
+用于控制一些软件服务的启动/停止/重启
+```
+#service name start/stop/restart
+```
+
+9. kill
+```
+#kill 进程PID //配合 ps 一起使用
+#killall 进程名称
+```
+
+10 ifconfig
+```
+#ifconfig //获取网卡信息
+```
 
 
 ## 替换源
