@@ -7,7 +7,7 @@ color: rgb(255,90,90)
 cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubuntu.png?raw=true'
 ---
 
-> 持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.2。
+> 持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.3。
 
 ## 基础指令
 1. ls
@@ -157,9 +157,66 @@ shared 用于共享内存
 一般用于“过滤”、“特殊”、“拓展处理”。  
 不能单独使用，主要是辅助作用。
 ```
-#//
+#ls /|grep y //过滤（查询出根目录下包含 “y” 的文档名称）
+     针对以上命令说明：  
+     ① 以管道作为分界线，前面的命令有个输出，后面需要先输入，再过滤最后输出。  
+     ② grep 指令主要用于过滤。  
+#ls /|wc -l //统计根目录文档总个数
 ```
 
+## 高级指令
+1. host name  
+操作主机名（读取、设置）
+```
+#hostname
+#hostname -f //输出当前主机名中的 FQDN （全限定域名）
+```
+
+2. id  
+查看用户基本信息（包含用户id，用户组id，附加组id...），该指令如果不指定用户则默认当前用户。
+```
+#id
+#id username //指定用户的信息
+    验证上述信息是否正确？
+    验证用户信息：#cat /etc/passwd
+    验证用户组信息：#cat /etc/group
+```
+
+3. whoami  
+显示当前登录用户名，一般用于 shell 脚本，用于获取当前用户名，方便记录日志。
+```
+#whoami
+```
+
+4. ps -ef  
+查看服务器进程信息  
+> 选项含义：  
+> -e 等价于 “-A” ，表示列出全部的进程。  
+> -f 显示全部列
+>
+```
+jallen@JALLENLAU:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 07:44 ?        00:00:00 /init ro
+root         6     1  0 07:44 tty1     00:00:00 /init ro
+jallen       7     6  0 07:44 tty1     00:00:00 -bash
+jallen      30     7  0 09:01 tty1     00:00:00 ps -ef
+```
+列的含义：  
+UID：该进程执行的用户id  
+PID：进程id  
+PPID：该进程的父级进程id，如果一个程序的父级进程找不到，改进程称之为僵尸进程  
+C：CPU的占用率  
+STIME：进行的启动时间  
+TTY：终端设备，发起该进程的设备识别符号
+TIME：进程的执行时间
+CMD：该进程的名称或者对应的路径  
+```
+#ps -ef|grep name //在 ps 结果中搜索
+```
+
+5. top
+查看服务器进程占用资源
 
 
 ## 替换源
