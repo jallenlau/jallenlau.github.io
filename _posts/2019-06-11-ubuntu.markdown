@@ -312,12 +312,12 @@ option:
 #netstat -tnlp
 ```
 选项说明：  
-    -t：表示只列出 tcp 协议的链接
+    -t：表示只列出 tcp 协议的链接  
     -n：表示将地址从字母组合转化为 ip 地址，将协议转化成端口号显示  
     -l：表示过滤出 stat（状态）列中其值为 LISTEN（监听）的连接  
     -p：表示发起连接的进程的 PID 的进程名称  
 
-16. man（Manual）
+16. man（Manual）  
 手册（包含Linux中全部命令手册）
 ```
 #man cp/rm/wc...
