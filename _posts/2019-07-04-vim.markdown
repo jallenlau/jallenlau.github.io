@@ -3,8 +3,8 @@ layout: post
 title:  "Vim 编辑器学习"
 date:   2019-07-04 10:55:59
 tags: Linux
-color: rgb(255,90,90)
-cover: 'https://github.com/jallenlau/picture/blob/master/post-images/install_ubuntu.png?raw=true'
+color: rgb(018,081,021)
+cover: '/assets/blog/vim.jpg'
 ---
 
 > 持续更新 Vim 编辑器使用方法，最后更新：2019.7.8。
