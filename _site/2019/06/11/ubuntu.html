@@ -147,7 +147,7 @@
 
   <!-- 文章内容 -->
   <blockquote>
-  <p>持续更新本人 Linux 学习过程中所需常见命令，最后更新时间：2019.7.3。</p>
+  <p>持续更新本人 Linux 学习过程中所需常见命令，已更新完结。</p>
 </blockquote>
 
 <h2 id="基础指令">基础指令</h2>
@@ -164,7 +164,7 @@
   </li>
   <li>cd &amp; pwd
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#pwd // Print Working Directory 打印当前工作路径
-#cd &lt;parh&gt; // Change Directory 切换当前工作目录
+#cd &lt;path&gt; // Change Directory 切换当前工作目录
 #cd ~ //切换到当前用户的家目录
  //#cd ~/apple
 </code></pre></div>    </div>
@@ -314,19 +314,17 @@ shared 用于共享内存</p>
 </code></pre></div>    </div>
   </li>
   <li>ps -ef<br />
-查看服务器进程信息
-    <blockquote>
-      <p>选项含义：<br />
--e 等价于 “-A” ，表示列出全部的进程。<br />
--f 显示全部列</p>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jallen@JALLENLAU:~$ ps -ef
+查看服务器进程信息   <br />
+“ -e ” 等价于 “ -A ” ，表示列出全部的进程<br />
+“ -f ” 显示全部列
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jallen@JALLENLAU:~$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
 root         1     0  0 07:44 ?        00:00:00 /init ro
 root         6     1  0 07:44 tty1     00:00:00 /init ro
 jallen       7     6  0 07:44 tty1     00:00:00 -bash
 jallen      30     7  0 09:01 tty1     00:00:00 ps -ef
-</code></pre></div>      </div>
-      <p>列的含义：<br />
+</code></pre></div>    </div>
+    <p>列的含义：<br />
 UID：该进程执行的用户id<br />
 PID：进程id<br />
 PPID：该进程的父级进程id，如果一个程序的父级进程找不到，改进程称之为僵尸进程<br />
@@ -335,54 +333,120 @@ STIME：进行的启动时间<br />
 TTY：终端设备，发起该进程的设备识别符号
 TIME：进程的执行时间
 CMD：该进程的名称或者对应的路径</p>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#ps -ef|grep name //在 ps 结果中搜索
-</code></pre></div>      </div>
-    </blockquote>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#ps -ef|grep name //在 ps 结果中搜索
+</code></pre></div>    </div>
   </li>
-  <li>top
+  <li>top<br />
 查看服务器进程占用资源
-```
-jallen@JALLENLAU:~$ top
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jallen@JALLENLAU:~$ top
 top - 10:35:23 up  2:51,  0 users,  load average: 0.52, 0.58, 0.59
 Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
 %Cpu(s):  5.1 us,  3.7 sy,  0.0 ni, 90.9 id,  0.0 wa,  0.3 hi,  0.0 si,
 KiB Mem :  8273208 total,  3175048 free,  4868808 used,   229352 buff/cac
-KiB Swap: 15497464 total, 14828848 free,   668616 used.  3270668 avail Me</li>
+KiB Swap: 15497464 total, 14828848 free,   668616 used.  3270668 avail Me
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+
+ 1 root      20   0    8892      0      0 S   0.0  0.0   0:00.10
+ 6 root      20   0    8904      0      0 S   0.0  0.0   0:00.01
+ 7 jallen    20   0   16928   1216   1128 S   0.0  0.0   0:00.26
+  484 jallen    20   0   17644   1948   1436 R   0.0  0.0   0:00.03
+</code></pre></div>    </div>
+    <ul>
+      <li>表头含义：<br />
+PID：进程id<br />
+USER：该进程对应的用户id<br />
+PR：优先级<br />
+VIRT：虚拟内存<br />
+RES：常驻内存<br />
+SHR：共享内存  <br />
+S：运行的状态（S代表睡眠，R代表运行）<br />
+%CPU：表示 CPU 占用百分比<br />
+%MEM：表示内存占用百分比<br />
+TIME+：执行的时间<br />
+COMMAND：进程的名称和路径</li>
+      <li>计算一个进程实际使用的内存 = 常驻内存 - 共享内存</li>
+      <li>在运行 top 的时候,可以按下方便快捷键:
+M:表示将结果按内存从高到低进行排序<br />
+P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
+    </ul>
+  </li>
+  <li>du -sh <br />
+查看目录真实大小<br />
+“ -s ”只显示汇总的大小<br />
+“ -h ”表示以较高可读性进行显示
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#du -sh &lt;path&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>find<br />
+用于查找
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#find &lt;path&gt; option name
+</code></pre></div>    </div>
+    <p>option:<br />
+ -name //按照文档名称搜索（支持模糊搜索）<br />
+ -type //按照文档类型搜索（“-”表示文件，在用find时用f替换），“d”表示文件夹</p>
+  </li>
+  <li>service<br />
+用于控制一些软件服务的启动/停止/重启
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#service name start/stop/restart
+</code></pre></div>    </div>
+  </li>
+  <li>kill
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#kill 进程PID //配合 ps 一起使用
+#killall 进程名称
+</code></pre></div>    </div>
+  </li>
+  <li>ifconfig
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#ifconfig //获取网卡信息
+</code></pre></div>    </div>
+  </li>
+  <li>reboot<br />
+重启计算机
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#reboot
+#reboot -w //模拟重启（只写开机与关机的日志信息）
+</code></pre></div>    </div>
+  </li>
+  <li>shutdown<br />
+关机
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#shutdown
+#shutdown -h now/15:25
+</code></pre></div>    </div>
+  </li>
+  <li>uptime<br />
+输出计算机的持续在线时间
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#uptime
+</code></pre></div>    </div>
+  </li>
+  <li>uname<br />
+获取计算机操作系统相关信息
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#uname //获取操作系统的类型
+#uname -a //获取全部的系统信息（类型、全部主机名、内核版本、发布时间、开源计划）
+</code></pre></div>    </div>
+  </li>
+  <li>netstat -tnlp<br />
+查看网络连接状态
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#netstat -tnlp
+</code></pre></div>    </div>
+    <p>选项说明：<br />
+-t：表示只列出 tcp 协议的链接<br />
+-n：表示将地址从字母组合转化为 ip 地址，将协议转化成端口号显示<br />
+-l：表示过滤出 stat（状态）列中其值为 LISTEN（监听）的连接<br />
+-p：表示发起连接的进程的 PID 的进程名称</p>
+  </li>
+  <li>man（Manual）<br />
+手册（包含Linux中全部命令手册）
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#man cp/rm/wc...
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<p>PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+
-    1 root      20   0    8892      0      0 S   0.0  0.0   0:00.10
-    6 root      20   0    8904      0      0 S   0.0  0.0   0:00.01
-    7 jallen    20   0   16928   1216   1128 S   0.0  0.0   0:00.26
-  484 jallen    20   0   17644   1948   1436 R   0.0  0.0   0:00.03</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 表头含义：  
-PID：进程id  
-USER：该进程对应的用户id  
-PR：优先级  
-VIRT：虚拟内存  
-RES：常驻内存  
-SHR：共享内存  
-&gt; 计算一个进程实际使用的内存 = 常驻内存 - 共享内存  
-S：运行的状态（S代表睡眠，R代表运行）  
-%CPU：表示 CPU 占用百分比  
-%MEM：表示内存占用百分比  
-TIME+：执行的时间  
-COMMAND：进程的名称和路径  
-- 在运行 top 的时候,可以按下方便快捷键:  
-M:表示将结果按内存从高到低进行排序  
-P:表示将结果按照 CPU 使用率从高到低进行降序排序
-
-
-
-## 替换源
-1. 输入指令。
-</code></pre></div></div>
-<p>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
-sudo vim  /etc/apt/sources.list //打开list列表</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-2. 替换阿里源。
-</code></pre></div></div>
-<p>deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+<h2 id="替换源">替换源</h2>
+<ol>
+  <li>输入指令。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
+sudo vim  /etc/apt/sources.list //打开list列表
+</code></pre></div>    </div>
+  </li>
+  <li>替换阿里源。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
@@ -391,49 +455,58 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiv
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-3. 按 ESC 退出，并输入`:wq`保存。
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>按 ESC 退出，并输入<code class="highlighter-rouge">:wq</code>保存。</p>
+  </li>
+  <li>输入指令更新源。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+sudo apt upgrade
+</code></pre></div>    </div>
+  </li>
+</ol>
 
-4. 输入指令更新源。
+<h2 id="安装">安装</h2>
+<ol>
+  <li>更新软件库
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+</code></pre></div>    </div>
+  </li>
+  <li>安装软件
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>通过关键词搜索软件库
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt search &lt;key&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="卸载">卸载</h2>
+<ol>
+  <li>删除软件及其配置文件。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get purge / apt-get --purge remove &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>删除依赖包,保留配置文件。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get autoremove &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>删除软件，不删除依赖包，保留配置文件。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get remove &lt;package&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get autoclean
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="以最高权限开启文件管理">以最高权限开启文件管理</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nautilus
 </code></pre></div></div>
-<p>sudo apt update
-sudo apt upgrade</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## 安装
-1. 更新软件库  
-</code></pre></div></div>
-<p>sudo apt-get update</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-2. 安装软件
-</code></pre></div></div>
-<p>sudo apt-get install <package></package></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-3. 通过关键词搜索软件库
-</code></pre></div></div>
-<p>sudo apt search <key></key></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## 卸载
-1. 删除软件及其配置文件。
-</code></pre></div></div>
-<p>apt-get purge / apt-get –purge remove <package></package></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-2. 删除依赖包,保留配置文件。
-</code></pre></div></div>
-<p>apt-get autoremove <package></package></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-3. 删除软件，不删除依赖包，保留配置文件。
-</code></pre></div></div>
-<p>apt-get remove <package></package></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-4. apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。
-</code></pre></div></div>
-<p>apt-get autoclean</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## 以最高权限开启文件管理
-</code></pre></div></div>
-<p>sudo nautilus
-```</p>
 
   <!-- 引入share模块 -->
   

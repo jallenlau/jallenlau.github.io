@@ -1,0 +1,441 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Algorithms learn blog" />
+<meta name="keywords" content="algorithm , Android" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_manni.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/avatar.png" rel="shortcut icon" />
+<link href="/assets/avatar.png" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Vim 编辑器学习</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142191569-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142191569-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(018,081,021) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(018,081,021);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Marasati's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时光机</a></li>
+              
+                <li><a href="/about.html" style="color: white;">关于我</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时光机</li></a>
+        
+          <a href="/about.html"><li>关于我</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Vim 编辑器学习</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(018,081,021);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(018,081,021)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(018,081,021);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Vim 编辑器学习</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2019/06/28/jekyll.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(018,081,021)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(018,081,021);"><sapn class="main">借助 jekyll 搭建静态博客</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(018,081,021);border-bottom: 2px solid rgb(018,081,021);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2019/06/28/jekyll.html" class="rightchange" style="border-left: 1px solid rgb(018,081,021);border-bottom: 2px solid rgb(018,081,021);"><span>下一篇<br><br>借助 jekyll 搭建静态博客</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <blockquote>
+  <p>Vim 编辑器使用方法。</p>
+</blockquote>
+
+<h1 id="vim-三种模式">Vim 三种模式</h1>
+<p>命令模式、编辑模式（输入模式）、末行模式（尾行模式）</p>
+<blockquote>
+  <p>命令模式：在该模式下是不能对文件直接编辑，可以输入快捷键进行一些操作（删除行，复制行，移动光标，粘贴等等），打开文件之后默认进入的模式。<br />
+编辑模式：在该模式下可以对文件的内容进行编辑。<br />
+末行模式：可以在末行输入命令来对文件进行操作（搜索、替换、保存、退出、撤销、高亮等等）。</p>
+</blockquote>
+
+<h2 id="vim的打开文件的方式">Vim的打开文件的方式</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#vim &lt;path&gt; //打开指定的文件
+#vim +number &lt;path&gt; //打开指定的文件，并将光标移动到指定行
+#vim +/keyword &lt;path&gt; //打开指定的文件，并高亮显示关键词
+#vim &lt;path1&gt; &lt;path2&gt; &lt;path3&gt; //同时打开多个文件
+</code></pre></div></div>
+
+<h2 id="命令模式">命令模式</h2>
+<h3 id="光标移动">光标移动</h3>
+<ol>
+  <li>
+    <p>光标移动到行首<br />
+按键：shift + 6 或 ^</p>
+  </li>
+  <li>
+    <p>光标移动到行尾<br />
+按键：shift + 4 或 $</p>
+  </li>
+  <li>
+    <p>光标移动到首行<br />
+按键：gg</p>
+  </li>
+  <li>
+    <p>光标移动到末行<br />
+按键：G</p>
+  </li>
+  <li>
+    <p>翻屏<br />
+向上翻屏：按键 ctrl + b（before）或 PgUp<br />
+向下翻屏：按键 ctrl + f（after）或 PgDn</p>
+  </li>
+</ol>
+
+<h3 id="复制操作">复制操作</h3>
+<ol>
+  <li>
+    <p>复制光标所在行<br />
+按键：yy<br />
+粘贴：在想要粘贴的地方按下p键</p>
+  </li>
+  <li>
+    <p>以光标所在行为准（包含当前行），向下复制指定的行数<br />
+按键：数字yy</p>
+  </li>
+  <li>
+    <p>可视化复制<br />
+按键：ctrl + v（可视块）或 V（可视行）或 v（可视），然后按下 ↑↓←→ 方向键来选中需要复制的区块，按下 y 键进行复制，最后按下 p 键粘贴</p>
+  </li>
+</ol>
+
+<h3 id="剪切删除">剪切/删除</h3>
+<ol>
+  <li>
+    <p>剪切/删除光标所在行<br />
+按键：dd （删除之后下一行上移）<br />
+注意：dd 严格意义上说是剪切命令，但是如果剪切了不粘贴就是删除的效果。</p>
+  </li>
+  <li>
+    <p>剪切/删除光标所在行为准（包含当前行），向下删除/剪切指定的行  <br />
+按键：数字dd（删除之后下一行上移）</p>
+  </li>
+  <li>
+    <p>剪切/删除光标所在的当前行之后的内容，但是删除之后下一行不上移<br />
+按键：D（删除之后当前行会变成空白行）</p>
+  </li>
+  <li>
+    <p>可视化删除<br />
+按键：ctrl + v（可视块）或 V（可视行）或 v（可视），上下左右移动，按下 D 表示删除选中行，d 表示删选中块</p>
+  </li>
+  <li>
+    <p>撤销/恢复<br />
+撤销：输入:u（不属于命令模式）或者 u（undo）<br />
+恢复：ctrl + r 恢复（取消）之前的撤销操作</p>
+  </li>
+</ol>
+
+<h3 id="光标的快速移动">光标的快速移动</h3>
+<ol>
+  <li>
+    <p>快速将光标移动到指定的行<br />
+按键：数字G</p>
+  </li>
+  <li>
+    <p>以当前光标为准向上/向下移动 n 行<br />
+按键：数字↑，数字↓</p>
+  </li>
+  <li>
+    <p>以当前光标为准向左/向右移动 n 字符<br />
+按键：数字←，数字→</p>
+  </li>
+  <li>
+    <p>末行模式下的快速移动方式：移动到指定的行<br />
+按键：输入英文 “:”，其后输入行数数字，按下回车</p>
+  </li>
+</ol>
+
+<h2 id="末行模式">末行模式</h2>
+<p>进入方式：由命令模式进入，按下 : 或者 /（表示查找） 即可进入<br />
+退出方式：<br />
+		a. 按下esc<br />
+		b. 连按2次esc键<br />
+		c. 删除末行全部输入字符</p>
+
+<h3 id="保存操作write">保存操作（write）</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:w //保存文件  
+:w &lt;path&gt; //另存为
+</code></pre></div></div>
+
+<h3 id="退出quit">退出（quit）</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:q //退出文件
+</code></pre></div></div>
+
+<h3 id="保存并退出">保存并退出</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:wq //保存并且退出
+</code></pre></div></div>
+
+<h3 id="强制">强制（!）</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:q! //表示强制退出，刚才做的修改操作不做保存
+</code></pre></div></div>
+
+<h3 id="调用外部命令了解">调用外部命令（了解）</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:! //外部命令
+</code></pre></div></div>
+
+<h3 id="搜索查找">搜索/查找</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/keyword
+N/n //在搜索结果中切换上/下一个结果（next）  
+:nohl //取消高亮（no highlight）  
+</code></pre></div></div>
+
+<h3 id="替换">替换</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:s/keyword/newword //替换光标所在行的第一处符合条件的内容
+:s/keyword/newword/g //替换光标所在行的全部符合条件的内容
+:%s/keyword/newword //替换整个文档中每行第一个符合条件的内容
+:%s/keyword/newword/g //替换整个文档的符合条件的内容
+% //表示整个文件
+g //表示全局（global）
+</code></pre></div></div>
+
+<h3 id="显示行号临时">显示行号（临时）</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:set nu //number
+:set nonu //取消显示
+</code></pre></div></div>
+
+<p>使用vim同时打开多个文件，在末行模式下进行切换文件</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:files //查看当前已经打开的文件名称
+%a：a=active //表示当前正在打开的文件
+# //表示上一个打开的文件
+</code></pre></div></div>
+
+<h3 id="切换文件的方式">切换文件的方式</h3>
+<p>a. 指定切换文件的名称</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:open 已经打开的文件名
+</code></pre></div></div>
+
+<p>b. 通过其他命令来切换上一个文件/下一个文件</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:bn //切换到下一个文件（back next）
+:bp //切换到上一个文件（back prev）
+</code></pre></div></div>
+
+<h2 id="编辑模式">编辑模式</h2>
+<p><img src="/assets/blog/111.png" alt="" /></p>
+
+<p>退出方式：按下esc键</p>
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDk1NS8yMTQ3NQ=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>Marasati ©
+  
+  
+  2019
+  <br>
+  </span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
