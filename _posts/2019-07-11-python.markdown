@@ -40,7 +40,6 @@ print(message0)
 print(message1)
 print(message2)
 
-
 message_absence = names[2].title() + "is ansence."
 print(message_absence)
 names[2] = 'jallen'
