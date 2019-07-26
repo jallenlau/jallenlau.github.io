@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "收藏的趣味项目"
+date:   2019-07-26 10:55:59
+tags: Linux
+color: rgb(255,90,90)
+cover: '/assets/blog/favor.jpg'
+---
+
+> 收集的一些有趣项目
+
+[12个非常有趣的Linux命令](https://zhuanlan.zhihu.com/p/64362228)
