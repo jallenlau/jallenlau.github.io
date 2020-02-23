@@ -18,14 +18,16 @@ cover: 'https://github.com/jallenlau/picture/blob/master/MVIMG_20200223_151557.j
 ## 所需设备及固件
 - [Etcher](https://www.balena.io/etcher/) 镜像烧录工具
 - [Volumio](https://volumio.org/) 下载适配 Raspberry 固件
+- Micro-SD 16GB 内存卡
 - 读卡器
 - 树莓派 4B（具备无线网卡款）
-- xDuoo XD-05 DAC 解码耳放
+- xDuoo XD-05 DAC 解码耳放（自选）
 
 ## 步骤
-- 利用 Etcher 将 Volumio 固件烧录到 Micro-SD 卡内，烧录前将卡格式化为 FAT32 格式。
-- 将卡插入机器，开机。
+- 烧录前将卡格式化为 FAT32 格式，利用 Etcher 将 Volumio 固件烧录到 Micro-SD 卡内。
+- 将卡插入树莓派，开机。
 - 输入用户名：volumio ，密码：volumio
 - 打开电脑搜索名称为 Volumio 的 WiFi ，输入密码：volumio2 连接。
 - 依次按照提示操作，并连接无线网络。
-- 用同一无线网下的设备登录 http://volumio.local ,即可享受聆听。
+- 用同一无线网下的设备登录 [http://volumio.local]() ,即可享受聆听。
+- 若选择连接有线网络，则保证在同一网段的情况下，登录树莓派所在 IP 地址。
