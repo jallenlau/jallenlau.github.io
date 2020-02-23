@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "树莓派 4B 实现音乐无损串流"
+title:  "树莓派 4B 完美实现音乐无损串流"
 date:   2020-02-23 17:00:00
-tags: 折腾
+tags: 树莓派
 color: rgb(255,90,90)
 cover: 'https://github.com/jallenlau/picture/blob/master/MVIMG_20200223_151557.jpg?raw=true'
 ---
