@@ -4,7 +4,7 @@ title:  "树莓派 4B 实现音乐无损串流"
 date:   2020-02-23 17:00:00
 tags: 折腾
 color: rgb(255,90,90)
-cover: 'https://github.com/jallenlau/picture/blob/master/MVIMG_20200223_151557.jpg'
+cover: 'https://github.com/jallenlau/picture/blob/master/MVIMG_20200223_151557.jpg?raw=true'
 ---
 >利用树莓派低功耗、低噪音、免关机的特性，针对有聆听无损音乐且鄙夷繁杂操作等需求的用户打造一台方便的无损音乐串流器。
 
