@@ -20,6 +20,7 @@ cover: 'https://github.com/jallenlau/picture/blob/master/MVIMG_20200223_151557.j
 - 通过插件支持 Spotify 无缝串流（最高320kbps）
 - One Drive 云盘读取私人音乐库（操作很迟钝，操作不人性）
 - Tidal、Qobuz 无损音乐串流（付费功能，且只能在后台操作页面选择歌曲或者官方 app）
+- 支持 DSD 原生传输或经过系统 PCM 传输 DoP
 - 支持无损 FLAC 电台播放功能
 - 支持 DLNA、miniDLNA、AirPlay
 
@@ -30,6 +31,7 @@ cover: 'https://github.com/jallenlau/picture/blob/master/MVIMG_20200223_151557.j
 - 支持本地存储、局域网读取、NAS
 - 通过插件支持 Spotify 无缝串流（最高320kbps）
 - 支持 UPnP （Tidal、Qobuz、One Drive、Google Drive 等音乐通过手机 UPnP 软件统一操控，软件选择性广泛且十分方便，除 Tidal 只能 16-44.1 FLAC 传输，Qobuz 最高支持 24-192 FLAC 传输，云盘内直接原文件传输）
+- 支持 DSD 原生传输
 - 支持 DLNA、miniDLNA、AirPlay
 
 ## 所需设备及固件
