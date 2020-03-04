@@ -3,7 +3,7 @@ layout: post
 title:  "我的信仰"
 date:   2020-03-02 17:00:00
 tags: 书评
-color: rgb(255,192,203)
+color: rgb(96,55,62)
 cover: 'https://github.com/jallenlau/picture/blob/master/1543-7a.jpg?raw=true'
 ---
 > 读远藤周作《沉默》有感
