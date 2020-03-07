@@ -4,7 +4,7 @@ title:  "「权利与荣耀」摘录"
 date:   2020-03-07 17:00:00
 tags: 摘录
 color: rgb(221,210,59)
-cover: 'https://github.com/jallenlau/picture/blob/master/1543-7a.jpg?raw=true'
+cover: 'https://github.com/jallenlau/picture/blob/master/95478-120425121T212.jpg?raw=true'
 ---
 >
 
