@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "「关于人生的自述」摘录"
+title:  "「关于人生的自述」"
 date:   2020-03-08 17:00:00
 tags: 随笔
 color: rgb(203,27,69)
