@@ -4,7 +4,7 @@ title:  "Openwrt、OpenClash 安装教程"
 date:   2020-05-03 22:36:00
 tags: 软路由
 color: rgb(135,206,235)
-cover: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Ffossbytes.com%2F3-year-old-rce-bug-puts-millions-of-openwrt-devices-at-risk%2F&psig=AOvVaw0TyBN8EIiAUiTDn0hhiyOb&ust=1588603081815000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjMgOj1l-kCFQAAAAAdAAAAABAL'
+cover: 'https://github.com/jallenlau/picture/blob/master/OpenWRT-bug.jpg?raw=true'
 ---
 
 > OpenWrt + OpenClash 安装步骤
