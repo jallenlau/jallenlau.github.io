@@ -71,7 +71,7 @@ opkg install luci-compat
 3. 打开 WinSCP，文件协议选择 SCP，输入软路由的 IP，输入用户名密码，进入。
 4. 找到 OpenClash 的 ipk 安装包，右键上传到软路由的 tmp 文件夹内。
 5. 回到命令行，输入（xxx 替换为安装包全名）：```opkg install xxx.ipk```
-6. 回到软路由页面，刷新，即可看见**服务**选项卡出现 OpenClash 表示安装成功。
+6. 回到软路由页面，刷新，看见**服务**选项卡出现 OpenClash 表示安装成功。
 
 ## 总结
 1. Luci for Clash 安装方法类似，不再赘述。
