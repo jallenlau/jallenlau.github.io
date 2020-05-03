@@ -10,7 +10,7 @@ cover: 'https://github.com/jallenlau/picture/blob/master/OpenWRT-bug.jpg?raw=tru
 > OpenWrt + OpenClash 安装步骤
 
 ## 溯源
-由于之前软路由的 LEDE/OpenWrt 的问题日渐显现，无奈之下重刷 Openwrt。在此记录安装步骤。
+由于之前软路由 LEDE/OpenWrt 系统的问题日渐显现，无奈之下重刷 Openwrt。在此记录安装步骤。
 
 ## 准备
 ### 工具软件
