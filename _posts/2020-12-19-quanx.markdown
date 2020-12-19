@@ -1,0 +1,86 @@
+---
+layout: post
+title:  "Quantumult X 京东脚本设置 "
+date:   2020-12-19 22:36:00
+tags: 代理软件
+color: rgb(67,205,128)
+cover: 'https://github.com/jallenlau/picture/blob/master/quan/fm.png?raw=true'
+---
+
+> Quantumult X 京东签到脚本设置
+
+## 准备
+### 工具软件
+- Quantumult X（外服 App Store 下载）
+- [lxk0301 京豆签到脚本（长按复制链接）](https://raw.githubusercontent.com/lxk0301/jd_scripts/master/QuantumultX/lxk0301_gallery.json)
+- [NobyDa 京东 Cookies 获取脚本](https://github.com/NobyDa/Script/blob/master/JD-DailyBonus/JD_DailyBonus.js)
+
+
+> 选用  
+> Scriptable（用来显示京豆收益图，国服即可下载）  
+> [Boxjs 重写脚本（选用）](https://raw.githubusercontent.com/whyour/hundun/master/quanx/whyour.boxjs.json)  
+> [Boxjs 文档](https://chavyleung.gitbook.io/boxjs/)  
+
+## 步骤
+### 配置 Quantumult X
+1. 打开 Quantumult X，点击主界面右下角按钮，进入菜单，如图从上至下依次为：“全局网络代理模式”、“规则分流代理模式”、“全局直连模式”；  
+![1](https://github.com/jallenlau/picture/blob/master/quan/1.PNG?raw=true)  
+2. 点击图示订阅按钮；  
+![2](https://github.com/jallenlau/picture/blob/master/quan/2.PNG?raw=true)  
+3. 粘贴机场订阅链接；  
+![3](https://github.com/jallenlau/picture/blob/master/quan/3.PNG?raw=true)  
+4. 打开 **重写**、**MitM** 开关；  
+![4](https://github.com/jallenlau/picture/blob/master/quan/4.PNG?raw=true)
+5. 生成、配置证书，之后在 **系统设置 - 通用 - 描述文件** 中安装证书，并在 **系统设置 - 通用 - 关于本机** 中信任证书；    
+![5](https://github.com/jallenlau/picture/blob/master/quan/5.PNG?raw=true)
+![6](https://github.com/jallenlau/picture/blob/master/quan/6.PNG?raw=true)
+![7](https://github.com/jallenlau/picture/blob/master/quan/7.PNG?raw=true)  
+6. 如图设置 Quantumult X 的其他设置；  
+![8](https://github.com/jallenlau/picture/blob/master/quan/8.PNG?raw=true)
+![9](https://github.com/jallenlau/picture/blob/master/quan/9.PNG?raw=true)  
+
+### 配置京东签到 Cookies 脚本
+1. 下载 [NobyDa 京东 Cookies 获取脚本](https://github.com/NobyDa/Script/blob/master/JD-DailyBonus/JD_DailyBonus.js) 到本地（文件后缀名为 .js ），并移动到 **我的 iphone - Quantumult X - Scripts** 文件夹内；  
+2. 打开下载的 JD_DailyBonus.js 文件，找到 Quantumult X 对应的配置部分；  
+```
+【 QX 1.0.10+ 脚本配置 】
+[task_local]
+# 京东多合一签到
+# 注意此为远程路径, 低版本用户请自行调整为本地路径.
+5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东多合一签到, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png,enabled=true
+[rewrite_local]
+# 获取京东Cookie.
+# 注意此为远程路径, 低版本用户请自行调整为本地路径.
+https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+[mitm]
+hostname = api.m.jd.com
+```
+3. 打开 Quantumult X 设置 **配置文件 - 编辑**，分别找到 ```[task_local]  [rewrite_local]  [mitm]```，并将对应分组内的文字复制到配置文件中（如果没有某个分组自行添加），保存并退出；  
+![10](https://github.com/jallenlau/picture/blob/master/quan/10.PNG?raw=true)
+![11](https://github.com/jallenlau/picture/blob/master/quan/11.PNG?raw=true)
+![12](https://github.com/jallenlau/picture/blob/master/quan/12.PNG?raw=true)  
+
+### 配置京东签到脚本
+1. 打开 Quantumult X 设置 **调试 - 构造请求**，如图点击进入子菜单；  
+![13](https://github.com/jallenlau/picture/blob/master/quan/13.PNG?raw=true)
+![14](https://github.com/jallenlau/picture/blob/master/quan/14.PNG?raw=true)  
+2. 点击右上角添加订阅，显示如下图即为订阅成功，并每个图标依此点击添加；  
+![15](https://github.com/jallenlau/picture/blob/master/quan/15.PNG?raw=true)  
+3. 回到上级菜单，显示如下图即为正常；  
+![16](https://github.com/jallenlau/picture/blob/master/quan/16.PNG?raw=true)  
+
+### 获取京东 Cookies
+Safari浏览器打开登录 https://bean.m.jd.com ,点击签到并且出现签到日历后, 如果通知获得cookie成功即可；  
+
+- 请勿在京东APP内获取；  
+- 如果需要双账号签到则更换浏览器重复上述操作即可；  
+- 由于cookie的有效性(经测试网页Cookie有效周期最长31天)，如果脚本后续弹出cookie无效的通知，则需要重复上述步骤。   
+
+### 脚本运行
+此订阅脚本为全自动脚本，无需手动运行，自动运行后会弹出系统通知。
+
+## 附加
+### 添加桌面京豆收益小组件教程待后续更新~~~
+
+
+> 此教程涉及内容均收集自互联网资源。
