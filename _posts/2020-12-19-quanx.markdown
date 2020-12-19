@@ -27,7 +27,7 @@ cover: 'https://github.com/jallenlau/picture/blob/master/quan/fm.png?raw=true'
 ![1](https://github.com/jallenlau/picture/blob/master/quan/1.PNG?raw=true)  
 2. 点击图示订阅按钮；  
 ![2](https://github.com/jallenlau/picture/blob/master/quan/2.PNG?raw=true)  
-3. 粘贴机场订阅链接；  
+3. 粘贴机场订阅链接（订阅完再次点击此按钮，选择取消关联此配置）；  
 ![3](https://github.com/jallenlau/picture/blob/master/quan/3.PNG?raw=true)  
 4. 打开 **重写**、**MitM** 开关；  
 ![4](https://github.com/jallenlau/picture/blob/master/quan/4.PNG?raw=true)
