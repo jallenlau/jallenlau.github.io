@@ -1,8 +1,7 @@
-# I'm Jallen ! 😎
+# This is Jallen ! 😎
 
 
->[**JallenLau** 😎](https://github.com/jallenlau)，**编程**业余爱好者，本博客主要记录本人的学习经历。  
->本科毕业三年，因热爱编程，故拟转行**前端开发**。
+>[**JallenLau** 😎](https://github.com/jallenlau) ～ 因热爱编程，拟转行**前端开发** ～
 
 ### 基础技能
 
@@ -31,31 +30,34 @@
 * Context
 * Render Props
 * Ecosystem: Routers
-* Ecosystem: Redux (Learning...)
+* Ecosystem: Redux ( Learning... )
 
-:(fa-brands fa-vuejs): **Vue** (Learning...)
+:(fa-brands fa-vuejs): **Vue** ( Learning... )
 
-:(fa-brands fa-java):  **Java** (Learning...)
+:(fa-brands fa-java):  **Java** ( Learning... )
 
-:(fa-brands fa-golang): **Golang** (Learning...)
+:(fa-brands fa-golang): **Golang** ( Learning... )
 
-:(fa-brands fa-centercode): **Backend** (Learning...)
+:(fa-brands fa-centercode): **Backend** ( Learning... )
 
 ### 独立项目
 
 :(fa-brands fa-react): **React 搭建的电子商务平台全栈项目**
-> **🖥 项目地址**：[点此跳转](https://regal-empanada-b3ccfd.netlify.app/)  
+> **🖥 项目地址**：[GitHub 源码](https://github.com/jallenlau/crwn-clothing) ｜ [Demo](https://regal-empanada-b3ccfd.netlify.app/)    
 > **🔧 涉及工具**:   
->**React**: React Basics, React Router, React Hooks, Context API, React Suspense + React Lazy, React Design Patterns, React Best Practices  
->**Redux**: Redux, Redux Saga, Asynchronous Redux  
->**Others**: Firebase, Stripe API, Styled-Components, GraphQL, Apollo, PWAs, React Performance, , Testing with Jest, Enzyme and Snapshot testing, , Persistance + Session Storage, State Normalization
+>* **页面搭建**: React Basics, React Router, React Hooks, React Performance, React Suspense + React Lazy, React Design Patterns, Styled-Components
+>* **状态管理**: Context API
+>* **状态管理优化**: Redux, Redux Saga, Asynchronous Redux  
+>* **数据库**: Firebase
+>* **测试工具**: Testing with Jest, Enzyme and Snapshot testing
+>* **其他工具**: Stripe API, GraphQL, Apollo, PWAs, Persistance + Session Storage, State Normalization
 
-:(fa-brands fa-vuejs): **Vue** (...)
+:(fa-brands fa-vuejs): **Vue** ( ... )
 >...
 
-:(fa-brands fa-js-square): **JavaScript** (...)
+:(fa-brands fa-js-square): **JavaScript** ( ... )
 >...
 
-### 开源社区贡献
+### 社区贡献
 
 :(fa-brands fa-github): **尚无**
