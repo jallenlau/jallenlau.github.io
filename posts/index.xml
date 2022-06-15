@@ -1455,11 +1455,13 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 </item>
 <item>
     <title>刷机及 Root 教程</title>
-    <link>https://jallenlau.github.io/android_flash_mi/</link>
+    <link>https://jallenlau.github.io/android_flash_android/</link>
     <pubDate>Mon, 10 Jun 2019 21:40:32 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>https://jallenlau.github.io/android_flash_mi/</guid>
-    <description><![CDATA[<h2 id="刷机前准备">刷机前准备</h2>
+    <guid>https://jallenlau.github.io/android_flash_android/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts_image/flash_gsi.gif" referrerpolicy="no-referrer">
+            </div><h2 id="刷机前准备">刷机前准备</h2>
 <ul>
 <li>
 <p>刷机前请解锁Bootloader，小米机型解锁链接如下：<br>
