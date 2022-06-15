@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>编程 - 分类 - JallenLau</title>
-        <link>http://jallenlau.github.io/categories/code/</link>
+        <link>https://jallenlau.github.io/categories/code/</link>
         <description>编程 - 分类 - JallenLau</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jallenlau@protonmail.com (JallenLau)</managingEditor>
-            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Jul 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://jallenlau.github.io/categories/code/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Jul 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://jallenlau.github.io/categories/code/" rel="self" type="application/rss+xml" /><item>
     <title>Vim 常用语句</title>
-    <link>http://jallenlau.github.io/vim/</link>
+    <link>https://jallenlau.github.io/vim/</link>
     <pubDate>Thu, 04 Jul 2019 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/vim/</guid>
+    <guid>https://jallenlau.github.io/vim/</guid>
     <description><![CDATA[<h1 id="vim-三种模式">Vim 三种模式</h1>
 <p>命令模式、编辑模式（输入模式）、末行模式（尾行模式）</p>
 <blockquote>
@@ -253,10 +253,10 @@ c. 删除末行全部输入字符</p>
 </item>
 <item>
     <title>Ubuntu 常见命令</title>
-    <link>http://jallenlau.github.io/ubuntu_code/</link>
+    <link>https://jallenlau.github.io/ubuntu_code/</link>
     <pubDate>Tue, 04 Jun 2019 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/ubuntu_code/</guid>
+    <guid>https://jallenlau.github.io/ubuntu_code/</guid>
     <description><![CDATA[<p>持续更新本人 Linux 学习过程中所需常见命令，已更新完结。</p>
 <h2 id="基础指令">基础指令</h2>
 <ol>

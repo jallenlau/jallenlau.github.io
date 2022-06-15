@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>随笔 - 分类 - JallenLau</title>
-        <link>http://jallenlau.github.io/categories/essay/</link>
+        <link>https://jallenlau.github.io/categories/essay/</link>
         <description>随笔 - 分类 - JallenLau</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jallenlau@protonmail.com (JallenLau)</managingEditor>
-            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 07 Mar 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://jallenlau.github.io/categories/essay/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 07 Mar 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://jallenlau.github.io/categories/essay/" rel="self" type="application/rss+xml" /><item>
     <title>关于人生的自述</title>
-    <link>http://jallenlau.github.io/private_doc_life/</link>
+    <link>https://jallenlau.github.io/private_doc_life/</link>
     <pubDate>Mon, 02 Mar 2020 21:40:32 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/private_doc_life/</guid>
+    <guid>https://jallenlau.github.io/private_doc_life/</guid>
     <description><![CDATA[<p>  方才过了几年自由的生活，转眼却又步入了社会。从不见得任何人、任何组织曾教导过我该如何将身心状态调整好，以适应这倏然的转变。庆幸的是，在大学期间我曾走出校门，与社会各个阶层（其实主要是中高阶层）的人有过持久性的接触，以做了些许准备。可当我真正的走入社会，面临亲人与环境带来的“压力”时，我犯了错，迷茫了很长一段时间。</p>
 <p>  那时曾以为人生就是所见所闻，容不下梦想。可现在我才明白，人生不是所见所闻，而是所感。</p>
 <p>  “感情，曾以为可见的未来才足以承载持久的爱；工作，曾以为人本应承受无法热爱的折磨；生活，曾以为活着便是为了满足周围人于物质上评判的目光；未来，曾以为我也不过是一介草民，只配重复机械的人生。如今，回想刚开始的迷惘，不禁感慨人活着能经历这个过程是多么美好啊！当你对自己一无所知，对未来毫无概念的时候，以为只能从所见所闻来定义自己的未来，从而制定一生的方向。那时的你确定了方向以后，生活看似充满活力与节奏感。当你在一步步迈向未来的过程中，也许你会觉得生活无比的充实，也许你会意识到你的判断存在着致命的问题。很幸运，我是后者。</p>
@@ -25,10 +25,10 @@
 </item>
 <item>
     <title>我的信仰</title>
-    <link>http://jallenlau.github.io/private_book_silence/</link>
+    <link>https://jallenlau.github.io/private_book_silence/</link>
     <pubDate>Mon, 02 Mar 2020 21:40:32 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/private_book_silence/</guid>
+    <guid>https://jallenlau.github.io/private_book_silence/</guid>
     <description><![CDATA[<p>读远藤周作「沉默」有感</p>
 <p>  “世人并不只限于圣人和英雄。要不是生长在这遭受迫害的时代，不知有多少信徒根本不必弃教或舍弃生命，就可以一直信守着幸福的信仰呢。他们只是平凡的信徒，最后被肉体的恐怖击倒了。”吉次郎的这番话在司祭脑海中翻滚，那个看似胆怯、懦弱，在威胁面前多次弃教的人也许才是真正的信徒。</p>
 <p>  本书所描述的故事是两名葡萄牙神甫在德川家光时代，冒着被捕及死亡的危险毅然来到日本拯救天主教徒的信仰，然而在面对信徒接连死亡时，却无法感知到上帝的一丝眷顾，他将希望寄托在那梦中的神，而神一次次的沉默让他开始怀疑自己多年来坚持且信奉的信仰，终于他在神的沉默中用脚掩盖了圣母的神像，而此后的他才领悟到了真正的信仰。</p>
@@ -42,10 +42,10 @@
 </item>
 <item>
     <title>「权利与荣耀」摘录</title>
-    <link>http://jallenlau.github.io/private_book_power/</link>
+    <link>https://jallenlau.github.io/private_book_power/</link>
     <pubDate>Sat, 07 Mar 2020 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/private_book_power/</guid>
+    <guid>https://jallenlau.github.io/private_book_power/</guid>
     <description><![CDATA[<p>读远藤周作「沉默」有感</p>
 <h2 id="序">序</h2>
 <p>近日读完格雷厄姆「权利与荣耀」，主旨意味颇深，对很多地方尚无法深刻理解，故无法动笔写下感悟。便将摘录记录成文，以作分享。</p>

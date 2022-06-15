@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>其他 - 分类 - JallenLau</title>
-        <link>http://jallenlau.github.io/categories/other/</link>
+        <link>https://jallenlau.github.io/categories/other/</link>
         <description>其他 - 分类 - JallenLau</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jallenlau@protonmail.com (JallenLau)</managingEditor>
-            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 03 May 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://jallenlau.github.io/categories/other/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 03 May 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://jallenlau.github.io/categories/other/" rel="self" type="application/rss+xml" /><item>
     <title>OpenWrt、OpenClash 安装教程</title>
-    <link>http://jallenlau.github.io/openwrt_install/</link>
+    <link>https://jallenlau.github.io/openwrt_install/</link>
     <pubDate>Sun, 03 May 2020 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/openwrt_install/</guid>
+    <guid>https://jallenlau.github.io/openwrt_install/</guid>
     <description><![CDATA[<p>OpenWrt + OpenClash 安装步骤</p>
 <h2 id="溯源">溯源</h2>
 <p>由于软路由 LEDE/OpenWrt 系统的问题日渐显现，改刷 OpenWrt。<br>
@@ -164,10 +164,10 @@
 </item>
 <item>
     <title>树莓派 4B 完美实现音乐无损串流</title>
-    <link>http://jallenlau.github.io/raspberry_music/</link>
+    <link>https://jallenlau.github.io/raspberry_music/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/raspberry_music/</guid>
+    <guid>https://jallenlau.github.io/raspberry_music/</guid>
     <description><![CDATA[<p>利用树莓派低功耗、低噪音、免关机的特性，针对有聆听无损音乐且鄙夷繁杂操作等需求的用户打造一台方便的无损音乐串流器。</p>
 <h2 id="溯源">溯源</h2>
 <p>现在到了无损音乐贩售厂家都开始做流媒体的时代了，所以享受高品质音乐的同时，便捷性也成为关注点。毅然决然卖掉了 Sony zx300 播放器，入了个 xDuoo 出的新款解码耳放，想着利用手里闲置的那台安卓手机实现流媒体无损串流。只可惜安卓系统虽然从 Android N 时代就宣布手机 USB 传输音频支持动态采样率，可到了 Android 10 时代发现，输出采样只会锁定 48kHz、192kHz、384kHz。不巧的是，我的解码耳放当输入手机强制重采样为 192kHz 的音乐时，持续产生爆破音。头疼的刷了多个类原生系统以及 MIUI 系统（只支持 48kHz 采样）都无法解决问题。迫于贫穷没法买一台 iPhone 作为音乐转盘，由此考虑利用树莓派低功耗、低噪音、免关机的特性，借助国外开发者的固件实现流媒体整合传输并保证无损的功能。</p>
@@ -227,10 +227,10 @@
 </item>
 <item>
     <title>创建 GitHub Pages &amp; 自定域名教程</title>
-    <link>http://jallenlau.github.io/bulid_blog_github/</link>
+    <link>https://jallenlau.github.io/bulid_blog_github/</link>
     <pubDate>Tue, 11 Jun 2019 17:55:28 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>http://jallenlau.github.io/bulid_blog_github/</guid>
+    <guid>https://jallenlau.github.io/bulid_blog_github/</guid>
     <description><![CDATA[<p>本文详细介绍利用 Github Pages 搭建个人博客，以及自定义域名步骤。</p>
 <h2 id="建立-github-pages">建立 GitHub Pages</h2>
 <h3 id="第一步">第一步</h3>
