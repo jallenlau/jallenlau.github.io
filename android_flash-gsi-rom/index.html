@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>安卓手机刷入 GSI 镜像教程 - JallenLau</title><meta name="Description" content="安卓手机刷入 GSI 镜像教程"><meta property="og:title" content="安卓手机刷入 GSI 镜像教程" />
+<meta property="og:description" content="安卓手机刷入 GSI 镜像教程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jallenlau.github.io/android_flash-gsi-rom/" /><meta property="og:image" content="https://jallenlau.github.io/android_flash-gsi-rom/gsi.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-06-10T21:40:32+08:00" />
+<meta property="article:modified_time" content="2019-06-10T21:40:32+08:00" /><meta property="og:site_name" content="JallenLau&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jallenlau.github.io/android_flash-gsi-rom/gsi.jpg"/>
+<meta name="twitter:title" content="安卓手机刷入 GSI 镜像教程"/>
+<meta name="twitter:description" content="安卓手机刷入 GSI 镜像教程"/>
+<meta name="application-name" content="JallenLau">
+<meta name="apple-mobile-web-app-title" content="JallenLau"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jallenlau.github.io/android_flash-gsi-rom/" /><link rel="prev" href="https://jallenlau.github.io/android_flash_android/" /><link rel="next" href="https://jallenlau.github.io/vim/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "安卓手机刷入 GSI 镜像教程",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jallenlau.github.io\/android_flash-gsi-rom\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/jallenlau.github.io\/android_flash-gsi-rom\/gsi.jpg",
+                            "width":  1200 ,
+                            "height":  627 
+                        }],"genre": "posts","keywords": "","wordcount":  1401 ,
+        "url": "https:\/\/jallenlau.github.io\/android_flash-gsi-rom\/","datePublished": "2019-06-10T21:40:32+08:00","dateModified": "2019-06-10T21:40:32+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "JallenLau","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/jallenlau.github.io\/images\/avatar.jpg",
+                    "width":  640 ,
+                    "height":  640 
+                }},"author": {
+                "@type": "Person",
+                "name": "JallenLau"
+            },"description": "安卓手机刷入 GSI 镜像教程"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="JallenLau"><span class="header-title-pre">⌘</span>JallenLau</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于我 </a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/android_flash-gsi-rom/" selected>中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="JallenLau"><span class="header-title-pre">⌘</span>JallenLau</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于我</a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/android_flash-gsi-rom/" selected>中文</option></select>
+                </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">安卓手机刷入 GSI 镜像教程</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>JallenLau</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/android/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>安卓</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2019-06-10">2019-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1401 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/android_flash-gsi-rom/gsi.jpg"
+        data-srcset="/android_flash-gsi-rom/gsi.jpg, /android_flash-gsi-rom/gsi.jpg 1.5x, /android_flash-gsi-rom/gsi.jpg 2x"
+        data-sizes="auto"
+        alt="/android_flash-gsi-rom/gsi.jpg"
+        title="安卓手机刷入 GSI 镜像教程" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一gsi-镜像包介绍">一、gsi 镜像包介绍</a></li>
+    <li><a href="#二gsi-镜像通刷包的特点">二、gsi 镜像通刷包的特点</a></li>
+    <li><a href="#三gsi镜像包的刷入选择">三、gsi镜像包的刷入选择</a></li>
+    <li><a href="#四gsi镜像包类名的选择两类">四、gsi镜像包类名的选择（两类）</a>
+      <ul>
+        <li><a href="#出厂安卓版本是80及以下的手机">出厂安卓版本是8.0及以下的手机</a>
+          <ul>
+            <li><a href="#第一步">第一步</a></li>
+            <li><a href="#第二步">第二步</a></li>
+            <li><a href="#第三步">第三步</a></li>
+          </ul>
+        </li>
+        <li><a href="#出厂版本是安卓90版本的手机第二步关键">出厂版本是安卓9.0版本的手机（第二步关键）</a>
+          <ul>
+            <li><a href="#第一步-1">第一步</a></li>
+            <li><a href="#第二步-1">第二步</a></li>
+            <li><a href="#第三步-1">第三步</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#五刷机步骤">五、刷机步骤</a>
+      <ul>
+        <li><a href="#自行完成">自行完成</a></li>
+        <li><a href="#刷机前注意">刷机前注意</a></li>
+        <li><a href="#开始刷机">开始刷机</a>
+          <ul>
+            <li><a href="#方法一rec-刷入">方法一：Rec 刷入</a>
+              <ul>
+                <li><a href="#第一步-2">第一步</a></li>
+                <li><a href="#第二步-2">第二步</a></li>
+                <li><a href="#第三步-2">第三步</a></li>
+              </ul>
+            </li>
+            <li><a href="#方法二fastboot-刷入">方法二：fastboot 刷入</a>
+              <ul>
+                <li><a href="#第一步-3">第一步</a></li>
+                <li><a href="#第二步-3">第二步</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#六修复-gsi-可能存在的基础问题">六、修复 GSI 可能存在的基础问题</a>
+      <ul>
+        <li><a href="#修复自动亮度失效">修复自动亮度失效</a></li>
+        <li><a href="#修复扬声器失真">修复扬声器失真</a></li>
+        <li><a href="#修复屏幕状态栏圆角">修复屏幕状态栏圆角</a></li>
+      </ul>
+    </li>
+    <li><a href="#七系统的使用">七、系统的使用</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。</p>
+<h2 id="一gsi-镜像包介绍">一、gsi 镜像包介绍</h2>
+<p>GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。 自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新，成为了社区开发的一大福音。从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。</p>
+<h2 id="二gsi-镜像通刷包的特点">二、gsi 镜像通刷包的特点</h2>
+<p>优点是在机器还没有适配第三方 ROM 的时候，可以提前体验到类原生系统，体验原生系统的流畅简洁以及丰富的自定义。但同样存在不小的问题，由于此类镜像包没有针对具体机型进行优化，所以会存在部分问题，例如小米手机的四角弧度过大，gsi 镜像包刷入后状态栏会有不匹配，显示不完全的可能性以及相机无法拍照，即使可以拍照，相片质量也堪忧。</p>
+<h2 id="三gsi镜像包的刷入选择">三、gsi镜像包的刷入选择</h2>
+<p>gsi通刷包有很多种选择，也是由不同的国外大神负责维护，下面贴上几乎所有 gsi 通刷包（包括官方和非官方）的集合链接，请各位自行选择，选择包的种类请见下一章节。</p>
+<p><a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list" target="_blank" rel="noopener noreffer">点此跳转GitHub</a></p>
+<h2 id="四gsi镜像包类名的选择两类">四、gsi镜像包类名的选择（两类）</h2>
+<h3 id="出厂安卓版本是80及以下的手机">出厂安卓版本是8.0及以下的手机</h3>
+<h4 id="第一步">第一步</h4>
+<p>需要下载一个软件 Treble Check 检测，附上谷歌商店和酷安链接。</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.kevintresuelo.treble" target="_blank" rel="noopener noreffer">Treble Check（点击跳转Google play store）</a></p>
+<p><a href="https://www.coolapk.com/apk/com.kevintresuelo.treble" target="_blank" rel="noopener noreffer">Treble Check（点击跳转酷安应用市场）</a></p>
+<h4 id="第二步">第二步</h4>
+<p>打开软件查看检测结果，只有当 <strong>Project Treble</strong> 通过检测才表明此手机可以刷 gsi 镜像包。接着看第二项 <strong>Seamless System Updates</strong>，如果显示 <strong>A/B</strong> 即表明你应该选择的通刷包后缀名为 <em>A/B</em> 或者 <em>AB</em> 。若检测结果显示 <strong>A only</strong>，即表明你应该选择的通刷包后缀名为 <em>A</em> 或者 <em>A only</em>。</p>
+<h4 id="第三步">第三步</h4>
+<p>上网查找你所使用手机的内核名称，例如小米 9 SE 为 <strong>arm64</strong></p>
+<h3 id="出厂版本是安卓90版本的手机第二步关键">出厂版本是安卓9.0版本的手机（第二步关键）</h3>
+<h4 id="第一步-1">第一步</h4>
+<p>同上第一步，需要检测 <strong>Project Treble</strong> 是否支持</p>
+<h4 id="第二步-1">第二步</h4>
+<p>此处注意！凡是出厂版本为 9.0 的手机，无论 <strong>Seamless System Updates</strong> 检测结果如何，通刷包的版本一律选择 <strong>A/B</strong> 或 <strong>AB</strong>。</p>
+<h4 id="第三步-1">第三步</h4>
+<p>同上第三步。</p>
+<h2 id="五刷机步骤">五、刷机步骤</h2>
+<h3 id="自行完成">自行完成</h3>
+<p>自行刷入第三方 rec<br>
+自行下载好 gsi 解压后得到 img 镜像包</p>
+<h3 id="刷机前注意">刷机前注意</h3>
+<p>使用官方稳定ROM作为底包，不要使用开发版和任何官改版。</p>
+<h3 id="开始刷机">开始刷机</h3>
+<h4 id="方法一rec-刷入">方法一：Rec 刷入</h4>
+<h5 id="第一步-2">第一步</h5>
+<p>手机备份好重要资料后，重启至第三方 recovery TWRP, 并在<strong>高级</strong>中选择<strong>取消强制加密</strong>并选中两项后确认。</p>
+<h5 id="第二步-2">第二步</h5>
+<p>主页面选择<strong>清除</strong>，滑动下方滑块进行<strong>双清</strong>即可，不要自作多情，双清足够。</p>
+<h5 id="第三步-2">第三步</h5>
+<p>返回主页面，选择<strong>安装</strong>后，点击右下方<strong>刷入镜像</strong>，找到拷贝到手机里的<strong>img</strong>镜像包，选择后刷入<strong>System镜像</strong>分区内，等待结束后再次<strong>双清</strong>即可使用。</p>
+<h4 id="方法二fastboot-刷入">方法二：fastboot 刷入</h4>
+<blockquote>
+<p><strong>此方法仅对小米手机有效</strong></p>
+</blockquote>
+<h5 id="第一步-3">第一步</h5>
+<ul>
+<li>网络下载符合所使用机型的 vbmeta.img, 并将其拷贝到 platform-tools 文件夹内</li>
+<li>下载 <a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list" target="_blank" rel="noopener noreffer">GSI</a> 包  (choose A/B one)</li>
+</ul>
+<h5 id="第二步-3">第二步</h5>
+<p>adb依次输入以下命令
+{% highlight ruby %}
+fastboot &ndash;disable-verity &ndash;disable-verification flash vbmeta vbmeta.img
+fastboot flash system <gsi-img>
+fastboot -w
+fastboot reboot
+{% endhighlight %}</p>
+<h2 id="六修复-gsi-可能存在的基础问题">六、修复 GSI 可能存在的基础问题</h2>
+<h3 id="修复自动亮度失效">修复自动亮度失效</h3>
+<ol>
+<li>下载 <a href="https://drive.google.com/open?id=1DF-v-gwG1rQT-SbAZQYlTwFZFcOPKI9U" target="_blank" rel="noopener noreffer">framework-res__auto_generated_rro.apk</a></li>
+<li>用re管理器将其复制到 vendor/overlay 文件夹</li>
+<li>修改 overlay 文件夹权限为 <code>rwxr-xr-x</code></li>
+<li>手机打开 Termux 输入以下命令
+{% highlight ruby %}
+mount -o remount -w /vendor
+chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay;chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay/framework-res__auto_generated_rro.apk
+{% endhighlight %}</li>
+</ol>
+<h3 id="修复扬声器失真">修复扬声器失真</h3>
+<ol>
+<li>手机下载 Root Explorer</li>
+<li>删除两个文件夹</li>
+</ol>
+<blockquote>
+<p>/system/vendor/lib/soundfx<br>
+/system/vendor/lib64/soundfx</p>
+</blockquote>
+<ol start="3">
+<li>改变 vendor 文件夹的权限为  <code>rw-r--r--</code></li>
+<li>重启手机</li>
+</ol>
+<h3 id="修复屏幕状态栏圆角">修复屏幕状态栏圆角</h3>
+<p>adb 输入以下命令(最后的数字根据自己喜好任意修改):<br>
+{% highlight ruby %}
+adb shell settings put secure sysui_rounded_content_padding 20
+{% endhighlight %}</p>
+<h2 id="七系统的使用">七、系统的使用</h2>
+<p>完成以上步骤即可完成刷机工作，如过程中遇到问题，可以去负责维护相关镜像系统的GitHub反馈Issue。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2019-06-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/android_flash-gsi-rom/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jallenlau.github.io/android_flash-gsi-rom/" data-title="安卓手机刷入 GSI 镜像教程" data-via="JallenLau1997" data-hashtags=""><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jallenlau.github.io/android_flash-gsi-rom/" data-hashtag=""><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="https://jallenlau.github.io/android_flash-gsi-rom/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Reddit" data-sharer="reddit" data-url="https://jallenlau.github.io/android_flash-gsi-rom/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jallenlau.github.io/android_flash-gsi-rom/" data-title="安卓手机刷入 GSI 镜像教程"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://jallenlau.github.io/android_flash-gsi-rom/" data-title="安卓手机刷入 GSI 镜像教程"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/android_flash_android/" class="prev" rel="prev" title="刷机及 Root 教程"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>刷机及 Root 教程</a>
+            <a href="/vim/" class="next" rel="next" title="Vim 常用语句">Vim 常用语句<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">JallenLau</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

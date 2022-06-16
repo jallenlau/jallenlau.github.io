@@ -1,0 +1,1014 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>编程 - 分类 - JallenLau</title>
+        <link>https://jallenlau.github.io/categories/code/</link>
+        <description>编程 - 分类 - JallenLau</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jallenlau@protonmail.com (JallenLau)</managingEditor>
+            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Jul 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://jallenlau.github.io/categories/code/" rel="self" type="application/rss+xml" /><item>
+    <title>Ubuntu 常见命令</title>
+    <link>https://jallenlau.github.io/ubuntu_code/</link>
+    <pubDate>Tue, 04 Jun 2019 00:00:00 &#43;0000</pubDate>
+    <author>JallenLau</author>
+    <guid>https://jallenlau.github.io/ubuntu_code/</guid>
+    <description><![CDATA[<p>持续更新本人 Linux 学习过程中所需常见命令，已更新完结。</p>
+<h2 id="基础指令">基础指令</h2>
+<ol>
+<li>ls</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ls //列出当前路径下的全部文件夹名称
+</span></span><span class="line"><span class="cl">#ls &lt;path&gt; //列出指定路径下的全部文件(夹)名称
+</span></span><span class="line"><span class="cl">#ls root //列出相对路径root下的全部文件夹
+</span></span><span class="line"><span class="cl">#ls /root //列出绝对路径root下的全部文件夹
+</span></span><span class="line"><span class="cl">#ls -l &lt;path&gt; //以详细列表的形式列出路径下的所有文件夹
+</span></span><span class="line"><span class="cl">#ls -a &lt;path&gt; //显示隐藏文件(夹)
+</span></span><span class="line"><span class="cl">#ls -lh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>cd &amp; pwd</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#pwd // Print Working Directory 打印当前工作路径
+</span></span><span class="line"><span class="cl">#cd &lt;path&gt; // Change Directory 切换当前工作目录
+</span></span><span class="line"><span class="cl">#cd ~ //切换到当前用户的家目录
+</span></span><span class="line"><span class="cl">    //#cd ~/apple
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>mkdir (Make Directory)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#mkdir &lt;path&gt; //创建目录
+</span></span><span class="line"><span class="cl">    //#mkdir newfolder
+</span></span><span class="line"><span class="cl">    //#mkdir /root/newfolder
+</span></span><span class="line"><span class="cl">#mkdir -p &lt;path&gt; //创建多层不存在目录
+</span></span><span class="line"><span class="cl">    //#mkdir -p /root/newfolder/a/b/c/d
+</span></span><span class="line"><span class="cl">#mkdir path1 path2 path3... //创建多个目录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>touch</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#touch &lt;path&gt; //创建文件
+</span></span><span class="line"><span class="cl">    //#touch fold1.txt fold2.txt...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>cp (Copy)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#cp &lt;copy path&gt; &lt;paste path&gt; //可以对新文件重命名
+</span></span><span class="line"><span class="cl">#cp -r &lt;copy folder&gt; &lt;paste folder&gt; //复制文件夹，&#34;- r&#34; 表示递归复制
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li>mv (Move)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#mv &lt;move path&gt; &lt;paste path&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>rm (Remove)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#rm -f &lt;path&gt; //force remove
+</span></span><span class="line"><span class="cl">#rm -r &lt;path&gt; //删除文件夹
+</span></span><span class="line"><span class="cl">    //rm -rf &lt;path&gt;
+</span></span><span class="line"><span class="cl">#rm -f linux* //删除具有公共特性的文件，*为通配符
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="8">
+<li>vim</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#vim &lt;fold&gt; //文件存在与否均可
+</span></span><span class="line"><span class="cl">            //Shift+: 按下 q 后回车即可退出
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>储存重定向</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#正常执行的指令 &gt;/&gt;&gt; 文件的路径 //文件不存在则自动创建
+</span></span><span class="line"><span class="cl">    //#ls -la &gt; ls.txt 覆盖
+</span></span><span class="line"><span class="cl">    //#ls -la &gt;&gt; ls.txt 追加
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="10">
+<li>cat</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#cat &lt;path&gt; //直接打开文件
+</span></span><span class="line"><span class="cl">#cat &lt;path1&gt; &lt;path2&gt; ... &lt;pathN&gt; &gt; &lt;path&gt; //合并文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="进阶指令">进阶指令</h2>
+<ol>
+<li>df</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#df -h //查看磁盘空间
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>free</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#free -m/h //查看内存使用情况，-m 表示以 MB 为单位查看
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>swap 用于临时内存
+shared 用于共享内存</p>
+<ol start="3">
+<li>head</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#head -n abc.log //查看文件前 n 行，如果不指定，默认为10行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>tail</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#tail -n abc.log //查看文件末 n 行，如果不指定，默认为10行
+</span></span><span class="line"><span class="cl">#tail -f &lt;path&gt; //查看文件动态变化
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>一般用于查看系统日志</p>
+<ol start="5">
+<li>less</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#less &lt;path&gt; //查看文件，以较少的内容进行输出，按下辅助功能键（数字+回车、空格+上下方向键）查看更多
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li>wc</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#wc -lwc //统计文件内容信息（包含行数、单词数、字节数）
+</span></span><span class="line"><span class="cl">    //-l 行数
+</span></span><span class="line"><span class="cl">    //-w 单词数
+</span></span><span class="line"><span class="cl">    //-c 字节数
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>date</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#date //表示操作时间日期（读取、设置）
+</span></span><span class="line"><span class="cl">#date +%F
+</span></span><span class="line"><span class="cl">#date &#34;+%Y-%m-%d&#34; //输出形式：2019-07-02
+</span></span><span class="line"><span class="cl">#date &#34;+%F %T&#34;
+</span></span><span class="line"><span class="cl">#date &#34;+%Y-%m-%d %H:%M:%S&#34; //输出形式：2019-07-02 08:41:20
+</span></span><span class="line"><span class="cl">#date -d &#34;-1 day&#34; &#34;+%Y-%m-%d %H:%M:%S&#34;
+</span></span><span class="line"><span class="cl">#date -d &#34;-1 year&#34; &#34;+%Y-%m-%d %H:%M:%S&#34; //获取之前的时间
+</span></span><span class="line"><span class="cl">#date -d &#34;+1 day&#34; &#34;+%Y-%m-%d %H:%M:%S&#34; //获取之后的时间
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>%F 表示完整的年月日<br>
+%T 表示完整的时分秒<br>
+%Y 表示四位年份<br>
+%m 表示两位月份（带前导0）<br>
+%d 表示日期（带前导0）<br>
+%H 表示小时（带前导0）<br>
+%M 表示分钟（带前导0）<br>
+%S 表示秒数（带前导0）</p>
+<ol start="8">
+<li>cal</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#cal
+</span></span><span class="line"><span class="cl">#cal -1 //直接输出当前月份日历
+</span></span><span class="line"><span class="cl">#cal -3 //输出上月+本月+下月日历
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>clear/ctrl+L</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#clear/ctrl+L //清除(隐藏)终端中已经存在的信息
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="10">
+<li>管道<br>
+一般用于“过滤”、“特殊”、“拓展处理”。<br>
+不能单独使用，主要是辅助作用。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ls /|grep y //过滤（查询出根目录下包含 “y” 的文档名称）
+</span></span><span class="line"><span class="cl">     针对以上命令说明：  
+</span></span><span class="line"><span class="cl">     ① 以管道作为分界线，前面的命令有个输出，后面需要先输入，再过滤最后输出。  
+</span></span><span class="line"><span class="cl">     ② grep 指令主要用于过滤。  
+</span></span><span class="line"><span class="cl">#ls /|wc -l //统计根目录文档总个数
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="高级指令">高级指令</h2>
+<ol>
+<li>host name<br>
+操作主机名（读取、设置）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#hostname
+</span></span><span class="line"><span class="cl">#hostname -f //输出当前主机名中的 FQDN （全限定域名）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>id<br>
+查看用户基本信息（包含用户id，用户组id，附加组id&hellip;），该指令如果不指定用户则默认当前用户。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#id
+</span></span><span class="line"><span class="cl">#id username //指定用户的信息
+</span></span><span class="line"><span class="cl">    验证上述信息是否正确？
+</span></span><span class="line"><span class="cl">    验证用户信息：#cat /etc/passwd
+</span></span><span class="line"><span class="cl">    验证用户组信息：#cat /etc/group
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>whoami<br>
+显示当前登录用户名，一般用于 shell 脚本，用于获取当前用户名，方便记录日志。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#whoami
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>ps -ef<br>
+查看服务器进程信息  <br>
+“ -e ” 等价于 “ -A ” ，表示列出全部的进程<br>
+“ -f ” 显示全部列</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jallen@JALLENLAU:~$ ps -ef
+</span></span><span class="line"><span class="cl">UID        PID  PPID  C STIME TTY          TIME CMD
+</span></span><span class="line"><span class="cl">root         1     0  0 07:44 ?        00:00:00 /init ro
+</span></span><span class="line"><span class="cl">root         6     1  0 07:44 tty1     00:00:00 /init ro
+</span></span><span class="line"><span class="cl">jallen       7     6  0 07:44 tty1     00:00:00 -bash
+</span></span><span class="line"><span class="cl">jallen      30     7  0 09:01 tty1     00:00:00 ps -ef
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>列的含义：<br>
+UID：该进程执行的用户id<br>
+PID：进程id<br>
+PPID：该进程的父级进程id，如果一个程序的父级进程找不到，改进程称之为僵尸进程<br>
+C：CPU的占用率<br>
+STIME：进行的启动时间<br>
+TTY：终端设备，发起该进程的设备识别符号
+TIME：进程的执行时间
+CMD：该进程的名称或者对应的路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ps -ef|grep name //在 ps 结果中搜索
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>top<br>
+查看服务器进程占用资源</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jallen@JALLENLAU:~$ top
+</span></span><span class="line"><span class="cl">top - 10:35:23 up  2:51,  0 users,  load average: 0.52, 0.58, 0.59
+</span></span><span class="line"><span class="cl">Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+</span></span><span class="line"><span class="cl">%Cpu(s):  5.1 us,  3.7 sy,  0.0 ni, 90.9 id,  0.0 wa,  0.3 hi,  0.0 si,
+</span></span><span class="line"><span class="cl">KiB Mem :  8273208 total,  3175048 free,  4868808 used,   229352 buff/cac
+</span></span><span class="line"><span class="cl">KiB Swap: 15497464 total, 14828848 free,   668616 used.  3270668 avail Me
+</span></span><span class="line"><span class="cl">  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+
+</span></span><span class="line"><span class="cl">    1 root      20   0    8892      0      0 S   0.0  0.0   0:00.10
+</span></span><span class="line"><span class="cl">    6 root      20   0    8904      0      0 S   0.0  0.0   0:00.01
+</span></span><span class="line"><span class="cl">    7 jallen    20   0   16928   1216   1128 S   0.0  0.0   0:00.26
+</span></span><span class="line"><span class="cl">  484 jallen    20   0   17644   1948   1436 R   0.0  0.0   0:00.03
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>表头含义：<br>
+PID：进程id<br>
+USER：该进程对应的用户id<br>
+PR：优先级<br>
+VIRT：虚拟内存<br>
+RES：常驻内存<br>
+SHR：共享内存 <br>
+S：运行的状态（S代表睡眠，R代表运行）<br>
+%CPU：表示 CPU 占用百分比<br>
+%MEM：表示内存占用百分比<br>
+TIME+：执行的时间<br>
+COMMAND：进程的名称和路径</li>
+<li>计算一个进程实际使用的内存 = 常驻内存 - 共享内存</li>
+<li>在运行 top 的时候,可以按下方便快捷键:
+M:表示将结果按内存从高到低进行排序<br>
+P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
+</ul>
+<ol start="6">
+<li>du -sh<br>
+查看目录真实大小<br>
+“ -s ”只显示汇总的大小<br>
+“ -h ”表示以较高可读性进行显示</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#du -sh &lt;path&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>find<br>
+用于查找</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#find &lt;path&gt; option name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>option:<br>
+-name //按照文档名称搜索（支持模糊搜索）<br>
+-type //按照文档类型搜索（“-”表示文件，在用find时用f替换），“d”表示文件夹</p>
+<ol start="8">
+<li>service<br>
+用于控制一些软件服务的启动/停止/重启</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#service name start/stop/restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>kill</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#kill 进程PID //配合 ps 一起使用
+</span></span><span class="line"><span class="cl">#killall 进程名称
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="10">
+<li>ifconfig</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ifconfig //获取网卡信息
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="11">
+<li>reboot<br>
+重启计算机</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#reboot
+</span></span><span class="line"><span class="cl">#reboot -w //模拟重启（只写开机与关机的日志信息）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="12">
+<li>shutdown<br>
+关机</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#shutdown
+</span></span><span class="line"><span class="cl">#shutdown -h now/15:25
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="13">
+<li>uptime<br>
+输出计算机的持续在线时间</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#uptime
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="14">
+<li>uname<br>
+获取计算机操作系统相关信息</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#uname //获取操作系统的类型
+</span></span><span class="line"><span class="cl">#uname -a //获取全部的系统信息（类型、全部主机名、内核版本、发布时间、开源计划）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="15">
+<li>netstat -tnlp<br>
+查看网络连接状态</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#netstat -tnlp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>选项说明：<br>
+-t：表示只列出 tcp 协议的链接<br>
+-n：表示将地址从字母组合转化为 ip 地址，将协议转化成端口号显示<br>
+-l：表示过滤出 stat（状态）列中其值为 LISTEN（监听）的连接<br>
+-p：表示发起连接的进程的 PID 的进程名称</p>
+<ol start="16">
+<li>man（Manual）<br>
+手册（包含Linux中全部命令手册）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#man cp/rm/wc...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="替换源">替换源</h2>
+<ol>
+<li>输入指令。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
+</span></span><span class="line"><span class="cl">sudo vim  /etc/apt/sources.list //打开list列表
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>替换阿里源。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>
+<p>按 ESC 退出，并输入<code>:wq</code>保存。</p>
+</li>
+<li>
+<p>输入指令更新源。</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="安装">安装</h2>
+<ol>
+<li>更新软件库</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>安装软件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get install &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>通过关键词搜索软件库</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt search &lt;key&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="卸载">卸载</h2>
+<ol>
+<li>删除软件及其配置文件。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get purge / apt-get --purge remove &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>删除依赖包,保留配置文件。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get autoremove &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>删除软件，不删除依赖包，保留配置文件。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get remove &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get autoclean
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="以最高权限开启文件管理">以最高权限开启文件管理</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nautilus
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item>
+<item>
+    <title>Vim 常用语句</title>
+    <link>https://jallenlau.github.io/vim/</link>
+    <pubDate>Thu, 04 Jul 2019 00:00:00 &#43;0000</pubDate>
+    <author>JallenLau</author>
+    <guid>https://jallenlau.github.io/vim/</guid>
+    <description><![CDATA[<h1 id="vim-三种模式">Vim 三种模式</h1>
+<p>命令模式、编辑模式（输入模式）、末行模式（尾行模式）</p>
+<blockquote>
+<p>命令模式：在该模式下是不能对文件直接编辑，可以输入快捷键进行一些操作（删除行，复制行，移动光标，粘贴等等），打开文件之后默认进入的模式。<br>
+编辑模式：在该模式下可以对文件的内容进行编辑。<br>
+末行模式：可以在末行输入命令来对文件进行操作（搜索、替换、保存、退出、撤销、高亮等等）。</p>
+</blockquote>
+<h2 id="vim的打开文件的方式">Vim的打开文件的方式</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#vim &lt;path&gt; //打开指定的文件
+</span></span><span class="line"><span class="cl">#vim +number &lt;path&gt; //打开指定的文件，并将光标移动到指定行
+</span></span><span class="line"><span class="cl">#vim +/keyword &lt;path&gt; //打开指定的文件，并高亮显示关键词
+</span></span><span class="line"><span class="cl">#vim &lt;path1&gt; &lt;path2&gt; &lt;path3&gt; //同时打开多个文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="命令模式">命令模式</h2>
+<h3 id="光标移动">光标移动</h3>
+<ol>
+<li>
+<p>光标移动到行首<br>
+按键：shift + 6 或 ^</p>
+</li>
+<li>
+<p>光标移动到行尾<br>
+按键：shift + 4 或 $</p>
+</li>
+<li>
+<p>光标移动到首行<br>
+按键：gg</p>
+</li>
+<li>
+<p>光标移动到末行<br>
+按键：G</p>
+</li>
+<li>
+<p>翻屏<br>
+向上翻屏：按键 ctrl + b（before）或 PgUp<br>
+向下翻屏：按键 ctrl + f（after）或 PgDn</p>
+</li>
+</ol>
+<h3 id="复制操作">复制操作</h3>
+<ol>
+<li>
+<p>复制光标所在行<br>
+按键：yy<br>
+粘贴：在想要粘贴的地方按下p键</p>
+</li>
+<li>
+<p>以光标所在行为准（包含当前行），向下复制指定的行数<br>
+按键：数字yy</p>
+</li>
+<li>
+<p>可视化复制<br>
+按键：ctrl + v（可视块）或 V（可视行）或 v（可视），然后按下 ↑↓←→ 方向键来选中需要复制的区块，按下 y 键进行复制，最后按下 p 键粘贴</p>
+</li>
+</ol>
+<h3 id="剪切删除">剪切/删除</h3>
+<ol>
+<li>
+<p>剪切/删除光标所在行<br>
+按键：dd （删除之后下一行上移）<br>
+注意：dd 严格意义上说是剪切命令，但是如果剪切了不粘贴就是删除的效果。</p>
+</li>
+<li>
+<p>剪切/删除光标所在行为准（包含当前行），向下删除/剪切指定的行 <br>
+按键：数字dd（删除之后下一行上移）</p>
+</li>
+<li>
+<p>剪切/删除光标所在的当前行之后的内容，但是删除之后下一行不上移<br>
+按键：D（删除之后当前行会变成空白行）</p>
+</li>
+<li>
+<p>可视化删除<br>
+按键：ctrl + v（可视块）或 V（可视行）或 v（可视），上下左右移动，按下 D 表示删除选中行，d 表示删选中块</p>
+</li>
+<li>
+<p>撤销/恢复<br>
+撤销：输入:u（不属于命令模式）或者 u（undo）<br>
+恢复：ctrl + r 恢复（取消）之前的撤销操作</p>
+</li>
+</ol>
+<h3 id="光标的快速移动">光标的快速移动</h3>
+<ol>
+<li>
+<p>快速将光标移动到指定的行<br>
+按键：数字G</p>
+</li>
+<li>
+<p>以当前光标为准向上/向下移动 n 行<br>
+按键：数字↑，数字↓</p>
+</li>
+<li>
+<p>以当前光标为准向左/向右移动 n 字符<br>
+按键：数字←，数字→</p>
+</li>
+<li>
+<p>末行模式下的快速移动方式：移动到指定的行<br>
+按键：输入英文 “:”，其后输入行数数字，按下回车</p>
+</li>
+</ol>
+<h2 id="末行模式">末行模式</h2>
+<p>进入方式：由命令模式进入，按下 : 或者 /（表示查找） 即可进入<br>
+退出方式：<br>
+a. 按下esc<br>
+b. 连按2次esc键<br>
+c. 删除末行全部输入字符</p>
+<h3 id="保存操作write">保存操作（write）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:w //保存文件  
+</span></span><span class="line"><span class="cl">:w &lt;path&gt; //另存为
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="退出quit">退出（quit）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:q //退出文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="保存并退出">保存并退出</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:wq //保存并且退出
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="强制">强制（!）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:q! //表示强制退出，刚才做的修改操作不做保存
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="调用外部命令了解">调用外部命令（了解）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:! //外部命令
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="搜索查找">搜索/查找</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/keyword
+</span></span><span class="line"><span class="cl">N/n //在搜索结果中切换上/下一个结果（next）  
+</span></span><span class="line"><span class="cl">:nohl //取消高亮（no highlight）  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="替换">替换</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:s/keyword/newword //替换光标所在行的第一处符合条件的内容
+</span></span><span class="line"><span class="cl">:s/keyword/newword/g //替换光标所在行的全部符合条件的内容
+</span></span><span class="line"><span class="cl">:%s/keyword/newword //替换整个文档中每行第一个符合条件的内容
+</span></span><span class="line"><span class="cl">:%s/keyword/newword/g //替换整个文档的符合条件的内容
+</span></span><span class="line"><span class="cl">% //表示整个文件
+</span></span><span class="line"><span class="cl">g //表示全局（global）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="显示行号临时">显示行号（临时）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:set nu //number
+</span></span><span class="line"><span class="cl">:set nonu //取消显示
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用vim同时打开多个文件，在末行模式下进行切换文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:files //查看当前已经打开的文件名称
+</span></span><span class="line"><span class="cl">%a：a=active //表示当前正在打开的文件
+</span></span><span class="line"><span class="cl"># //表示上一个打开的文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="切换文件的方式">切换文件的方式</h3>
+<p>a. 指定切换文件的名称</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:open 已经打开的文件名
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>b. 通过其他命令来切换上一个文件/下一个文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:bn //切换到下一个文件（back next）
+</span></span><span class="line"><span class="cl">:bp //切换到上一个文件（back prev）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="编辑模式">编辑模式</h2>
+<p></p>
+<p>退出方式：按下esc键</p>]]></description>
+</item>
+</channel>
+</rss>

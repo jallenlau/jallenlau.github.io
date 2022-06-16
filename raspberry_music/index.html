@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>树莓派 4B 完美实现音乐无损串流 - JallenLau</title><meta name="Description" content="树莓派 4B 完美实现音乐无损串流"><meta property="og:title" content="树莓派 4B 完美实现音乐无损串流" />
+<meta property="og:description" content="树莓派 4B 完美实现音乐无损串流" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jallenlau.github.io/raspberry_music/" /><meta property="og:image" content="https://jallenlau.github.io/raspberry_music/raspberry.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-02-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-23T00:00:00+00:00" /><meta property="og:site_name" content="JallenLau&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jallenlau.github.io/raspberry_music/raspberry.webp"/>
+<meta name="twitter:title" content="树莓派 4B 完美实现音乐无损串流"/>
+<meta name="twitter:description" content="树莓派 4B 完美实现音乐无损串流"/>
+<meta name="application-name" content="JallenLau">
+<meta name="apple-mobile-web-app-title" content="JallenLau"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jallenlau.github.io/raspberry_music/" /><link rel="prev" href="https://jallenlau.github.io/bulid_blog_github/" /><link rel="next" href="https://jallenlau.github.io/ubuntu_code/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "树莓派 4B 完美实现音乐无损串流",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jallenlau.github.io\/raspberry_music\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/jallenlau.github.io\/raspberry_music\/raspberry.webp",
+                            "width":  1200 ,
+                            "height":  675 
+                        }],"genre": "posts","keywords": "","wordcount":  1261 ,
+        "url": "https:\/\/jallenlau.github.io\/raspberry_music\/","datePublished": "2020-02-23T00:00:00+00:00","dateModified": "2020-02-23T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "JallenLau","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/jallenlau.github.io\/images\/avatar.jpg",
+                    "width":  640 ,
+                    "height":  640 
+                }},"author": {
+                "@type": "Person",
+                "name": "JallenLau"
+            },"description": "树莓派 4B 完美实现音乐无损串流"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="JallenLau"><span class="header-title-pre">⌘</span>JallenLau</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于我 </a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/raspberry_music/" selected>中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="JallenLau"><span class="header-title-pre">⌘</span>JallenLau</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于我</a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/raspberry_music/" selected>中文</option></select>
+                </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">树莓派 4B 完美实现音乐无损串流</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>JallenLau</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/other/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>其他</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-02-23">2020-02-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1261 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/raspberry_music/raspberry.webp"
+        data-srcset="/raspberry_music/raspberry.webp, /raspberry_music/raspberry.webp 1.5x, /raspberry_music/raspberry.webp 2x"
+        data-sizes="auto"
+        alt="/raspberry_music/raspberry.webp"
+        title="树莓派 4B 完美实现音乐无损串流" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#溯源">溯源</a></li>
+    <li><a href="#采用固件">采用固件</a>
+      <ul>
+        <li><a href="#volumio">Volumio</a></li>
+        <li><a href="#moode推荐">moOde（推荐）</a></li>
+      </ul>
+    </li>
+    <li><a href="#所需设备及固件">所需设备及固件</a></li>
+    <li><a href="#步骤">步骤</a>
+      <ul>
+        <li><a href="#volumio-安装过程">Volumio 安装过程</a></li>
+        <li><a href="#moode-安装过程">moOde 安装过程</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>利用树莓派低功耗、低噪音、免关机的特性，针对有聆听无损音乐且鄙夷繁杂操作等需求的用户打造一台方便的无损音乐串流器。</p>
+<h2 id="溯源">溯源</h2>
+<p>现在到了无损音乐贩售厂家都开始做流媒体的时代了，所以享受高品质音乐的同时，便捷性也成为关注点。毅然决然卖掉了 Sony zx300 播放器，入了个 xDuoo 出的新款解码耳放，想着利用手里闲置的那台安卓手机实现流媒体无损串流。只可惜安卓系统虽然从 Android N 时代就宣布手机 USB 传输音频支持动态采样率，可到了 Android 10 时代发现，输出采样只会锁定 48kHz、192kHz、384kHz。不巧的是，我的解码耳放当输入手机强制重采样为 192kHz 的音乐时，持续产生爆破音。头疼的刷了多个类原生系统以及 MIUI 系统（只支持 48kHz 采样）都无法解决问题。迫于贫穷没法买一台 iPhone 作为音乐转盘，由此考虑利用树莓派低功耗、低噪音、免关机的特性，借助国外开发者的固件实现流媒体整合传输并保证无损的功能。</p>
+<h2 id="采用固件">采用固件</h2>
+<h3 id="volumio">Volumio</h3>
+<p>利用国外的 volumio 固件进行功能实现，可以将音频直接通过 USB 接口数字传输到 DAC 解码设备，不经过系统 SRC 处理，保证了音频文件的原位深、源采样率。</p>
+<p><strong>经过本人亲自体验总结以下使用特性：</strong></p>
+<ul>
+<li>支持本地存储、局域网读取、NAS</li>
+<li>通过插件支持 Spotify 无缝串流（最高320kbps）</li>
+<li>One Drive 云盘读取私人音乐库（操作很迟钝，操作不人性）</li>
+<li>Tidal、Qobuz 无损音乐串流（付费功能，且只能在后台操作页面选择歌曲或者官方 app）</li>
+<li>支持 DSD 原生传输或经过系统 PCM 传输 DoP</li>
+<li>支持无损 FLAC 电台播放功能</li>
+<li>支持 DLNA、miniDLNA、AirPlay</li>
+</ul>
+<h3 id="moode推荐">moOde（推荐）</h3>
+<p>利用国外的 moOde 固件进行功能实现，可以将音频直接通过 USB 接口数字传输到 DAC 解码设备，不经过系统 SRC 处理，保证了音频文件的原位深、源采样率，支持，操作页面更专业化，更美观。</p>
+<p><strong>经过本人亲自体验总结以下使用特性：</strong></p>
+<ul>
+<li>支持本地存储、局域网读取、NAS</li>
+<li>通过插件支持 Spotify 无缝串流（最高320kbps）</li>
+<li>支持 UPnP （Tidal、Qobuz、One Drive、Google Drive 等音乐通过手机 UPnP 软件统一操控，软件选择性广泛且十分方便，除 Tidal 只能 16-44.1 FLAC 传输，Qobuz 最高支持 24-192 FLAC 传输，云盘内直接原文件传输）</li>
+<li>支持 DSD 原生传输</li>
+<li>支持 DLNA、miniDLNA、AirPlay</li>
+</ul>
+<h2 id="所需设备及固件">所需设备及固件</h2>
+<ul>
+<li><a href="https://www.balena.io/etcher/" target="_blank" rel="noopener noreffer">Etcher</a> 镜像烧录工具</li>
+<li><a href="https://volumio.org/" target="_blank" rel="noopener noreffer">Volumio</a> 下载适配 Raspberry 固件</li>
+<li><a href="https://moodeaudio.org/" target="_blank" rel="noopener noreffer">moOde</a> 下载适配 Raspberry 固件</li>
+<li>Micro-SD 16GB 内存卡（容量足矣）</li>
+<li>读卡器</li>
+<li>树莓派 4B（具备无线网卡款）</li>
+<li>xDuoo XD-05 DAC 解码耳放（自选）</li>
+</ul>
+<h2 id="步骤">步骤</h2>
+<h3 id="volumio-安装过程">Volumio 安装过程</h3>
+<ul>
+<li>烧录前将卡格式化为 FAT32 格式，利用 Etcher 将 Volumio 固件烧录到 Micro-SD 卡内。</li>
+<li>将卡插入树莓派，开机。</li>
+<li>输入用户名：volumio ，密码：volumio</li>
+<li>打开电脑搜索名称为 Volumio 的 WiFi ，输入密码：volumio2 连接。</li>
+<li>依次按照提示操作，并连接无线网络。</li>
+<li>用同一无线网下的设备登录 <a href="" rel="">http://volumio.local</a> ,即可享受聆听。</li>
+<li>若选择连接有线网络，则保证在同一网段的情况下，登录树莓派所在 IP 地址。</li>
+</ul>
+<h3 id="moode-安装过程">moOde 安装过程</h3>
+<ul>
+<li>烧录前将卡格式化为 FAT32 格式，利用 Etcher 将 moOde 固件烧录到 Micro-SD 卡内。</li>
+<li>将卡插入树莓派，开机。</li>
+<li>打开电脑搜索名称为 moode 的 WiFi ，输入密码：moodeaudio 连接。</li>
+<li>依次按照提示操作，并连接无线网络。</li>
+<li>用同一无线网下的设备登录 <a href="" rel="">http://moode.local</a> ,即可享受聆听。</li>
+<li>若选择连接有线网络，则保证在同一网段的情况下，登录树莓派所在 IP 地址。</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-02-23</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/raspberry_music/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://jallenlau.github.io/raspberry_music/" data-title="树莓派 4B 完美实现音乐无损串流" data-via="JallenLau1997" data-hashtags=""><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://jallenlau.github.io/raspberry_music/" data-hashtag=""><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="https://jallenlau.github.io/raspberry_music/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Reddit" data-sharer="reddit" data-url="https://jallenlau.github.io/raspberry_music/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://jallenlau.github.io/raspberry_music/" data-title="树莓派 4B 完美实现音乐无损串流"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://jallenlau.github.io/raspberry_music/" data-title="树莓派 4B 完美实现音乐无损串流"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/bulid_blog_github/" class="prev" rel="prev" title="创建 GitHub Pages &amp; 自定域名教程"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>创建 GitHub Pages & 自定域名教程</a>
+            <a href="/ubuntu_code/" class="next" rel="next" title="Ubuntu 常见命令">Ubuntu 常见命令<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">JallenLau</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
