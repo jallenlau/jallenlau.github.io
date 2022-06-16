@@ -11,42 +11,42 @@
 ## 个人技能
 
 ### :(fa-brands fa-js-square): **JavaScript**  
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 **Syn**tax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ and modular JavaScript / **Jav**aScript Concepts
 {{< /style >}}
 
 ### :(fa-solid fa-file-code):  **HTML**
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 **HTM**L Basics / **Sem**antic HTML / **Acc**essibility / **Bas**ics of SEO
 {{< /style >}}
 
 ### :(fa-brands fa-css3-alt):  **CSS**
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 **CSS** Basics / **Mak**ing layouts / **Res**ponsive Web Design / **CSS** Preprocessors
 {{< /style >}}
 
 ### :(fa-brands fa-react): **React**
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 **Rea**ct Basics / **Hoo**ks / **Con**text / **Ren**der Props / **Eco**system: Routers / **Eco**system: Redux
 {{< /style >}}
 
 ### :(fa-brands fa-vuejs): **Vue** 
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 ( Learning... )
 {{< /style >}}
 
 ### :(fa-brands fa-java):  **Java** 
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 ( Learning... )
 {{< /style >}}
 
 ### :(fa-brands fa-golang): **Golang** 
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 ( Learning... )
 {{< /style >}}
 
 ### :(fa-brands fa-centercode): **Backend** 
-{{< style "strong{color:#473C8B;}; " >}}
+{{< style "strong{color:#473C8B;}" >}}
 ( Learning... )
 {{< /style >}}
 
