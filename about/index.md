@@ -2,7 +2,7 @@
 
 {{< figure src="/images/obiwan.jpg" >}}
 
-{{< style "text-align:center; font-size: 1.2rem; strong{color:#00b1ff;}" >}}
+{{< style "text-align:center; font-size: 1.2rem" >}}
 {{< typeit >}} 
 🤩 热爱编程，拟转行 **前端开发** 🥰 
 {{< /typeit >}}
