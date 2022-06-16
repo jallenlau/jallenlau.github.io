@@ -2,11 +2,11 @@
 
 {{< figure src="obiwan.jpg" >}}
 
-<!-- {{< style "text-align:center" >}}
+{{< style "text-align:center" >}}
 {{< typeit >}} 
-🤩 热爱编程，拟转行 **前端开发** 🥰 
+👾 热爱编程，拟转行 **前端开发** 🥰 
 {{< /typeit >}}
-{{< /style >}} -->
+{{< /style >}}
 
 ## 个人技能
 
