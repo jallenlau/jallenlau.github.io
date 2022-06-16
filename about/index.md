@@ -1,38 +1,54 @@
 # This is Jallen ! 😎
 
+{{< figure src="/images/obiwan.jpg" >}}
 
-{{< style "text-align:center; font-size: 1.2rem" >}}
+{{< style "text-align:center; font-size: 1.2rem; strong{color:#00b1ff;}" >}}
 {{< typeit >}} 
-～ 因热爱编程，拟转行**前端开发** ～ 
+🤩 热爱编程，拟转行 **前端开发** 🥰 
 {{< /typeit >}}
 {{< /style >}}
 
-
-## 基础技能
+## 个人技能
 
 ### :(fa-brands fa-js-square): **JavaScript**  
-> **Syn**tax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ and modular JavaScript / **Jav**aScript Concepts
+{{< style "strong{color:#473C8B;}; " >}}
+**Syn**tax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ and modular JavaScript / **Jav**aScript Concepts
+{{< /style >}}
 
 ### :(fa-solid fa-file-code):  **HTML**
-> **HTM**L Basics / **Sem**antic HTML / **Acc**essibility / **Bas**ics of SEO
+{{< style "strong{color:#473C8B;}; " >}}
+**HTM**L Basics / **Sem**antic HTML / **Acc**essibility / **Bas**ics of SEO
+{{< /style >}}
 
 ### :(fa-brands fa-css3-alt):  **CSS**
-> **CSS** Basics / **Mak**ing layouts / **Res**ponsive Web Design / **CSS** Preprocessors
+{{< style "strong{color:#473C8B;}; " >}}
+**CSS** Basics / **Mak**ing layouts / **Res**ponsive Web Design / **CSS** Preprocessors
+{{< /style >}}
 
 ### :(fa-brands fa-react): **React**
-> **Rea**ct Basics / **Hoo**ks / **Con**text / **Ren**der Props / **Eco**system: Routers / **Eco**system: Redux
+{{< style "strong{color:#473C8B;}; " >}}
+**Rea**ct Basics / **Hoo**ks / **Con**text / **Ren**der Props / **Eco**system: Routers / **Eco**system: Redux
+{{< /style >}}
 
 ### :(fa-brands fa-vuejs): **Vue** 
-> ( Learning... )
+{{< style "strong{color:#473C8B;}; " >}}
+( Learning... )
+{{< /style >}}
 
 ### :(fa-brands fa-java):  **Java** 
-> ( Learning... )
+{{< style "strong{color:#473C8B;}; " >}}
+( Learning... )
+{{< /style >}}
 
 ### :(fa-brands fa-golang): **Golang** 
-> ( Learning... )
+{{< style "strong{color:#473C8B;}; " >}}
+( Learning... )
+{{< /style >}}
 
 ### :(fa-brands fa-centercode): **Backend** 
-> ( Learning... )
+{{< style "strong{color:#473C8B;}; " >}}
+( Learning... )
+{{< /style >}}
 
 ## 独立项目
 
