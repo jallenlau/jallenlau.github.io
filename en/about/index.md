@@ -1,6 +1,6 @@
 # This is Jallen ! 😎
 
-{{< figure src="obiwan.jpg" >}}
+{{< figure src="obiwan.png" >}}
 
 {{< style "text-align:center" >}}
 {{< typeit >}} 
