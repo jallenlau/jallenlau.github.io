@@ -1,8 +1,9 @@
 # This is Jallen ! 😎
 
+
 {{< figure src="obiwan.png" >}}
 
-{{< style "text-align:center" >}}
+{{< style "text-align:center; font-size: 1.2rem" >}}
 {{< typeit >}} 
 👾 热爱编程，拟转行 **前端开发** 🥰 
 {{< /typeit >}}
@@ -11,7 +12,7 @@
 ## 个人技能
 
 ### :(fa-brands fa-js-square): **JavaScript**  
-Syntax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ and modular JavaScript / **Jav**aScript Concepts
+**Syn**tax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ and modular JavaScript / **Jav**aScript Concepts
 
 ### :(fa-solid fa-file-code):  **HTML**
 **HTM**L Basics / **Sem**antic HTML / **Acc**essibility / **Bas**ics of SEO
@@ -67,3 +68,5 @@ Syntax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ an
 ## 社区贡献
 
 ### :(fa-brands fa-github): **尚无**
+
+{{< music server="netease" type="song" id="18687683" autoplay="true" mini="true">}}
