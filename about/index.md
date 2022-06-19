@@ -1,7 +1,9 @@
 # This is Jallen ! 😎
 
 
-{{< figure src="obiwan.png" >}}
+{{< figure src="https://s2.loli.net/2022/06/19/5hWue7l8jm9kawy.jpg" >}}
+
+
 
 {{< style "text-align:center; font-size: 1.2rem" >}}
 {{< typeit >}} 
@@ -13,6 +15,9 @@
 
 ### :(fa-brands fa-js-square): **JavaScript**  
 **Syn**tax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ and modular JavaScript / **Jav**aScript Concepts
+
+### :(fa-brands fa-js-square): **TypeScript**  
+( Learning... )
 
 ### :(fa-solid fa-file-code):  **HTML**
 **HTM**L Basics / **Sem**antic HTML / **Acc**essibility / **Bas**ics of SEO
@@ -68,5 +73,3 @@
 ## 社区贡献
 
 ### :(fa-brands fa-github): **尚无**
-
-{{< music server="netease" type="song" id="18687683" autoplay="true" mini="true">}}
