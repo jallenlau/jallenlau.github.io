@@ -14,10 +14,10 @@
 ## 个人技能
 
 ### :(fa-brands fa-js-square): **JavaScript**  
-**Syn**tax and Basic Constructs / **DOM** Manipulation / **Fet**ch API / **ES6**+ and modular JavaScript / **Jav**aScript Concepts
+**Syn**tax and Basic Constructs / **D**OM Manipulation / **Fet**ch API / **E**S6+ and modular JavaScript / **Jav**aScript Concepts
 
 ### :(fa-brands fa-js-square): **TypeScript**  
-( Learning... )
+**Typ**e Inference / **Typ**e Assertion / **Uni**on Types / **Int**erfaces / **cl**ass / **Gen**erics
 
 ### :(fa-solid fa-file-code):  **HTML**
 **HTM**L Basics / **Sem**antic HTML / **Acc**essibility / **Bas**ics of SEO
@@ -43,26 +43,34 @@
 ## 独立项目
 
 ### :(fa-brands fa-react): **React 搭建的电子商务平台全栈项目**
-> **🖥 项目地址**：[GitHub 源码](https://github.com/jallenlau/crwn-clothing) ｜ [Demo](https://regal-empanada-b3ccfd.netlify.app/)    
+>   **🖥 项目地址**： [Demo](https://regal-empanada-b3ccfd.netlify.app/)  ｜  [GitHub 源码](https://github.com/jallenlau/crwn-clothing)  | [TypeScript 优化](https://github.com/jallenlau/crwn-clothing-TypeScript)
+>
+> **💡实现功能**：
+>
+> > 利用 Firebase 动态获取商品信息并储存用户信息，利用 React Router 特性生成登录注册页面、主页面、商品概览页面、分类商品详情页面、购物车页面，利用状态管理工具 Redux 实现用户信息及购物车商品信息的动态更新，利用 Stripe API 实现第三方信用卡付款。最后，使用 TypeScript 改写 Redux 部分源码，保证代码维护（ Type Checker ）的便利性。
+>
 > **🔧 涉及工具**: 
->   
+>
 > **页面搭建**: 
->> **Rea**ct Basics, **Rea**ct Router, **Rea**ct Hooks, **Rea**ct Performance, **Rea**ct Suspense + React Lazy, **Rea**ct Design Patterns, **Sty**led-Components 
-> 
+>
+> > **Rea**ct Basics, **Rea**ct Router, **Rea**ct Hooks, **Rea**ct Performance, **Rea**ct Suspense + React Lazy, **Rea**ct Design Patterns, **Sty**led-Components 
+>
 > **状态管理**: 
->> **Con**text API 
-> 
+> > **Con**text API 
+>
 > **状态管理优化**: 
->> **Red**ux, **Red**ux thunk, **Red**ux Saga, **Asy**nchronous Redux 
-> 
-> **数据库**: 
->> **Fir**ebase
+> > **Red**ux, **Red**ux thunk, **Red**ux Saga, **Asy**nchronous Redux 
+>
+> **数据库及 API**: 
+>
+> > **Fir**ebase, **Str**ipe API
 >
 > **测试工具**: 
->> **Tes**ting with Jest, **Enz**yme and **Sna**pshot testing
+>
+> > **Tes**ting with Jest, **Enz**yme and **Sna**pshot testing
 >
 > **其他工具**: 
->> **Str**ipe API, **Gra**phQL, **Apo**llo, **PWA**s, **Per**sistance + Session Storage, **Sta**te Normalization
+> > **Gra**phQL, **Apo**llo, **PWA**s, **Per**sistance + Session Storage, **Sta**te Normalization
 
 ### :(fa-brands fa-vuejs): **Vue** ( ... )
 >...
