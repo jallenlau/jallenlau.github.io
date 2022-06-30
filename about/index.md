@@ -43,34 +43,36 @@
 ## 独立项目
 
 ### :(fa-brands fa-react): **React 搭建的电子商务平台全栈项目**
->   **🖥 项目地址**： [Demo](https://regal-empanada-b3ccfd.netlify.app/)  ｜  [GitHub 源码](https://github.com/jallenlau/crwn-clothing)  | [TypeScript 优化](https://github.com/jallenlau/crwn-clothing-TypeScript)
+>   **🖥 项目地址**： [Demo](https://regal-empanada-b3ccfd.netlify.app/)  ｜  [JavaScript 源码](https://github.com/jallenlau/crwn-clothing)  | [TypeScript 源码](https://github.com/jallenlau/crwn-clothing-TypeScript)
 >
-> **💡实现功能**：
+>   **💡实现功能**：
 >
-> > 利用 Firebase 动态获取商品信息并储存用户信息，利用 React Router 特性生成登录注册页面、主页面、商品概览页面、分类商品详情页面、购物车页面，利用状态管理工具 Redux 实现用户信息及购物车商品信息的动态更新，利用 Stripe API 实现第三方信用卡付款。最后，使用 TypeScript 改写 Redux 部分源码，保证代码维护（ Type Checker ）的便利性。
+>   > 利用 Firebase 动态获取商品信息并储存用户信息，使用 React Router 特性生成登录注册页面、主页面、商品概览页面、分类商品详情页面、购物车页面，尝试使用三种状态管理工具（Context API、Redux、GraphQL）实现用户信息及购物车商品信息的动态更新，使用 Stripe API 实现第三方信用卡付款。最后，使用 TypeScript 改写 所有 JavaScript 源码，保证代码维护（ Type Checker ）的便利性。
 >
-> **🔧 涉及工具**: 
+>   **🔧 涉及工具**: 
 >
-> **页面搭建**: 
+>   **页面搭建**: 
 >
-> > **Rea**ct Basics, **Rea**ct Router, **Rea**ct Hooks, **Rea**ct Performance, **Rea**ct Suspense + React Lazy, **Rea**ct Design Patterns, **Sty**led-Components 
+>   > **Rea**ct Basics, **Rea**ct Router, **Rea**ct Hooks, **Rea**ct Performance, **Rea**ct Suspense + React Lazy, **Rea**ct Design Patterns, **S**CSS, **Sty**led-Components 
 >
-> **状态管理**: 
-> > **Con**text API 
+>   **状态管理**: 
+>   > **Con**text API 
 >
-> **状态管理优化**: 
-> > **Red**ux, **Red**ux thunk, **Red**ux Saga, **Asy**nchronous Redux 
+>   **状态管理优化**: 
+>   > 方案一：**Red**ux, **Red**ux thunk, **Red**ux Saga, **Asy**nchronous Redux 
+>   >
+>   > 方案二：**Gra**phQL, **Apo**llo | [GitHub 源码](https://github.com/jallenlau/crwn-clothing-graphql)
 >
-> **数据库及 API**: 
+>   **数据库及 API**: 
 >
-> > **Fir**ebase, **Str**ipe API
+>   > **Fir**ebase, **Str**ipe API
 >
-> **测试工具**: 
+>   **测试工具**: 
 >
-> > **Tes**ting with Jest, **Enz**yme and **Sna**pshot testing
+>   > **Tes**ting with Jest, **Enz**yme and **Sna**pshot testing
 >
-> **其他工具**: 
-> > **Gra**phQL, **Apo**llo, **PWA**s, **Per**sistance + Session Storage, **Sta**te Normalization
+>   **其他工具**: 
+>   > **PWA**s, **Per**sistance + Session Storage, **Sta**te Normalization
 
 ### :(fa-brands fa-vuejs): **Vue** ( ... )
 >...
