@@ -13,10 +13,14 @@
 
 ## 个人技能
 
-### :(fa-brands fa-js-square): **JavaScript**  
+### :(fa-brands fa-js-square): **JavaScript** 
+掌握 JavaScript 所有概念，可熟练运用。
+
 **Syn**tax and Basic Constructs / **D**OM Manipulation / **Fet**ch API / **E**S6+ and modular JavaScript / **Jav**aScript Concepts
 
-### :(fa-brands fa-js-square): **TypeScript**  
+### :(fa-brands fa-js-square): **TypeScript** 
+掌握 TypeScript 核心概念，可用 TypeScript 创建/改写 Web 项目。
+
 **Typ**e Inference / **Typ**e Assertion / **Uni**on Types / **Int**erfaces / **cl**ass / **Gen**erics
 
 ### :(fa-solid fa-file-code):  **HTML**
@@ -26,11 +30,13 @@
 **CSS** Basics / **Mak**ing layouts / **Res**ponsive Web Design / **CSS** Preprocessors
 
 ### :(fa-brands fa-react): **React**
-了解 React Basics，了解并可运用 Hook、Props、State、Ecosystem 等核心概念。
+了解 React Basics，掌握并可运用 Hook、Props、State、Ecosystem 等核心概念。
 
 **Rea**ct Basics / **Hoo**ks / **Con**text / **Ren**der Props / **Eco**system: Routers / **Eco**system: Redux
 
 ### :(fa-brands fa-vuejs): **Vue** 
+掌握 Vue Basics 等核心概念，可较熟练运用。
+
 ( Learning... )
 
 ### :(fa-brands fa-java):  **Java** 
