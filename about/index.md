@@ -26,6 +26,8 @@
 **CSS** Basics / **Mak**ing layouts / **Res**ponsive Web Design / **CSS** Preprocessors
 
 ### :(fa-brands fa-react): **React**
+了解 React Basics，了解并可运用 Hook、Props、State、Ecosystem 等核心概念。
+
 **Rea**ct Basics / **Hoo**ks / **Con**text / **Ren**der Props / **Eco**system: Routers / **Eco**system: Redux
 
 ### :(fa-brands fa-vuejs): **Vue** 
@@ -56,9 +58,11 @@
 >   > **Rea**ct Basics, **Rea**ct Router, **Rea**ct Hooks, **Rea**ct Performance, **Rea**ct Suspense + React Lazy, **Rea**ct Design Patterns, **S**CSS, **Sty**led-Components 
 >
 >   **状态管理**: 
+>
 >   > **Con**text API 
 >
 >   **状态管理优化**: 
+>
 >   > 方案一：**Red**ux, **Red**ux thunk, **Red**ux Saga, **Asy**nchronous Redux 
 >   >
 >   > 方案二：**Gra**phQL, **Apo**llo | [GitHub 源码](https://github.com/jallenlau/crwn-clothing-graphql)
@@ -71,8 +75,9 @@
 >
 >   > **Tes**ting with Jest, **Enz**yme and **Sna**pshot testing
 >
->   **其他工具**: 
->   > **PWA**s, **Per**sistance + Session Storage, **Sta**te Normalization
+>   **其他**: 
+>
+>   > **PWA**, **Per**sistance + Session Storage, **Sta**te Normalization
 
 ### :(fa-brands fa-vuejs): **Vue** ( ... )
 >...
