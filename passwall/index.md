@@ -35,7 +35,7 @@
 
 🔗 [点击此处跳转使用教程](https://docs.gtk.pw/contents/android.html)
 
-##### iOS 系统
+#### iOS 系统
 
 客户端：[Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)、[Surge](https://apps.apple.com/us/app/surge-5/id1442620678)、[Quantumult X](https://apps.apple.com/us/app/quantumult-x/id1443988620)
 
