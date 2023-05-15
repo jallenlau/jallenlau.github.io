@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Code - Category - JallenLau</title>
+        <link>http://jallenlau.github.io/en/categories/code/</link>
+        <description>Code - Category - JallenLau</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jallenlau@protonmail.com (JallenLau)</managingEditor>
+            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://jallenlau.github.io/en/categories/code/" rel="self" type="application/rss+xml" /></channel>
+</rss>

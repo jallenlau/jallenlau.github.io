@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Ubuntu 常见命令 - JallenLau</title><meta name="Description" content="JallenLau&#39;s Blog"><meta property="og:title" content="Ubuntu 常见命令" />
+<meta property="og:description" content="持续更新本人 Linux 学习过程中所需常见命令，已更新完结。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://jallenlau.github.io/ubuntu_code/" /><meta property="og:image" content="http://jallenlau.github.io/ubuntu_code/install_ubuntu.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-06-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-06-04T00:00:00+00:00" /><meta property="og:site_name" content="JallenLau&#39;s Blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://jallenlau.github.io/ubuntu_code/install_ubuntu.png"/>
+<meta name="twitter:title" content="Ubuntu 常见命令"/>
+<meta name="twitter:description" content="持续更新本人 Linux 学习过程中所需常见命令，已更新完结。"/>
+<meta name="application-name" content="JallenLau">
+<meta name="apple-mobile-web-app-title" content="JallenLau"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://jallenlau.github.io/ubuntu_code/" /><link rel="prev" href="http://jallenlau.github.io/raspberry_music/" /><link rel="next" href="http://jallenlau.github.io/private_book_silence/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Ubuntu 常见命令",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/jallenlau.github.io\/ubuntu_code\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/jallenlau.github.io\/ubuntu_code\/install_ubuntu.png",
+                            "width":  2200 ,
+                            "height":  1125 
+                        }],"genre": "posts","keywords": "","wordcount":  2630 ,
+        "url": "http:\/\/jallenlau.github.io\/ubuntu_code\/","datePublished": "2019-06-04T00:00:00+00:00","dateModified": "2019-06-04T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "JallenLau","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/jallenlau.github.io\/images\/avatar.jpg",
+                    "width":  640 ,
+                    "height":  640 
+                }},"author": {
+                "@type": "Person",
+                "name": "JallenLau"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="JallenLau">JallenLau</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于我 </a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/ubuntu_code/" selected>中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="JallenLau">JallenLau</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于我</a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/ubuntu_code/" selected>中文</option></select>
+                </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Ubuntu 常见命令</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>JallenLau</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/code/"><i class="fa-solid fa-user-secret" aria-hidden="true"></i>编程</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2019-06-04">2019-06-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2630 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/ubuntu_code/install_ubuntu.png"
+        data-srcset="/ubuntu_code/install_ubuntu.png, /ubuntu_code/install_ubuntu.png 1.5x, /ubuntu_code/install_ubuntu.png 2x"
+        data-sizes="auto"
+        alt="/ubuntu_code/install_ubuntu.png"
+        title="/ubuntu_code/install_ubuntu.png" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础指令">基础指令</a></li>
+    <li><a href="#进阶指令">进阶指令</a></li>
+    <li><a href="#高级指令">高级指令</a></li>
+    <li><a href="#替换源">替换源</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#卸载">卸载</a></li>
+    <li><a href="#以最高权限开启文件管理">以最高权限开启文件管理</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>持续更新本人 Linux 学习过程中所需常见命令，已更新完结。</p>
+<h2 id="基础指令">基础指令</h2>
+<ol>
+<li>ls</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ls //列出当前路径下的全部文件夹名称
+</span></span><span class="line"><span class="cl">#ls &lt;path&gt; //列出指定路径下的全部文件(夹)名称
+</span></span><span class="line"><span class="cl">#ls root //列出相对路径root下的全部文件夹
+</span></span><span class="line"><span class="cl">#ls /root //列出绝对路径root下的全部文件夹
+</span></span><span class="line"><span class="cl">#ls -l &lt;path&gt; //以详细列表的形式列出路径下的所有文件夹
+</span></span><span class="line"><span class="cl">#ls -a &lt;path&gt; //显示隐藏文件(夹)
+</span></span><span class="line"><span class="cl">#ls -lh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>cd &amp; pwd</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#pwd // Print Working Directory 打印当前工作路径
+</span></span><span class="line"><span class="cl">#cd &lt;path&gt; // Change Directory 切换当前工作目录
+</span></span><span class="line"><span class="cl">#cd ~ //切换到当前用户的家目录
+</span></span><span class="line"><span class="cl">    //#cd ~/apple
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>mkdir (Make Directory)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#mkdir &lt;path&gt; //创建目录
+</span></span><span class="line"><span class="cl">    //#mkdir newfolder
+</span></span><span class="line"><span class="cl">    //#mkdir /root/newfolder
+</span></span><span class="line"><span class="cl">#mkdir -p &lt;path&gt; //创建多层不存在目录
+</span></span><span class="line"><span class="cl">    //#mkdir -p /root/newfolder/a/b/c/d
+</span></span><span class="line"><span class="cl">#mkdir path1 path2 path3... //创建多个目录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>touch</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#touch &lt;path&gt; //创建文件
+</span></span><span class="line"><span class="cl">    //#touch fold1.txt fold2.txt...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>cp (Copy)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#cp &lt;copy path&gt; &lt;paste path&gt; //可以对新文件重命名
+</span></span><span class="line"><span class="cl">#cp -r &lt;copy folder&gt; &lt;paste folder&gt; //复制文件夹，&#34;- r&#34; 表示递归复制
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li>mv (Move)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#mv &lt;move path&gt; &lt;paste path&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>rm (Remove)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#rm -f &lt;path&gt; //force remove
+</span></span><span class="line"><span class="cl">#rm -r &lt;path&gt; //删除文件夹
+</span></span><span class="line"><span class="cl">    //rm -rf &lt;path&gt;
+</span></span><span class="line"><span class="cl">#rm -f linux* //删除具有公共特性的文件，*为通配符
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="8">
+<li>vim</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#vim &lt;fold&gt; //文件存在与否均可
+</span></span><span class="line"><span class="cl">            //Shift+: 按下 q 后回车即可退出
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>储存重定向</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#正常执行的指令 &gt;/&gt;&gt; 文件的路径 //文件不存在则自动创建
+</span></span><span class="line"><span class="cl">    //#ls -la &gt; ls.txt 覆盖
+</span></span><span class="line"><span class="cl">    //#ls -la &gt;&gt; ls.txt 追加
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="10">
+<li>cat</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#cat &lt;path&gt; //直接打开文件
+</span></span><span class="line"><span class="cl">#cat &lt;path1&gt; &lt;path2&gt; ... &lt;pathN&gt; &gt; &lt;path&gt; //合并文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="进阶指令">进阶指令</h2>
+<ol>
+<li>df</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#df -h //查看磁盘空间
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>free</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#free -m/h //查看内存使用情况，-m 表示以 MB 为单位查看
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>swap 用于临时内存
+shared 用于共享内存</p>
+<ol start="3">
+<li>head</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#head -n abc.log //查看文件前 n 行，如果不指定，默认为10行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>tail</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#tail -n abc.log //查看文件末 n 行，如果不指定，默认为10行
+</span></span><span class="line"><span class="cl">#tail -f &lt;path&gt; //查看文件动态变化
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>一般用于查看系统日志</p>
+<ol start="5">
+<li>less</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#less &lt;path&gt; //查看文件，以较少的内容进行输出，按下辅助功能键（数字+回车、空格+上下方向键）查看更多
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li>wc</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#wc -lwc //统计文件内容信息（包含行数、单词数、字节数）
+</span></span><span class="line"><span class="cl">    //-l 行数
+</span></span><span class="line"><span class="cl">    //-w 单词数
+</span></span><span class="line"><span class="cl">    //-c 字节数
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>date</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#date //表示操作时间日期（读取、设置）
+</span></span><span class="line"><span class="cl">#date +%F
+</span></span><span class="line"><span class="cl">#date &#34;+%Y-%m-%d&#34; //输出形式：2019-07-02
+</span></span><span class="line"><span class="cl">#date &#34;+%F %T&#34;
+</span></span><span class="line"><span class="cl">#date &#34;+%Y-%m-%d %H:%M:%S&#34; //输出形式：2019-07-02 08:41:20
+</span></span><span class="line"><span class="cl">#date -d &#34;-1 day&#34; &#34;+%Y-%m-%d %H:%M:%S&#34;
+</span></span><span class="line"><span class="cl">#date -d &#34;-1 year&#34; &#34;+%Y-%m-%d %H:%M:%S&#34; //获取之前的时间
+</span></span><span class="line"><span class="cl">#date -d &#34;+1 day&#34; &#34;+%Y-%m-%d %H:%M:%S&#34; //获取之后的时间
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>%F 表示完整的年月日<br>
+%T 表示完整的时分秒<br>
+%Y 表示四位年份<br>
+%m 表示两位月份（带前导0）<br>
+%d 表示日期（带前导0）<br>
+%H 表示小时（带前导0）<br>
+%M 表示分钟（带前导0）<br>
+%S 表示秒数（带前导0）</p>
+<ol start="8">
+<li>cal</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#cal
+</span></span><span class="line"><span class="cl">#cal -1 //直接输出当前月份日历
+</span></span><span class="line"><span class="cl">#cal -3 //输出上月+本月+下月日历
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>clear/ctrl+L</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#clear/ctrl+L //清除(隐藏)终端中已经存在的信息
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="10">
+<li>管道<br>
+一般用于“过滤”、“特殊”、“拓展处理”。<br>
+不能单独使用，主要是辅助作用。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ls /|grep y //过滤（查询出根目录下包含 “y” 的文档名称）
+</span></span><span class="line"><span class="cl">     针对以上命令说明：  
+</span></span><span class="line"><span class="cl">     ① 以管道作为分界线，前面的命令有个输出，后面需要先输入，再过滤最后输出。  
+</span></span><span class="line"><span class="cl">     ② grep 指令主要用于过滤。  
+</span></span><span class="line"><span class="cl">#ls /|wc -l //统计根目录文档总个数
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="高级指令">高级指令</h2>
+<ol>
+<li>host name<br>
+操作主机名（读取、设置）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#hostname
+</span></span><span class="line"><span class="cl">#hostname -f //输出当前主机名中的 FQDN （全限定域名）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>id<br>
+查看用户基本信息（包含用户id，用户组id，附加组id&hellip;），该指令如果不指定用户则默认当前用户。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#id
+</span></span><span class="line"><span class="cl">#id username //指定用户的信息
+</span></span><span class="line"><span class="cl">    验证上述信息是否正确？
+</span></span><span class="line"><span class="cl">    验证用户信息：#cat /etc/passwd
+</span></span><span class="line"><span class="cl">    验证用户组信息：#cat /etc/group
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>whoami<br>
+显示当前登录用户名，一般用于 shell 脚本，用于获取当前用户名，方便记录日志。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#whoami
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>ps -ef<br>
+查看服务器进程信息  <br>
+“ -e ” 等价于 “ -A ” ，表示列出全部的进程<br>
+“ -f ” 显示全部列</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jallen@JALLENLAU:~$ ps -ef
+</span></span><span class="line"><span class="cl">UID        PID  PPID  C STIME TTY          TIME CMD
+</span></span><span class="line"><span class="cl">root         1     0  0 07:44 ?        00:00:00 /init ro
+</span></span><span class="line"><span class="cl">root         6     1  0 07:44 tty1     00:00:00 /init ro
+</span></span><span class="line"><span class="cl">jallen       7     6  0 07:44 tty1     00:00:00 -bash
+</span></span><span class="line"><span class="cl">jallen      30     7  0 09:01 tty1     00:00:00 ps -ef
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>列的含义：<br>
+UID：该进程执行的用户id<br>
+PID：进程id<br>
+PPID：该进程的父级进程id，如果一个程序的父级进程找不到，改进程称之为僵尸进程<br>
+C：CPU的占用率<br>
+STIME：进行的启动时间<br>
+TTY：终端设备，发起该进程的设备识别符号
+TIME：进程的执行时间
+CMD：该进程的名称或者对应的路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ps -ef|grep name //在 ps 结果中搜索
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>top<br>
+查看服务器进程占用资源</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">jallen@JALLENLAU:~$ top
+</span></span><span class="line"><span class="cl">top - 10:35:23 up  2:51,  0 users,  load average: 0.52, 0.58, 0.59
+</span></span><span class="line"><span class="cl">Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+</span></span><span class="line"><span class="cl">%Cpu(s):  5.1 us,  3.7 sy,  0.0 ni, 90.9 id,  0.0 wa,  0.3 hi,  0.0 si,
+</span></span><span class="line"><span class="cl">KiB Mem :  8273208 total,  3175048 free,  4868808 used,   229352 buff/cac
+</span></span><span class="line"><span class="cl">KiB Swap: 15497464 total, 14828848 free,   668616 used.  3270668 avail Me
+</span></span><span class="line"><span class="cl">  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+
+</span></span><span class="line"><span class="cl">    1 root      20   0    8892      0      0 S   0.0  0.0   0:00.10
+</span></span><span class="line"><span class="cl">    6 root      20   0    8904      0      0 S   0.0  0.0   0:00.01
+</span></span><span class="line"><span class="cl">    7 jallen    20   0   16928   1216   1128 S   0.0  0.0   0:00.26
+</span></span><span class="line"><span class="cl">  484 jallen    20   0   17644   1948   1436 R   0.0  0.0   0:00.03
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>表头含义：<br>
+PID：进程id<br>
+USER：该进程对应的用户id<br>
+PR：优先级<br>
+VIRT：虚拟内存<br>
+RES：常驻内存<br>
+SHR：共享内存 <br>
+S：运行的状态（S代表睡眠，R代表运行）<br>
+%CPU：表示 CPU 占用百分比<br>
+%MEM：表示内存占用百分比<br>
+TIME+：执行的时间<br>
+COMMAND：进程的名称和路径</li>
+<li>计算一个进程实际使用的内存 = 常驻内存 - 共享内存</li>
+<li>在运行 top 的时候,可以按下方便快捷键:
+M:表示将结果按内存从高到低进行排序<br>
+P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
+</ul>
+<ol start="6">
+<li>du -sh<br>
+查看目录真实大小<br>
+“ -s ”只显示汇总的大小<br>
+“ -h ”表示以较高可读性进行显示</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#du -sh &lt;path&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>find<br>
+用于查找</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#find &lt;path&gt; option name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>option:<br>
+-name //按照文档名称搜索（支持模糊搜索）<br>
+-type //按照文档类型搜索（“-”表示文件，在用find时用f替换），“d”表示文件夹</p>
+<ol start="8">
+<li>service<br>
+用于控制一些软件服务的启动/停止/重启</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#service name start/stop/restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>kill</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#kill 进程PID //配合 ps 一起使用
+</span></span><span class="line"><span class="cl">#killall 进程名称
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="10">
+<li>ifconfig</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#ifconfig //获取网卡信息
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="11">
+<li>reboot<br>
+重启计算机</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#reboot
+</span></span><span class="line"><span class="cl">#reboot -w //模拟重启（只写开机与关机的日志信息）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="12">
+<li>shutdown<br>
+关机</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#shutdown
+</span></span><span class="line"><span class="cl">#shutdown -h now/15:25
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="13">
+<li>uptime<br>
+输出计算机的持续在线时间</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#uptime
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="14">
+<li>uname<br>
+获取计算机操作系统相关信息</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#uname //获取操作系统的类型
+</span></span><span class="line"><span class="cl">#uname -a //获取全部的系统信息（类型、全部主机名、内核版本、发布时间、开源计划）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="15">
+<li>netstat -tnlp<br>
+查看网络连接状态</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#netstat -tnlp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>选项说明：<br>
+-t：表示只列出 tcp 协议的链接<br>
+-n：表示将地址从字母组合转化为 ip 地址，将协议转化成端口号显示<br>
+-l：表示过滤出 stat（状态）列中其值为 LISTEN（监听）的连接<br>
+-p：表示发起连接的进程的 PID 的进程名称</p>
+<ol start="16">
+<li>man（Manual）<br>
+手册（包含Linux中全部命令手册）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#man cp/rm/wc...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="替换源">替换源</h2>
+<ol>
+<li>输入指令。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak //备份
+</span></span><span class="line"><span class="cl">sudo vim  /etc/apt/sources.list //打开list列表
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>替换阿里源。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>
+<p>按 ESC 退出，并输入<code>:wq</code>保存。</p>
+</li>
+<li>
+<p>输入指令更新源。</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="安装">安装</h2>
+<ol>
+<li>更新软件库</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>安装软件</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get install &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>通过关键词搜索软件库</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt search &lt;key&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="卸载">卸载</h2>
+<ol>
+<li>删除软件及其配置文件。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get purge / apt-get --purge remove &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>删除依赖包,保留配置文件。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get autoremove &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>删除软件，不删除依赖包，保留配置文件。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get remove &lt;package&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>apt的底层包是dpkg，而dpkg安装Package时，会将*.deb 放在 /var/cache/apt/archives/ 中，apt-get autoclean 只会删除 /var/cache/apt/archives/ 已经过期的deb。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt-get autoclean
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="以最高权限开启文件管理">以最高权限开启文件管理</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nautilus
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2019-06-04</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/ubuntu_code/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://jallenlau.github.io/ubuntu_code/" data-title="Ubuntu 常见命令" data-via="JallenLau1997" data-hashtags=""><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://jallenlau.github.io/ubuntu_code/" data-hashtag=""><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="http://jallenlau.github.io/ubuntu_code/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Reddit" data-sharer="reddit" data-url="http://jallenlau.github.io/ubuntu_code/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://jallenlau.github.io/ubuntu_code/" data-title="Ubuntu 常见命令"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://jallenlau.github.io/ubuntu_code/" data-title="Ubuntu 常见命令"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/raspberry_music/" class="prev" rel="prev" title="树莓派 4B 完美实现音乐无损串流"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>树莓派 4B 完美实现音乐无损串流</a>
+            <a href="/private_book_silence/" class="next" rel="next" title="我的信仰">我的信仰<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">JallenLau</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

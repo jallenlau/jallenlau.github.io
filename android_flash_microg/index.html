@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>microG 简介及安装 - JallenLau</title><meta name="Description" content="microG 官方文档翻译"><meta property="og:title" content="microG 简介及安装" />
+<meta property="og:description" content="microG 官方文档翻译" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://jallenlau.github.io/android_flash_microg/" /><meta property="og:image" content="http://jallenlau.github.io/android_flash_microg/microg.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-05-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-05-08T00:00:00+00:00" /><meta property="og:site_name" content="JallenLau&#39;s Blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://jallenlau.github.io/android_flash_microg/microg.webp"/>
+<meta name="twitter:title" content="microG 简介及安装"/>
+<meta name="twitter:description" content="microG 官方文档翻译"/>
+<meta name="application-name" content="JallenLau">
+<meta name="apple-mobile-web-app-title" content="JallenLau"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://jallenlau.github.io/android_flash_microg/" /><link rel="next" href="http://jallenlau.github.io/android_flash_android/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "microG 简介及安装",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/jallenlau.github.io\/android_flash_microg\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/jallenlau.github.io\/android_flash_microg\/microg.webp",
+                            "width":  768 ,
+                            "height":  329 
+                        }],"genre": "posts","keywords": "","wordcount":  1758 ,
+        "url": "http:\/\/jallenlau.github.io\/android_flash_microg\/","datePublished": "2019-05-08T00:00:00+00:00","dateModified": "2019-05-08T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "JallenLau","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/jallenlau.github.io\/images\/avatar.jpg",
+                    "width":  640 ,
+                    "height":  640 
+                }},"author": {
+                "@type": "Person",
+                "name": "JallenLau"
+            },"description": "microG 官方文档翻译"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="JallenLau">JallenLau</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于我 </a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/android_flash_microg/" selected>中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="JallenLau">JallenLau</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于我</a><a class="menu-item" href="https://github.com/jallenlau" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">中文<i class="fas fa-chevron-right fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/android_flash_microg/" selected>中文</option></select>
+                </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">microG 简介及安装</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>JallenLau</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/android/"><i class="fa-solid fa-user-secret" aria-hidden="true"></i>安卓</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2019-05-08">2019-05-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1758 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/android_flash_microg/microg.webp"
+        data-srcset="/android_flash_microg/microg.webp, /android_flash_microg/microg.webp 1.5x, /android_flash_microg/microg.webp 2x"
+        data-sizes="auto"
+        alt="/android_flash_microg/microg.webp"
+        title="microG 官方文档翻译" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#microg-介绍">microG 介绍</a></li>
+    <li><a href="#组件">组件</a>
+      <ul>
+        <li><a href="#service-core-gmscore">Service Core (GmsCore)</a>
+          <ul>
+            <li><a href="#概览">概览</a></li>
+            <li><a href="#特征">特征</a></li>
+            <li><a href="#系统要求">系统要求</a>
+              <ul>
+                <li><a href="#签名伪装">签名伪装</a></li>
+              </ul>
+            </li>
+            <li><a href="#模块">模块</a></li>
+          </ul>
+        </li>
+        <li><a href="#services-framework-proxy-gsfproxy">Services Framework Proxy (GsfProxy)</a></li>
+        <li><a href="#unified-network-location-provider-unifiednlp">Unified Network Location Provider (UnifiedNlp)</a></li>
+        <li><a href="#maps-api-mapsv1">Maps API (mapsv1)</a></li>
+      </ul>
+    </li>
+    <li><a href="#下载">下载</a>
+      <ul>
+        <li><a href="#f-droid存储库">F-Droid存储库</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#下载卡刷包">下载卡刷包</a></li>
+        <li><a href="#第一步">第一步</a></li>
+        <li><a href="#第二步推荐但不必要">第二步（推荐但不必要）</a></li>
+        <li><a href="#第三步无需求可省略">第三步（无需求可省略）</a></li>
+        <li><a href="#第四步">第四步</a></li>
+        <li><a href="#第五步">第五步</a></li>
+        <li><a href="#第六步">第六步</a></li>
+        <li><a href="#第七步">第七步</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="microg-介绍">microG 介绍</h2>
+<p>越来越多的 Library 和 API 仅适用于预先安装了各种 Google 应用的手机，从而有效地将第三方应用锁定到 Google 生态系统。出于这些原因，Android 被描述为“可远观而不可亵玩”的开放式。</p>
+<p>此时microG项目诞生了——谷歌专有核心库和应用程序的免费软件克隆。
+用户获得了扩展的应用程序支持，可以减少或监控发送给 Google 的数据，旧款手机可以提高电池寿命。microG 不仅用于真实设备，还取代了测试模拟器中的 Google 工具，甚至用于虚拟移动基础设施。</p>
+<h2 id="组件">组件</h2>
+<h3 id="service-core-gmscore">Service Core (GmsCore)</h3>
+<p>是一个库应用程序，给需通过谷歌服务或 Google Maps Android API（v2）才可运行的应用程序所需的功能特性。</p>
+<h4 id="概览">概览</h4>
+<p>microG GmsCore 是 Google Play 服务框架的免费开源实现方式。它允许调用专有 Google API 的应用程序在基于 AOSP 的 Rom（如 Replicant 和 LineageOS）上运行。作为闭源 Google Apps（GAPPS）的替代品，它是在享受 Android 核心功能的同时保护隐私的强大工具。</p>
+<h4 id="特征">特征</h4>
+<blockquote>
+<ul>
+<li>选择加入 Google 服务并扩展应用程序支持<br>
+(Opt-in to Google Services and extend application support)</li>
+<li>在线/离线定位服务<br>
+(On-/Offline location service)</li>
+<li>易于使用电池，内存和CPU<br>
+(Easy on battery, memory and CPU)</li>
+<li>没有多余软件<br>
+(No bloatware)</li>
+<li>适用于真实设备，测试模拟器和虚拟移动基础设施<br>
+(Works on real devices, test emulators and virtual mobile infrastructure)</li>
+<li>免费且开源（Apache 2.0许可）<br>
+(Free and open source (Apache 2.0 licensed))</li>
+</ul>
+</blockquote>
+<h4 id="系统要求">系统要求</h4>
+<p>需要伪装签名，使 GmsCore 可以假装官方 Play 服务使其存在于需要调用 Google API 的应用程序。</p>
+<blockquote>
+<h5 id="签名伪装">签名伪装</h5>
+<p>您需要一个支持签名伪装的 Rom。一些自定义 Rom 需要安装补丁并且在手机内完成部分操作设置以支持。</p>
+<ul>
+<li>CarbonROM<br>
+MicroG will ask for Signature Spoofing authorization</li>
+<li>OmniROM 5<br>
+Must be enabled at the bottom of the developer settings first.</li>
+<li>OmniROM 6/7<br>
+Must be enabled in Settings&gt;Apps&gt;Advanced(gear icon)&gt;Additional permissions&gt;Spoof signature.</li>
+<li>MarshRom<br>
+Must be enabled in Settings&gt;Apps&gt;Advanced(gear icon)&gt;Additional permissions&gt;Spoof signature.</li>
+<li>AospExtended<br>
+Must be enabled in Settings&gt;Apps&gt;Advanced(gear icon)&gt;App Permissions&gt;Spoof package signature.</li>
+<li><a href="https://lineage.microg.org/" target="_blank" rel="noopener noreffer">LineageOS bundled with microG</a></li>
+<li><a href="https://forum.xda-developers.com/showpost.php?p=71042083" target="_blank" rel="noopener noreffer">其他自定义Rom的支持列表</a></li>
+</ul>
+<p>如果安装了Xposed Framework，以下模块可以开启签名伪装：<a href="https://repo.xposed.info/module/com.thermatk.android.xf.fakegapps" target="_blank" rel="noopener noreffer">FakeGApps</a></p>
+<p>还可以通过 <a href="https://github.com/Nanolx/NanoDroid" target="_blank" rel="noopener noreffer">NanoDroid-patcher</a> 修补自定义 Rom，无需任何计算机操作,它将自动修补每次更新的 Rom。</p>
+<p>如果你已Root，但没有使用Xposed，你可以尝试使用 <a href="https://github.com/moosd/Needle" target="_blank" rel="noopener noreffer">Needle by moosd</a>（或 <a href="https://github.com/ale5000-git/tingle" target="_blank" rel="noopener noreffer">fork Tingle by ale5000</a>）或 <a href="https://github.com/Lanchon/haystack" target="_blank" rel="noopener noreffer">Haystack by Lanchon</a> 修补你已经安装的 Rom。Haystack可以选择添加一个简单的UI来控制伪装，它类似于 OmniROM 5 的伪装方式。请注意，所有3个修补程序都要求修补的是 Rom 不是 odexed。</p>
+<p><strong>注意：microG GmsCore无法安装在拥有Google服务的设备上。</strong></p>
+<p><a href="https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing" target="_blank" rel="noopener noreffer">原文详情</a></p>
+</blockquote>
+<h4 id="模块">模块</h4>
+<p>GmsCore 包括统一网络位置提供程序模块（UnifiedNlp），用于处理对 Google 网络位置提供程序的应用程序调用。它依赖于必须单独安装的位置和地址查找后端。</p>
+<p><a href="https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/README.md" target="_blank" rel="noopener noreffer">参阅</a></p>
+<p>对于完整的 microG 设置，可以安装PlayStore替换应用程序以及服务框架代理（GsfProxy）模块，以提供Google的推送消息服务。另请参见<a href="https://github.com/microg/android_packages_apps_GmsCore/wiki/Installation" target="_blank" rel="noopener noreffer">安装</a>。</p>
+<h3 id="services-framework-proxy-gsfproxy">Services Framework Proxy (GsfProxy)</h3>
+<p>是一个辅助实用程序，允许为 Google Cloud to Device Messaging（C2DM）开发的应用程序使用 Gms Core 内附带的 Google Cloud Messaging Service。</p>
+<p><strong>同上GmsCore</strong></p>
+<h3 id="unified-network-location-provider-unifiednlp">Unified Network Location Provider (UnifiedNlp)</h3>
+<p>是一个库，可为使用 Google 网络位置的应用提供基于 Wi-Fi 和移动数据的地理定位。它包含在 GmsCore 中，但也可以在大多数 Android 系统上独立运行。</p>
+<p><a href="https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/README.md" target="_blank" rel="noopener noreffer">详情</a></p>
+<h3 id="maps-api-mapsv1">Maps API (mapsv1)</h3>
+<p>是一个系统库，提供与现已弃用的 Google Maps API（v1）相同的功能。</p>
+<p><a href="https://github.com/microg/android_frameworks_mapsv1" target="_blank" rel="noopener noreffer">详情</a></p>
+<h2 id="下载">下载</h2>
+<p>提供了从 microG 项目下载 APK 文件索引。对于非APK组件，请参阅相应的文档。</p>
+<h3 id="f-droid存储库">F-Droid存储库</h3>
+<p>下载和更新 microG 项目组件的最佳方法是使用 F-Droid 存储库。它目前为 GmsCore 提供稳定的夜间更新以及 GsfProxy 和 FakeStore 发布。</p>
+<p><a href="https://microg.org/download.html" target="_blank" rel="noopener noreffer">点此跳转下载界面</a></p>
+<h2 id="安装">安装</h2>
+<h3 id="下载卡刷包">下载卡刷包</h3>
+<p><a href="https://androidfilehost.com/?w=files&amp;flid=198483" target="_blank" rel="noopener noreffer">点此下载</a> <strong>NanoDroid-patcher</strong> 和 <strong>NanoDroid-microG</strong> 两个卡刷包。</p>
+<h3 id="第一步">第一步</h3>
+<p>刷入目标第三方 ROM（必须刷入不包含谷歌框架的系统包）。</p>
+<h3 id="第二步推荐但不必要">第二步（推荐但不必要）</h3>
+<p>刷入Magisk。</p>
+<blockquote>
+<p>如果安装了 Magisk，NanoDroid 将会被作为模块刷入，否则将会直接安装到/system 分区。</p>
+</blockquote>
+<h3 id="第三步无需求可省略">第三步（无需求可省略）</h3>
+<p>安装 Kernel 核心。</p>
+<h3 id="第四步">第四步</h3>
+<p>安装 <strong>NanoDroid-patcher</strong> 卡刷包（时间大约在5到10分钟，请耐心等待。)</p>
+<h3 id="第五步">第五步</h3>
+<p>将下载好的 <strong>NanoDroid-microG</strong> 卡刷包打开，找到 <strong>.nanodroid.setup</strong>，以文本编辑模式打开，按照如下提示自定义按需设置：（<strong>1是开启,0是关闭</strong>）</p>
+<blockquote>
+<ul>
+<li>nanodroid_microg=1<br>
+microg核心，必须开启</li>
+<li>nanodroid_gmscore=0<br>
+谷歌原版服务框架，如果开启，上面microg要关闭，正常不开启</li>
+<li>nanodroid_fdroid=1<br>
+开源应用商店，按自己需求开启</li>
+<li>nanodroid_apps=1<br>
+microg其他软件默认开启</li>
+<li>nanodroid_play=1<br>
+谷歌原版商店，可以开启</li>
+<li>nanodroid_overlay=0</li>
+<li>nanodroid_zelda=1</li>
+<li>nanodroid_mapsv1=1<br>
+地图api，默认开启</li>
+<li>nanodroid_init=1</li>
+<li>nanodroid_gsync=0<br>
+谷歌同步，联系人，chrome等同步，如果在使用谷歌同步要开启</li>
+<li>nanodroid_swipe=0</li>
+<li>nanodroid_forcesystem=0</li>
+<li>nanodroid_nlpbackend=1000</li>
+<li>nanodroid_nano=1</li>
+<li>nanodroid_bash=1</li>
+<li>nanodroid_utils=1</li>
+<li>nanodroid_fonts=1</li>
+<li>nanodroid_override=0</li>
+</ul>
+</blockquote>
+<h3 id="第六步">第六步</h3>
+<p>安装 <strong>NanoDroid-microG</strong> 卡刷包后，重启手机至系统。</p>
+<h3 id="第七步">第七步</h3>
+<p>打开 microG 设置如下：</p>
+<blockquote>
+<p>运行 Self Check 授予缺少的必要权限,并关闭电池优化<br>
+启用 Google device registration<br>
+启用 Google Cloud Messaging<br>
+启用 Google SafetyNet<br>
+在 UnifiedNlp Settings 内全部勾选</p>
+</blockquote></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2019-05-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/android_flash_microg/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://jallenlau.github.io/android_flash_microg/" data-title="microG 简介及安装" data-via="JallenLau1997" data-hashtags=""><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://jallenlau.github.io/android_flash_microg/" data-hashtag=""><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Linkedin" data-sharer="linkedin" data-url="http://jallenlau.github.io/android_flash_microg/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Reddit" data-sharer="reddit" data-url="http://jallenlau.github.io/android_flash_microg/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://jallenlau.github.io/android_flash_microg/" data-title="microG 简介及安装"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://jallenlau.github.io/android_flash_microg/" data-title="microG 简介及安装"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/">Tags</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/android_flash_android/" class="next" rel="next" title="刷机及 Root 教程">刷机及 Root 教程<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">JallenLau</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
