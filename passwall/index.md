@@ -26,9 +26,8 @@
 
 ### 学习网络代理软件使用方法
 
-<aside>
-💡 以下内容点击超链接即可跳转应用安装包下载页面
-</aside>
+以下内容点击超链接即可跳转应用安装包下载页面
+
 #### Android 系统
 
 建议客户端：[Clash](https://github.com/Kr328/ClashForAndroid)、[Surfboard](https://github.com/getsurfboard/surfboard/releases)

@@ -938,10 +938,8 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 <p>民间通常称提供此节点的服务商为“机场”，我在互联网找到了一个推荐列表，供大家自行选择。</p>
 <p>🔗 <a href="https://clashnode.xyz/famous-clash-nodes-providers/" target="_blank" rel="noopener noreffer">点击此处跳转推荐列表</a></p>
 <h3 id="学习网络代理软件使用方法">学习网络代理软件使用方法</h3>
-<aside>
-💡 以下内容点击超链接即可跳转应用安装包下载页面
-</aside>
-#### Android 系统
+<p>以下内容点击超链接即可跳转应用安装包下载页面</p>
+<h4 id="android-系统">Android 系统</h4>
 <p>建议客户端：<a href="https://github.com/Kr328/ClashForAndroid" target="_blank" rel="noopener noreffer">Clash</a>、<a href="https://github.com/getsurfboard/surfboard/releases" target="_blank" rel="noopener noreffer">Surfboard</a></p>
 <p>🔗 <a href="https://docs.gtk.pw/contents/android.html" target="_blank" rel="noopener noreffer">点击此处跳转使用教程</a></p>
 <h4 id="ios-系统">iOS 系统</h4>
