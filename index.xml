@@ -921,53 +921,53 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 <h3 id="建立完成">建立完成</h3>]]></description>
 </item>
 <item>
-    <title>anti-passwall</title>
-    <link>https://jallenlau.github.io/anti_passwall/</link>
+    <title>科学上网指北</title>
+    <link>https://jallenlau.github.io/passwall/</link>
     <pubDate>Mon, 15 May 2023 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>https://jallenlau.github.io/anti_passwall/</guid>
-    <description><![CDATA[<h1 id="引言">引言</h1>
+    <guid>https://jallenlau.github.io/passwall/</guid>
+    <description><![CDATA[<h2 id="引言">引言</h2>
 <p>大家好，很多人都私信我怎么使用 Twitter，目前因某些原因国内网络无法使用，故需要设置网络代理（民间通常称为梯子 🪜）来使用。</p>
 <p>🙆 <strong>目前较安全的方式</strong>：网络代理软件 + 代理网络节点。<br>
 🙅 <strong>不安全的方式</strong>：使用目前常见的 VPN 软件（民间通常称为加速器）。</p>
 <p>因国家法律规定，教授此类内容属于违法行为，故我整理了目前互联网上的已有内容，供大家自行学习。</p>
-<h1 id="登陆外网的方法">登陆外网的方法</h1>
+<h3 id="登陆外网的方法">登陆外网的方法</h3>
 <p>能够顺利浏览国外网站的基础就是解决网络问题，上文也提到，比较建议的方式便是通过购买<strong>代理网络节点</strong>，再利用<strong>网络代理软件</strong>实现跨越防火墙。</p>
 <h2 id="具体方法">具体方法</h2>
-<h2 id="购买代理网络节点">购买代理网络节点</h2>
+<h3 id="购买代理网络节点">购买代理网络节点</h3>
 <p>民间通常称提供此节点的服务商为“机场”，我在互联网找到了一个推荐列表，供大家自行选择。</p>
 <p>🔗 <a href="https://clashnode.xyz/famous-clash-nodes-providers/" target="_blank" rel="noopener noreffer">点击此处跳转推荐列表</a></p>
-<h2 id="学习网络代理软件使用方法">学习网络代理软件使用方法</h2>
+<h3 id="学习网络代理软件使用方法">学习网络代理软件使用方法</h3>
 <aside>
 💡 以下内容点击超链接即可跳转应用安装包下载页面
 </aside>
-<h3 id="android-系统">Android 系统</h3>
+#### Android 系统
 <p>建议客户端：<a href="https://github.com/Kr328/ClashForAndroid" target="_blank" rel="noopener noreffer">Clash</a>、<a href="https://github.com/getsurfboard/surfboard/releases" target="_blank" rel="noopener noreffer">Surfboard</a></p>
 <p>🔗 <a href="https://docs.gtk.pw/contents/android.html" target="_blank" rel="noopener noreffer">点击此处跳转使用教程</a></p>
-<h3 id="ios-系统">iOS 系统</h3>
+<h5 id="ios-系统">iOS 系统</h5>
 <p>客户端：<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" target="_blank" rel="noopener noreffer">Shadowrocket</a>、<a href="https://apps.apple.com/us/app/surge-5/id1442620678" target="_blank" rel="noopener noreffer">Surge</a>、<a href="https://apps.apple.com/us/app/quantumult-x/id1443988620" target="_blank" rel="noopener noreffer">Quantumult X</a></p>
 <p>🔗 <a href="https://docs.gtk.pw/contents/ios.html" target="_blank" rel="noopener noreffer">点击此处跳转使用教程</a></p>
-<h3 id="windows-系统">Windows 系统</h3>
+<h4 id="windows-系统">Windows 系统</h4>
 <p>客户端：<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" target="_blank" rel="noopener noreffer">Clash for Windows</a></p>
 <p>🔗 <a href="https://docs.gtk.pw/contents/windows.html" target="_blank" rel="noopener noreffer">点击此处跳转使用教程</a></p>
-<h3 id="macos-系统">macOS 系统</h3>
+<h4 id="macos-系统">macOS 系统</h4>
 <p>客户端：<a href="https://github.com/yichengchen/clashX" target="_blank" rel="noopener noreffer">Clash X</a>、<a href="https://nssurge.com" target="_blank" rel="noopener noreffer">Surge for Mac</a></p>
 <p>🔗：<a href="https://docs.gtk.pw/contents/macos.html" target="_blank" rel="noopener noreffer">点击此处跳转使用教程</a></p>
-<h1 id="软件下载方式">软件下载方式</h1>
-<h2 id="安卓手机">安卓手机</h2>
+<h2 id="软件下载方式">软件下载方式</h2>
+<h3 id="安卓手机">安卓手机</h3>
 <p><a href="https://www.apkmirror.com/?post_type=app_release&amp;searchtype=apk&amp;s=instag" target="_blank" rel="noopener noreffer">Twitter 点击此处跳转下载</a></p>
 <p><a href="https://www.apkmirror.com/?post_type=app_release&amp;searchtype=apk&amp;s=twitter" target="_blank" rel="noopener noreffer">Instagram 点击此处跳转下载</a></p>
-<h2 id="苹果手机">苹果手机</h2>
+<h3 id="苹果手机">苹果手机</h3>
 <p>直接从 App Store 下载。</p>
-<h1 id="媒体下载工具">媒体下载工具</h1>
-<h2 id="推特视频下载">推特视频下载</h2>
-<h3 id="方法一快捷指令">方法一：快捷指令</h3>
+<h2 id="媒体下载工具">媒体下载工具</h2>
+<h3 id="推特视频下载">推特视频下载</h3>
+<h4 id="方法一快捷指令">方法一：快捷指令</h4>
 <p>🔧 <a href="https://www.icloud.com/shortcuts/8239cfb476784b44b2128b8c436e16b8" target="_blank" rel="noopener noreffer">点击跳转 Safari 安装</a></p>
 <p>💡 将其添加到快捷指令后，在浏览 Twitter 时遇到想要保存的视频直接点击分享至此快捷指令即可。</p>
-<h3 id="方法二网页版">方法二：网页版</h3>
+<h4 id="方法二网页版">方法二：网页版</h4>
 <p>🔧 <a href="https://www.getmytweet.com/zh/%C2%A0" target="_blank" rel="noopener noreffer">点击跳转网页版下载工具</a></p>
 <p>💡 快捷指令偶尔会失效，可用上面网页版下载工具，在浏览 Twitter 时遇到想要保存的视频，复制分享链接，粘贴入上述网址后，在“下载链接”按钮长按后，选中弹出菜单的“下载链接文件”即可。</p>
-<h2 id="instagram-媒体下载">Instagram 媒体下载</h2>
+<h3 id="instagram-媒体下载">Instagram 媒体下载</h3>
 <p>🔧 <a href="https://routinehub.co/shortcut/7823/" target="_blank" rel="noopener noreffer">点击跳转 Safari 安装</a></p>
 <p>💡 用 Safari 打开后，将其添加到快捷指令后，在浏览 ig 时遇到想要保存的视频直接点击分享至此快捷指令即可。</p>]]></description>
 </item>
