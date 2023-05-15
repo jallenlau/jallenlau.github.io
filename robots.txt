@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: http://jallenlau.github.io/en/sitemap.xml
+Sitemap: https://github.com/en/sitemap.xml
