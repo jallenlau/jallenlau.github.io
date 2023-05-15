@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - JallenLau</title>
-        <link>https://github.com/jallenlau/jallenlau.github.io/posts/</link>
+        <link>https://jallenlau.github.io/posts/</link>
         <description>所有文章 | JallenLau</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jallenlau@protonmail.com (JallenLau)</managingEditor>
-            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://github.com/jallenlau/jallenlau.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jallenlau@protonmail.com (JallenLau)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://jallenlau.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>关于人生的自述</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/private_doc_life/</link>
+    <link>https://jallenlau.github.io/private_doc_life/</link>
     <pubDate>Mon, 02 Mar 2020 21:40:32 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/private_doc_life/</guid>
+    <guid>https://jallenlau.github.io/private_doc_life/</guid>
     <description><![CDATA[<p>  方才过了几年自由的生活，转眼却又步入了社会。从不见得任何人、任何组织曾教导过我该如何将身心状态调整好，以适应这倏然的转变。庆幸的是，在大学期间我曾走出校门，与社会各个阶层（其实主要是中高阶层）的人有过持久性的接触，以做了些许准备。可当我真正的走入社会，面临亲人与环境带来的“压力”时，我犯了错，迷茫了很长一段时间。</p>
 <p>  那时曾以为人生就是所见所闻，容不下梦想。可现在我才明白，人生不是所见所闻，而是所感。</p>
 <p>  “感情，曾以为可见的未来才足以承载持久的爱；工作，曾以为人本应承受无法热爱的折磨；生活，曾以为活着便是为了满足周围人于物质上评判的目光；未来，曾以为我也不过是一介草民，只配重复机械的人生。如今，回想刚开始的迷惘，不禁感慨人活着能经历这个过程是多么美好啊！当你对自己一无所知，对未来毫无概念的时候，以为只能从所见所闻来定义自己的未来，从而制定一生的方向。那时的你确定了方向以后，生活看似充满活力与节奏感。当你在一步步迈向未来的过程中，也许你会觉得生活无比的充实，也许你会意识到你的判断存在着致命的问题。很幸运，我是后者。</p>
@@ -25,10 +25,10 @@
 </item>
 <item>
     <title>我的信仰</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/private_book_silence/</link>
+    <link>https://jallenlau.github.io/private_book_silence/</link>
     <pubDate>Mon, 02 Mar 2020 21:40:32 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/private_book_silence/</guid>
+    <guid>https://jallenlau.github.io/private_book_silence/</guid>
     <description><![CDATA[<p>读远藤周作「沉默」有感</p>
 <p>  “世人并不只限于圣人和英雄。要不是生长在这遭受迫害的时代，不知有多少信徒根本不必弃教或舍弃生命，就可以一直信守着幸福的信仰呢。他们只是平凡的信徒，最后被肉体的恐怖击倒了。”吉次郎的这番话在司祭脑海中翻滚，那个看似胆怯、懦弱，在威胁面前多次弃教的人也许才是真正的信徒。</p>
 <p>  本书所描述的故事是两名葡萄牙神甫在德川家光时代，冒着被捕及死亡的危险毅然来到日本拯救天主教徒的信仰，然而在面对信徒接连死亡时，却无法感知到上帝的一丝眷顾，他将希望寄托在那梦中的神，而神一次次的沉默让他开始怀疑自己多年来坚持且信奉的信仰，终于他在神的沉默中用脚掩盖了圣母的神像，而此后的他才领悟到了真正的信仰。</p>
@@ -42,10 +42,10 @@
 </item>
 <item>
     <title>Ubuntu 常见命令</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/ubuntu_code/</link>
+    <link>https://jallenlau.github.io/ubuntu_code/</link>
     <pubDate>Tue, 04 Jun 2019 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/ubuntu_code/</guid>
+    <guid>https://jallenlau.github.io/ubuntu_code/</guid>
     <description><![CDATA[<p>持续更新本人 Linux 学习过程中所需常见命令，已更新完结。</p>
 <h2 id="基础指令">基础指令</h2>
 <ol>
@@ -801,10 +801,10 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 </item>
 <item>
     <title>树莓派 4B 完美实现音乐无损串流</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/raspberry_music/</link>
+    <link>https://jallenlau.github.io/raspberry_music/</link>
     <pubDate>Sun, 23 Feb 2020 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/raspberry_music/</guid>
+    <guid>https://jallenlau.github.io/raspberry_music/</guid>
     <description><![CDATA[<p>利用树莓派低功耗、低噪音、免关机的特性，针对有聆听无损音乐且鄙夷繁杂操作等需求的用户打造一台方便的无损音乐串流器。</p>
 <h2 id="溯源">溯源</h2>
 <p>现在到了无损音乐贩售厂家都开始做流媒体的时代了，所以享受高品质音乐的同时，便捷性也成为关注点。毅然决然卖掉了 Sony zx300 播放器，入了个 xDuoo 出的新款解码耳放，想着利用手里闲置的那台安卓手机实现流媒体无损串流。只可惜安卓系统虽然从 Android N 时代就宣布手机 USB 传输音频支持动态采样率，可到了 Android 10 时代发现，输出采样只会锁定 48kHz、192kHz、384kHz。不巧的是，我的解码耳放当输入手机强制重采样为 192kHz 的音乐时，持续产生爆破音。头疼的刷了多个类原生系统以及 MIUI 系统（只支持 48kHz 采样）都无法解决问题。迫于贫穷没法买一台 iPhone 作为音乐转盘，由此考虑利用树莓派低功耗、低噪音、免关机的特性，借助国外开发者的固件实现流媒体整合传输并保证无损的功能。</p>
@@ -864,10 +864,10 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 </item>
 <item>
     <title>创建 GitHub Pages &amp; 自定域名教程</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/bulid_blog_github/</link>
+    <link>https://jallenlau.github.io/bulid_blog_github/</link>
     <pubDate>Tue, 11 Jun 2019 17:55:28 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/bulid_blog_github/</guid>
+    <guid>https://jallenlau.github.io/bulid_blog_github/</guid>
     <description><![CDATA[<p>本文详细介绍利用 Github Pages 搭建个人博客，以及自定义域名步骤。</p>
 <h2 id="建立-github-pages">建立 GitHub Pages</h2>
 <h3 id="第一步">第一步</h3>
@@ -920,10 +920,10 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 </item>
 <item>
     <title>anti-passwall</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/anti_passwall/</link>
+    <link>https://jallenlau.github.io/anti_passwall/</link>
     <pubDate>Mon, 15 May 2023 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/anti_passwall/</guid>
+    <guid>https://jallenlau.github.io/anti_passwall/</guid>
     <description><![CDATA[<h1 id="引言">引言</h1>
 <p>大家好，很多人都私信我怎么使用 Twitter，目前因某些原因国内网络无法使用，故需要设置网络代理（民间通常称为梯子 🪜）来使用。</p>
 <p>🙆 <strong>目前较安全的方式</strong>：网络代理软件 + 代理网络节点。<br>
@@ -971,10 +971,10 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 </item>
 <item>
     <title>OpenWrt、OpenClash 安装教程</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/openwrt_install/</link>
+    <link>https://jallenlau.github.io/openwrt_install/</link>
     <pubDate>Sun, 03 May 2020 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/openwrt_install/</guid>
+    <guid>https://jallenlau.github.io/openwrt_install/</guid>
     <description><![CDATA[<p>OpenWrt + OpenClash 安装步骤</p>
 <h2 id="溯源">溯源</h2>
 <p>由于软路由 LEDE/OpenWrt 系统的问题日渐显现，改刷 OpenWrt。<br>
@@ -1129,10 +1129,10 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 </item>
 <item>
     <title>「权利与荣耀」摘录</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/private_book_power/</link>
+    <link>https://jallenlau.github.io/private_book_power/</link>
     <pubDate>Sat, 07 Mar 2020 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/private_book_power/</guid>
+    <guid>https://jallenlau.github.io/private_book_power/</guid>
     <description><![CDATA[<p>读远藤周作「沉默」有感</p>
 <h2 id="序">序</h2>
 <p>近日读完格雷厄姆「权利与荣耀」，主旨意味颇深，对很多地方尚无法深刻理解，故无法动笔写下感悟。便将摘录记录成文，以作分享。</p>
@@ -1164,10 +1164,10 @@ P:表示将结果按照 CPU 使用率从高到低进行降序排序</li>
 </item>
 <item>
     <title>Vim 常用语句</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/vim/</link>
+    <link>https://jallenlau.github.io/vim/</link>
     <pubDate>Thu, 04 Jul 2019 00:00:00 &#43;0000</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/vim/</guid>
+    <guid>https://jallenlau.github.io/vim/</guid>
     <description><![CDATA[<h1 id="vim-三种模式">Vim 三种模式</h1>
 <p>命令模式、编辑模式（输入模式）、末行模式（尾行模式）</p>
 <blockquote>
@@ -1411,10 +1411,10 @@ c. 删除末行全部输入字符</p>
 </item>
 <item>
     <title>安卓手机刷入 GSI 镜像教程</title>
-    <link>https://github.com/jallenlau/jallenlau.github.io/android_flash-gsi-rom/</link>
+    <link>https://jallenlau.github.io/android_flash-gsi-rom/</link>
     <pubDate>Mon, 10 Jun 2019 21:40:32 &#43;0800</pubDate>
     <author>JallenLau</author>
-    <guid>https://github.com/jallenlau/jallenlau.github.io/android_flash-gsi-rom/</guid>
+    <guid>https://jallenlau.github.io/android_flash-gsi-rom/</guid>
     <description><![CDATA[<p>从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。</p>
 <h2 id="一gsi-镜像包介绍">一、gsi 镜像包介绍</h2>
 <p>GSI 的全称是 Generic System Image，翻译过来就是「通用系统镜像」，这个概念来源于 Project Treble。 自从 Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新，成为了社区开发的一大福音。从理论上来说，刷入某个 GSI，你的手机就会摇身一变，从一个系统切换到了另一个系统。</p>
